@@ -1,0 +1,42 @@
+
+.container {
+    border-style: inset;
+    /* flex-wrap: wrap-reverse; */
+    /* display: flex; */
+    flex-flow: column wrap;
+    width: 278px;
+}
+
+.sp {
+    /* background-color: lightpink; */
+    /* display: flex; */
+    /* float: left; */
+}
+
+.input {
+    background-color: transparent;
+    border: 0px;
+    display: table-cell;
+    width: 100%;
+}
+
+.input:focus {
+    border: 0px;
+    outline: none;
+}
+
+.tag {
+    border-radius: 5px;
+    margin: 1px;
+    width: max-content;
+    background-color: darkblue;
+    display: inline-block;
+    color: lightgray;
+    padding: 1px;
+}
+
+.close_button {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,55 @@
+.bookmark_form {
+    width: 300px;
+    padding: 0 0 15px 15px;
+    margin: 0px;
+    border-radius: 16px;
+}
+
+.form_valid {
+    background-color: darkslategray;
+}
+
+.form_invalid {
+    background-color: darkred;
+}
+
+.input {
+    width: 280px;
+    border: 1px solid teal;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 5px 0 5px;
+}
+
+.textarea_wrapper {
+    width: 280px;
+}
+
+.textarea {
+    /* width: calc(100%-30px); */
+    /* max-width: 100%; */
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 5ex;
+    max-height: 30ex;
+    background: transparent;
+    border: 1px solid teal;
+    /* margin: 5px 5px 5px 5px; */
+    /* padding: 5px 5px 5px 5px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 5px 0 5px;
+    height: 10ex;
+}
+
+.button {
+    color: teal;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid teal;
+    cursor: pointer;
+}

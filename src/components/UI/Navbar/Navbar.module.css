@@ -1,0 +1,31 @@
+
+.navbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: lightgray;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.navbar__links {
+    margin-left: auto;
+}
+
+.link {
+    background-color: darkolivegreen;
+    text-decoration: unset;
+    padding: 5px;
+    margin: 5px;
+    border-style: outset;
+}
+
+.link:hover {
+    background-color: darkgreen;
+    text-decoration: underline;
+    border-style: inset;
+}

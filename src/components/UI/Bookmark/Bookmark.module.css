@@ -1,0 +1,42 @@
+
+.bookmark {
+    border: teal solid 1px;
+    border-radius: 15px;
+    background-color: darkolivegreen;
+    width: 90%;
+    margin: 5px;
+    padding: 10px;
+}
+
+.id {
+    font-weight: bold;
+}
+
+.summary {
+    font-weight: bold;
+}
+
+.created {
+    font-size: small;
+}
+
+.contents {
+    white-space: pre-line;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    /* height: auto; */
+}
+
+.contents:hover {
+    border-style: inset;
+}
+
+.btn_remove, .btn_ok, .btn_cancel {
+    float: right;
+    border-radius: 15px;
+    background-color: teal;
+}
