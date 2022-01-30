@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
-    background: darkolivegreen;
+    background: darkgray;
     position: sticky;
     left: 0px;
     top: 0px;
@@ -17,7 +17,7 @@
 }
 
 .link {
-    background-color: darkolivegreen;
+    background-color: darkgray;
     text-decoration: unset;
     padding: 5px;
     margin: 5px;
@@ -25,7 +25,7 @@
 }
 
 .link:hover {
-    background-color: darkgreen;
-    text-decoration: underline;
+    background-color: lightslategray;
     border-style: inset;
+    color: white;
 }

@@ -1,8 +1,8 @@
 
 .bookmark {
-    border: teal solid 1px;
+    border: black solid 1px;
     border-radius: 15px;
-    background-color: darkolivegreen;
+    background-color: darkgray;
     width: 90%;
     margin: 5px;
     padding: 10px;
@@ -14,8 +14,7 @@
 
 .summary {
     font-weight: bold;
-    color: lightgray;
-    text-decoration: underline;
+    color: black;
 }
 
 .created {
@@ -30,7 +29,7 @@
     box-sizing: border-box;
     resize: none;
     width: 100%;
-    color: lightgray;
+    color: black;
 }
 
 .contents:hover {
@@ -40,6 +39,6 @@
 .btn_remove {
     float: right;
     border-radius: 30px;
-    background-color: olive;
+    background-color: darkgray;
     font-size: 20px;
 }

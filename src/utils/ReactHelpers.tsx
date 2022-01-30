@@ -3,7 +3,6 @@ import React, { MutableRefObject } from "react";
 
 const scrollToRef = (ref: MutableRefObject<null | HTMLDivElement>) => {
     if (ref.current) {
-        // console.log(window.navigator)
         ref.current!.scrollIntoView({
             behavior: "smooth",
           });
