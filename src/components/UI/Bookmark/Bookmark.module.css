@@ -31,15 +31,15 @@
     resize: none;
     width: 100%;
     color: lightgray;
-    /* height: auto; */
 }
 
 .contents:hover {
     border-style: inset;
 }
 
-.btn_remove, .btn_ok, .btn_cancel {
+.btn_remove {
     float: right;
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: olive;
+    font-size: 20px;
 }

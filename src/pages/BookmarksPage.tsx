@@ -100,6 +100,10 @@ const BookmarksPage = (props: Props) => {
                             await props.bookmarksRepository.editBookmark({...bm, contents: new_contents});
                             doUpdatePoll();
                         }}
+                        onBookmarkSummaryChanged={async (bm: BookmarkDto, new_summary: string) => {
+                            await props.bookmarksRepository.editBookmark({...bm, summary: new_summary});
+                            doUpdatePoll();
+                        }}
                         />
             }
             

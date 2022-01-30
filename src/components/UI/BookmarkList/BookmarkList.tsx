@@ -10,6 +10,7 @@ interface Props {
     bookmarks: BookmarkDto[];
     onRemoveBookmark: (bm: BookmarkDto) => void;
     onBookmarkContentsChanged: (bm: BookmarkDto, new_contents: string) => void;
+    onBookmarkSummaryChanged: (bm: BookmarkDto, new_summary: string) => void;
     newBookmarkId? :string;
 }
 
@@ -38,6 +39,9 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
                                         doRemove={props.onRemoveBookmark}
                                         doChangeContents={(new_contents: string) => {
                                             props.onBookmarkContentsChanged(bm, new_contents)
+                                        }}
+                                        doChangeSummary={(new_summary: string) => {
+                                            props.onBookmarkSummaryChanged(bm, new_summary)
                                         }}
                                 />
                             </CSSTransition>

@@ -12,6 +12,7 @@ interface Props {
     bookmark: BookmarkDto
     doRemove: (bm: BookmarkDto) => void;
     doChangeContents: (new_contents: string) => void;
+    doChangeSummary: (new_summary: string) => void;
     highlightJustAdded?: boolean;
 }
 
@@ -30,7 +31,12 @@ const Bookmark = (props: Props) => {
     return (
         <div className={cl.bookmark} ref={divRef}>
             <Collapsible open={props.highlightJustAdded!} 
-                         trigger={<BookmarkHeader bookmark={props.bookmark} doRemove={props.doRemove} />}>
+                         trigger={<BookmarkHeader bookmark={props.bookmark} 
+                         doRemove={props.doRemove} onCancelEdit={() => setIsEdit(false)} 
+                         onAcceptEdit={(new_summary: string) => {
+                           setIsEdit(false);
+                           props.doChangeSummary(new_summary);
+                       }} />}>
                 
                 <div className={cl.created}>Created: {props.bookmark.created}</div>
 

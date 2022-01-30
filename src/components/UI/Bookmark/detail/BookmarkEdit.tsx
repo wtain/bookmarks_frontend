@@ -46,27 +46,25 @@ class BookmarkEdit extends React.Component<Props, State> {
 
     render () {
         return (
-            <div>
-                <ContentEditable onChange={(e) => {
-                                    this.setNewContents(e.target.value)
-                                    this.setChanged(true);
-                                }} 
-                                onBlur={(e) => {
-                                    this.props.onAcceptEdit(this.state.newContents);
-                                    this.setChanged(false);
-                                }}
-                                disabled={false}
-                                html={this.state.newContents} 
-                                className={cl.contents} 
-                                onKeyDown={(e) => {
-                                    if (e.code === "Enter" && e.ctrlKey) {
-                                        this.onAccept();
-                                    } 
-                                    if (e.code === "Escape") {
-                                        this.onCancel();
-                                    }
-                                }}/>
-            </div>
+            <ContentEditable onChange={(e) => {
+                                this.setNewContents(e.target.value)
+                                this.setChanged(true);
+                            }} 
+                            onBlur={(e) => {
+                                this.props.onAcceptEdit(this.state.newContents);
+                                this.setChanged(false);
+                            }}
+                            disabled={false}
+                            html={this.state.newContents} 
+                            className={cl.contents} 
+                            onKeyDown={(e) => {
+                                if (e.code === "Enter" && e.ctrlKey) {
+                                    this.onAccept();
+                                } 
+                                if (e.code === "Escape") {
+                                    this.onCancel();
+                                }
+                            }}/>
         )
     }
 }
