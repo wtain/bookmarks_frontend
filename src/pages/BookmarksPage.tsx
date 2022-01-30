@@ -46,23 +46,39 @@ const BookmarksPage = (props: Props) => {
     }, [])
 
     const doUpdatePoll = async () => {
+        console.log("Updating...");
         setBookmarks(await props.bookmarksRepository.getBookmarks());
     }
 
-    const addBookmark = (newBookmark: BookmarkDto) => {
+    const scheduleUpdatePoll = async () => {
+        setTimeout(() => {
+            doUpdatePoll();
+        }, 2000)
+    }
+
+    const addBookmark = async (newBookmark: BookmarkDto) => {
         setModal(false);
         setNewBookmarkId(newBookmark.id);
         // setBookmarks([...bookmarks, newBookmark]);
-        props.bookmarksRepository.addBookmark(newBookmark);
+        await props.bookmarksRepository.addBookmark(newBookmark);
         doUpdatePoll();
     }
 
-    const removeBookmark = (bm: BookmarkDto) => {
+    const removeBookmark = async (bm: BookmarkDto) => {
         setNewBookmarkId("");
-        props.bookmarksRepository.removeBookmark(bm);
+        await props.bookmarksRepository.removeBookmark(bm);
         // setBookmarks(await props.bookmarksRepository.getBookmarks());
         doUpdatePoll();
     }
+
+    // const updatePollCallbask = useCallback(() => doUpdatePoll(), []); // doUpdatePoll
+
+    // useCallback for doUpdatePoll
+
+    useEffect(() => {
+        const interval = setInterval(() => doUpdatePoll(), 20 * 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     useEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === "a" && e.ctrlKey) {
@@ -92,9 +108,9 @@ const BookmarksPage = (props: Props) => {
                 <BookmarkList bookmarks={bookmarks} 
                         newBookmarkId={newBookmarkId}
                         onRemoveBookmark={(bm: BookmarkDto) => removeBookmark(bm)} 
-                        onBookmarkContentsChanged={(bm: BookmarkDto, new_contents: string) => {
+                        onBookmarkContentsChanged={async (bm: BookmarkDto, new_contents: string) => {
                             // setBookmarks(bookmarks.map(b => b.id === bm.id ? {...bm, contents: new_contents} : b));
-                            props.bookmarksRepository.editBookmark({...bm, contents: new_contents});
+                            await props.bookmarksRepository.editBookmark({...bm, contents: new_contents});
                             doUpdatePoll();
                         }}
                         />

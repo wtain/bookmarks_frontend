@@ -5,7 +5,7 @@ import Tag from "../../TagsEditor/Tag";
 import cl from '../Bookmark.module.css'
 
 interface Props {
-    onlClick    : () => void;
+    onlClick: () => void;
     bookmark: BookmarkDto;
 }
 

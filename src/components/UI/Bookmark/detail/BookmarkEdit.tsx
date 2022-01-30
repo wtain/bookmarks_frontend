@@ -11,6 +11,7 @@ interface Props {
 
 interface State {
     newContents: string;
+    changed: boolean;
 }
 
 class BookmarkEdit extends React.Component<Props, State> {
@@ -20,11 +21,27 @@ class BookmarkEdit extends React.Component<Props, State> {
     // const [newContents, setNewContents] = useState(props.initialContents)
 
     state: State = {
-        newContents: this.props.initialContents 
+        newContents: this.props.initialContents,
+        changed: false
     }
 
     setNewContents(newContents: string) {
         this.setState({newContents})
+    }
+
+    setChanged(changed: boolean) {
+        this.setState({changed});
+    }
+
+    onAccept() {
+        this.props.onAcceptEdit(this.state.newContents)
+        this.setChanged(false);
+    }
+
+    onCancel() {
+        this.setNewContents(this.props.initialContents)
+        this.props.onCancelEdit()
+        this.setChanged(false);
     }
 
     render () {
@@ -44,32 +61,35 @@ class BookmarkEdit extends React.Component<Props, State> {
                 <ContentEditable onChange={(e) => {
                                     // console.log("Change: " + e.target.value)
                                     this.setNewContents(e.target.value)
+                                    this.setChanged(true);
                                 }} 
                                 onBlur={(e) => {
                                     // console.log("Saving: " + this.state.newContents);
                                     this.props.onAcceptEdit(this.state.newContents);
+                                    this.setChanged(false);
                                 }}
                                 disabled={false}
-                                html={this.state.newContents} className={cl.contents} 
+                                html={this.state.newContents} 
+                                className={cl.contents} 
                                 onKeyDown={(e) => {
-                                    console.log(e);
+                                    // console.log(e);
                                     if (e.code === "Enter" && e.ctrlKey) {
-                                        console.log("Accept: " + this.state.newContents)
-                                        this.props.onAcceptEdit(this.state.newContents)
+                                        // console.log("Accept: " + this.state.newContents)
+                                        this.onAccept();
                                     } 
                                     if (e.code === "Escape") {
-                                        console.log("Cancel")
-                                        this.setNewContents(this.props.initialContents)
-                                        this.props.onCancelEdit()
+                                        // console.log("Cancel")
+                                        this.onCancel();
                                     }
                                 }}/>
                 <button className={cl.btn_cancel} 
-                        onClick={this.props.onCancelEdit}>
+                        onClick={this.onCancel}>
                     Cancel
                 </button>
                 <button className={cl.btn_ok} 
-                        onClick={() => this.props.onAcceptEdit(this.state.newContents)}>
+                        onClick={this.onAccept}>
                     Ok
+                    {this.state.changed ? "*" : ""}
                 </button>
             </div>
         )

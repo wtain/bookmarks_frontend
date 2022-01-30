@@ -14,6 +14,8 @@
 
 .summary {
     font-weight: bold;
+    color: lightgray;
+    text-decoration: underline;
 }
 
 .created {
@@ -28,6 +30,7 @@
     box-sizing: border-box;
     resize: none;
     width: 100%;
+    color: lightgray;
     /* height: auto; */
 }
 
@@ -38,5 +41,5 @@
 .btn_remove, .btn_ok, .btn_cancel {
     float: right;
     border-radius: 15px;
-    background-color: teal;
+    background-color: olive;
 }

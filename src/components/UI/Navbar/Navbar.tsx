@@ -8,6 +8,7 @@ const Navbar: React.FC = () => {
         <div className={cl.navbar}>
             <div className={cl.navBar__links}>
                 <Link to="/bookmarks" className={cl.link}>Bookmarks</Link>
+                <Link to="/tags" className={cl.link}>Tags</Link>
             </div>
         </div>
     )

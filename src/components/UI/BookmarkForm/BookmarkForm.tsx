@@ -40,7 +40,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
     }
 
     const doAddBookmark = () => {
-        const newBookmark: BookmarkDto = {...bookmark, created: new Date().toLocaleString(), id: uuidv4(), tags};
+        const newBookmark: BookmarkDto = BookmarkUtils.createBookmark(bookmark.summary, bookmark.contents, tags);
         if (!valid) {
             return;
         }

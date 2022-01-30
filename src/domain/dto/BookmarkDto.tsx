@@ -8,6 +8,7 @@ interface BookmarkDto {
     created: string;
     id: string;
     tags: TagDto[];
+    isDone: boolean;
 }
 
 export default BookmarkDto;

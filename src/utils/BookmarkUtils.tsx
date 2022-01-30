@@ -10,7 +10,8 @@ const createBookmark = (summary: string, contents: string, tags: TagDto[]): Book
                 contents, 
                 id: uuidv4(), 
                 created: new Date().toLocaleString(),
-                tags
+                tags,
+                isDone: false
             }
 }
 
