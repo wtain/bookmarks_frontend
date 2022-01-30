@@ -4,7 +4,6 @@ import BookmarkDto from "../../../domain/dto/BookmarkDto";
 import cl from './Bookmark.module.css'
 import Collapsible from 'react-collapsible';
 import ReactHelpers from "../../../utils/ReactHelpers";
-import BookmarkStatic from "./detail/BookmarkStatic";
 import BookmarkEdit from "./detail/BookmarkEdit";
 import BookmarkHeader from "./detail/BookmarkHeader";
 import Tag from "../TagsEditor/Tag";
@@ -36,24 +35,12 @@ const Bookmark = (props: Props) => {
                 <div className={cl.created}>Created: {props.bookmark.created}</div>
 
                 {
-                    // isedit ? 
-                    //     <BookmarkEdit initialContents={props.bookmark.contents} 
-                    //                   onCancelEdit={() => setIsEdit(false)} 
-                    //                   onAcceptEdit={(new_contents: string) => {
-                    //                     setIsEdit(false);
-                    //                     props.doChangeContents(new_contents);
-                    //                 }} />
-                    // : 
-                    //     <BookmarkStatic bookmark={props.bookmark} 
-                    //         onlClick={() => setIsEdit(true)} />
-
                     <BookmarkEdit initialContents={props.bookmark.contents} 
                                       onCancelEdit={() => setIsEdit(false)} 
                                       onAcceptEdit={(new_contents: string) => {
                                         setIsEdit(false);
                                         props.doChangeContents(new_contents);
                                     }} />
-                        
                 }
                 <br />
                 {props.bookmark.tags.map((t, i) => <Tag key={t.id} tag={t} />)}

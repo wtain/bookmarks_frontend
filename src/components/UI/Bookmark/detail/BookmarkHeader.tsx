@@ -19,10 +19,6 @@ const BookmarkHeader = (props: Props) => {
                         onClick={() => props.doRemove(props.bookmark)}>
                             x
                 </button>
-
-                {/* <div>
-                    Done: <input type="checkbox">Done</input>
-                </div> */}
             </div>
 
             <ReactTooltip className={cl.id} id="registerTip" place="left" effect="float">

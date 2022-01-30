@@ -1,7 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import BookmarkDto from "../../../domain/dto/BookmarkDto";
-import {v4 as uuidv4} from 'uuid';
 import cl from './BookmarkForm.module.css'
 import TagsEditor from "../TagsEditor/TagsEditor";
 import TagDto from "../../../domain/dto/TagDto";
@@ -47,9 +46,6 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
         props.create(newBookmark);
         setBookmark(EmptyBookmark);
         setValid(false);
-        // if (inputRef.current !== null) {
-        //     inputRef.current.focus();
-        // }
     }
 
     const addBookmark = (e: React.MouseEvent) => {
@@ -88,22 +84,15 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
                     onTagAdded={() => {
                         let value = currentTag.name.trim()
                         if (value.length > 0) {
-                            // console.log("Added: '" + value + "'")
-                            // console.log("tags: '" + tags.join("','") + "'")
                             if (tags.find(t => t.name === value) === undefined) {
                                 setTags([...tags, { ...currentTag, name: value }]);
                             }
                             setCurrentTag(BookmarkUtils.createNewTag());
-                            // tags.push(value)
                         }
                     }} 
                     onDelete={(index: number) => {
-                        // console.log("tags: '" + tags.join("','") + "'")
-                        // console.log("Removing " + index)
                         const new_tags = tags.filter((v, i) => i !== index);
-                        // console.log("tags: '" + new_tags.join("','") + "'")
                         setTags(new_tags)
-                        //setTags(tags.slice(0, index).concat(tags.slice(index+1)));
                     }}
                     currentTag={currentTag}
                     onCurrentTagChange={(v) => {

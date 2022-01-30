@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import TagDto from "../../../domain/dto/TagDto";
 import Tag from "./Tag";
 import cl from './TagsEditor.module.css'
@@ -13,15 +13,6 @@ interface Props {
 }
 
 const TagsEditor: React.FC<Props> = (props: Props) => {
-
-    // useEffect(() => {
-    //     // if (inputRef.current !== null) {
-    //     //     inputRef.current.focus();
-    //     // }
-    // })
-
-    // const inputRef = useRef<HTMLInputElement | null>(null);
-    // ref={inputRef} 
 
     return (
         <div className={cl.container}>

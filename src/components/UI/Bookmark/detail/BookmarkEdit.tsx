@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import ContentEditable from "react-contenteditable";
 import cl from '../Bookmark.module.css'
 
@@ -47,24 +47,11 @@ class BookmarkEdit extends React.Component<Props, State> {
     render () {
         return (
             <div>
-                {/* <textarea className={cl.contents} 
-                        onChange={(e) => setNewContents(e.target.value)}
-                        onKeyDown={(e) => {
-                            if (e.code === "Enter" && e.ctrlKey) {
-                                props.onAcceptEdit(newContents)
-                            } 
-                            if (e.code === "Escape") {
-                                props.onCancelEdit()
-                            }
-                        }}
-                        defaultValue={newContents} /><br /> */}
                 <ContentEditable onChange={(e) => {
-                                    // console.log("Change: " + e.target.value)
                                     this.setNewContents(e.target.value)
                                     this.setChanged(true);
                                 }} 
                                 onBlur={(e) => {
-                                    // console.log("Saving: " + this.state.newContents);
                                     this.props.onAcceptEdit(this.state.newContents);
                                     this.setChanged(false);
                                 }}
@@ -72,25 +59,13 @@ class BookmarkEdit extends React.Component<Props, State> {
                                 html={this.state.newContents} 
                                 className={cl.contents} 
                                 onKeyDown={(e) => {
-                                    // console.log(e);
                                     if (e.code === "Enter" && e.ctrlKey) {
-                                        // console.log("Accept: " + this.state.newContents)
                                         this.onAccept();
                                     } 
                                     if (e.code === "Escape") {
-                                        // console.log("Cancel")
                                         this.onCancel();
                                     }
                                 }}/>
-                <button className={cl.btn_cancel} 
-                        onClick={this.onCancel}>
-                    Cancel
-                </button>
-                <button className={cl.btn_ok} 
-                        onClick={this.onAccept}>
-                    Ok
-                    {this.state.changed ? "*" : ""}
-                </button>
             </div>
         )
     }

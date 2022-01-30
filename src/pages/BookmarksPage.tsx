@@ -50,16 +50,9 @@ const BookmarksPage = (props: Props) => {
         setBookmarks(await props.bookmarksRepository.getBookmarks());
     }
 
-    const scheduleUpdatePoll = async () => {
-        setTimeout(() => {
-            doUpdatePoll();
-        }, 2000)
-    }
-
     const addBookmark = async (newBookmark: BookmarkDto) => {
         setModal(false);
         setNewBookmarkId(newBookmark.id);
-        // setBookmarks([...bookmarks, newBookmark]);
         await props.bookmarksRepository.addBookmark(newBookmark);
         doUpdatePoll();
     }
@@ -67,13 +60,8 @@ const BookmarksPage = (props: Props) => {
     const removeBookmark = async (bm: BookmarkDto) => {
         setNewBookmarkId("");
         await props.bookmarksRepository.removeBookmark(bm);
-        // setBookmarks(await props.bookmarksRepository.getBookmarks());
         doUpdatePoll();
     }
-
-    // const updatePollCallbask = useCallback(() => doUpdatePoll(), []); // doUpdatePoll
-
-    // useCallback for doUpdatePoll
 
     useEffect(() => {
         const interval = setInterval(() => doUpdatePoll(), 20 * 1000);
@@ -109,7 +97,6 @@ const BookmarksPage = (props: Props) => {
                         newBookmarkId={newBookmarkId}
                         onRemoveBookmark={(bm: BookmarkDto) => removeBookmark(bm)} 
                         onBookmarkContentsChanged={async (bm: BookmarkDto, new_contents: string) => {
-                            // setBookmarks(bookmarks.map(b => b.id === bm.id ? {...bm, contents: new_contents} : b));
                             await props.bookmarksRepository.editBookmark({...bm, contents: new_contents});
                             doUpdatePoll();
                         }}

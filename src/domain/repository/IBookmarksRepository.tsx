@@ -5,11 +5,11 @@ import BookmarkDto from "../dto/BookmarkDto";
 interface IBookmarksRepository {
     getBookmarks: () => Promise<BookmarkDto[]>;
 
-    addBookmark: (bookmark: BookmarkDto) => void;
+    addBookmark: (bookmark: BookmarkDto) => Promise<void>;
 
-    removeBookmark: (bookmark: BookmarkDto) => void;
+    removeBookmark: (bookmark: BookmarkDto) => Promise<void>;
 
-    editBookmark: (bookmark: BookmarkDto) => void;
+    editBookmark: (bookmark: BookmarkDto) => Promise<void>;
 }
 
 export default IBookmarksRepository;
