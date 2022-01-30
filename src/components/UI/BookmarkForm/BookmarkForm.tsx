@@ -19,7 +19,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
     const [bookmark, setBookmark] = React.useState(EmptyBookmark);
     const inputRef = useRef<HTMLInputElement | null>(null);
     const [tags, setTags] = useState<TagDto[]>([])
-    const [currentTag, setCurrentTag] = React.useState(BookmarkUtils.createNewTag());
+    
     const [valid, setValid] = React.useState(false);
     
     useEffect(() => {
@@ -30,7 +30,6 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
         }
         setBookmark(EmptyBookmark);
         setTags([]);
-        setCurrentTag(BookmarkUtils.createNewTag());
     }, [props.visibility])
 
     const updateBookmark = (bookmark: BookmarkDto) => {
@@ -81,31 +80,14 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
             </div>
             <TagsEditor 
                     tags={tags} 
-                    onTagAdded={() => {
-                        let value = currentTag.name.trim()
-                        if (value.length > 0) {
-                            if (tags.find(t => t.name === value) === undefined) {
-                                setTags([...tags, { ...currentTag, name: value }]);
-                            }
-                            setCurrentTag(BookmarkUtils.createNewTag());
+                    onTagAdded={(tag: TagDto) => {
+                        if (tags.find(t => t.name === tag.name) === undefined) {
+                            setTags([...tags, tag]);
                         }
                     }} 
                     onDelete={(index: number) => {
                         const new_tags = tags.filter((v, i) => i !== index);
                         setTags(new_tags)
-                    }}
-                    currentTag={currentTag}
-                    onCurrentTagChange={(v) => {
-                        let p = v.indexOf(" ")
-                        if (p != -1) {
-                            let value = v.substring(0, p).trim();
-                            if (value.length > 0) {
-                                setTags([...tags, { ...currentTag, name: value }]);
-                            }
-                            setCurrentTag({ ...BookmarkUtils.createNewTag(), name: v.substring(p+1) })
-                        } else {
-                            setCurrentTag({ ...currentTag, name: v })
-                        }
                     }} />
             <button onClick={addBookmark} className={cl.button}>Add</button>
         </form>
