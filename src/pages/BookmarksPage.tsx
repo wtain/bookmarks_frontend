@@ -6,6 +6,7 @@ import BookmarkList from "../components/UI/BookmarkList/BookmarkList";
 import Loading from "../components/UI/Loading/Loading";
 import Modal from "../components/UI/Modal/Modal";
 import BookmarkDto from "../domain/dto/BookmarkDto";
+import TagDto from "../domain/dto/TagDto";
 import IBookmarksRepository from "../domain/repository/IBookmarksRepository";
 import cl from './BookmarksPage.module.css'
 
@@ -102,6 +103,14 @@ const BookmarksPage = (props: Props) => {
                         }}
                         onBookmarkSummaryChanged={async (bm: BookmarkDto, new_summary: string) => {
                             await props.bookmarksRepository.editBookmark({...bm, summary: new_summary});
+                            doUpdatePoll();
+                        }}
+                        onBookmarkTagAdded={async (bm: BookmarkDto, new_tag: TagDto) => {
+                            await props.bookmarksRepository.editBookmark({...bm, tags: [...bm.tags, new_tag]});
+                            doUpdatePoll();
+                        }}
+                        onBookmarkTagRemoved={async (bm: BookmarkDto, index: number) => {
+                            await props.bookmarksRepository.editBookmark({...bm, tags: bm.tags.filter((v, i) => i !== index)});
                             doUpdatePoll();
                         }}
                         />

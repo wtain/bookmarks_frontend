@@ -6,13 +6,16 @@ import Collapsible from 'react-collapsible';
 import ReactHelpers from "../../../utils/ReactHelpers";
 import BookmarkEdit from "./detail/BookmarkEdit";
 import BookmarkHeader from "./detail/BookmarkHeader";
-import Tag from "../TagsEditor/Tag";
+import TagsEditor from "../TagsEditor/TagsEditor";
+import TagDto from "../../../domain/dto/TagDto";
 
 interface Props {
     bookmark: BookmarkDto
     doRemove: (bm: BookmarkDto) => void;
     doChangeContents: (new_contents: string) => void;
     doChangeSummary: (new_summary: string) => void;
+    doAddTag: (tag: TagDto) => void;
+    doRemoveTag: (index: number) => void;
     highlightJustAdded?: boolean;
 }
 
@@ -40,16 +43,21 @@ const Bookmark = (props: Props) => {
                 
                 <div className={cl.created}>Created: {props.bookmark.created}</div>
 
-                {
-                    <BookmarkEdit initialContents={props.bookmark.contents} 
-                                      onCancelEdit={() => setIsEdit(false)} 
-                                      onAcceptEdit={(new_contents: string) => {
-                                        setIsEdit(false);
-                                        props.doChangeContents(new_contents);
-                                    }} />
-                }
+                <BookmarkEdit initialContents={props.bookmark.contents} 
+                            onCancelEdit={() => setIsEdit(false)} 
+                            onAcceptEdit={(new_contents: string) => {
+                            setIsEdit(false);
+                            props.doChangeContents(new_contents);
+                        }} />
                 <br />
-                {props.bookmark.tags.map((t, i) => <Tag key={t.id} tag={t} />)}
+                <TagsEditor 
+                    tags={props.bookmark.tags} 
+                    onTagAdded={(tag: TagDto) => {
+                        props.doAddTag(tag);
+                    }} 
+                    onDelete={(index: number) => {
+                        props.doRemoveTag(index);
+                    }} />
             </Collapsible>
         </div>
     )

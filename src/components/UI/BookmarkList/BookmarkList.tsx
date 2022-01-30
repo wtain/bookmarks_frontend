@@ -5,12 +5,15 @@ import Bookmark from "../Bookmark/Bookmark";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import cl from './BookmarkList.module.css'
 import { Flex } from "reflexy";
+import TagDto from "../../../domain/dto/TagDto";
 
 interface Props {
     bookmarks: BookmarkDto[];
     onRemoveBookmark: (bm: BookmarkDto) => void;
     onBookmarkContentsChanged: (bm: BookmarkDto, new_contents: string) => void;
     onBookmarkSummaryChanged: (bm: BookmarkDto, new_summary: string) => void;
+    onBookmarkTagAdded: (bm: BookmarkDto, new_tag: TagDto) => void;
+    onBookmarkTagRemoved: (bm: BookmarkDto, index: number) => void;
     newBookmarkId? :string;
 }
 
@@ -42,6 +45,12 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
                                         }}
                                         doChangeSummary={(new_summary: string) => {
                                             props.onBookmarkSummaryChanged(bm, new_summary)
+                                        }}
+                                        doAddTag={(tag: TagDto) => {
+                                            props.onBookmarkTagAdded(bm, tag);
+                                        }}
+                                        doRemoveTag={(index: number) => {
+                                            props.onBookmarkTagRemoved(bm, index);
                                         }}
                                 />
                             </CSSTransition>

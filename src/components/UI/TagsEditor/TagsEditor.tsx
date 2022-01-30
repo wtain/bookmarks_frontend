@@ -22,7 +22,9 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
     const onTagAdded = () => {
         let value = currentTag.name.trim()
         if (value.length > 0) {
-            props.onTagAdded({...currentTag, name: value});
+            if (props.tags.find(t => t.name === value) === undefined) {
+                props.onTagAdded({...currentTag, name: value});                
+            }
             setCurrentTag(BookmarkUtils.createNewTag());
         }
     }

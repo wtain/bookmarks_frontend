@@ -81,9 +81,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
             <TagsEditor 
                     tags={tags} 
                     onTagAdded={(tag: TagDto) => {
-                        if (tags.find(t => t.name === tag.name) === undefined) {
-                            setTags([...tags, tag]);
-                        }
+                        setTags([...tags, tag]);
                     }} 
                     onDelete={(index: number) => {
                         const new_tags = tags.filter((v, i) => i !== index);
