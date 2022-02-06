@@ -42,6 +42,10 @@ const Bookmark = (props: Props) => {
                        }} />}>
                 
                 <div className={cl.created}>Created: {props.bookmark.created}</div>
+                {
+                    (props.bookmark.updated !== undefined) ? 
+                    <div className={cl.created}>Updated: {props.bookmark.updated}</div> : <></>
+                }
 
                 <BookmarkEdit initialContents={props.bookmark.contents} 
                             onCancelEdit={() => setIsEdit(false)} 
@@ -51,6 +55,7 @@ const Bookmark = (props: Props) => {
                         }} />
                 <br />
                 <TagsEditor 
+                    containerClass={cl.tags_container}
                     tags={props.bookmark.tags} 
                     onTagAdded={(tag: TagDto) => {
                         props.doAddTag(tag);

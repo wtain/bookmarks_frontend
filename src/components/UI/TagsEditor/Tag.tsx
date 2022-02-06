@@ -18,14 +18,15 @@ const Tag: React.FC<Props> = (props: Props) => {
             onMouseLeave={() => setShowClose(false)}>
             {props.tag.name}
             {
-                
                 (showClose && props.onDelete) ? 
-                    <button className={cl.close_button} onClick={() => {
-                            if (props.onDelete !== null && props.onDelete !== undefined)
-                                props.onDelete!()
-                        }}>
-                        x
-                    </button> 
+                    <div className={cl.close_button_wrapper}>
+                        <button className={cl.close_button} onClick={() => {
+                                if (props.onDelete !== null && props.onDelete !== undefined)
+                                    props.onDelete!()
+                            }}>
+                            x
+                        </button> 
+                    </div>
                     : <></>
             }
         </span>

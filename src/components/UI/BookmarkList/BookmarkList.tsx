@@ -36,7 +36,7 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
                                     exit: cl.bookmarkExit,
                                     exitActive: cl.bookmarkExitActive
                                 }}>
-                                <Bookmark
+                                <Bookmark key={bm.id}
                                         highlightJustAdded={props.newBookmarkId! === bm.id}
                                         bookmark={bm} 
                                         doRemove={props.onRemoveBookmark}

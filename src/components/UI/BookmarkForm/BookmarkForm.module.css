@@ -27,6 +27,10 @@
     width: 280px;
 }
 
+.tags_container {
+    width: 278px;
+}
+
 .textarea {
     /* width: calc(100%-30px); */
     /* max-width: 100%; */

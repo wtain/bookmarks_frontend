@@ -33,7 +33,9 @@ class BookmarkHeader extends React.Component<Props, State> {
     }
 
     onAccept() {
-        this.props.onAcceptEdit(this.state.new_summary)
+        if (this.state.new_summary !== this.props.bookmark.summary) {
+            this.props.onAcceptEdit(this.state.new_summary);
+        }
         this.setChanged(false);
     }
 
@@ -46,7 +48,7 @@ class BookmarkHeader extends React.Component<Props, State> {
     render () {
         return (
             <>
-                <div data-tip data-for="registerTip">
+                <div data-tip data-for={"registerTip" + this.props.bookmark.id}>
                     <span>
                         <button className={cl.btn_remove} 
                                 onClick={() => this.props.doRemove(this.props.bookmark)}>
@@ -58,8 +60,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                                 this.setChanged(true);
                             }} 
                             onBlur={(e) => {
-                                this.props.onAcceptEdit(this.state.new_summary);
-                                this.setChanged(false);
+                                this.onAccept();
                             }}
                             disabled={false}
                             html={this.state.new_summary} 
@@ -74,7 +75,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                             }}/>
                 </div>
 
-                <ReactTooltip className={cl.id} id="registerTip" place="left" effect="float">
+                <ReactTooltip className={cl.id} id={"registerTip" + this.props.bookmark.id} place="left" effect="float">
                     {this.props.bookmark.id}
                 </ReactTooltip>
             </>

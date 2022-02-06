@@ -34,7 +34,9 @@ class BookmarkEdit extends React.Component<Props, State> {
     }
 
     onAccept() {
-        this.props.onAcceptEdit(this.state.newContents)
+        if (this.props.initialContents !== this.state.newContents) {
+            this.props.onAcceptEdit(this.state.newContents);
+        }
         this.setChanged(false);
     }
 
@@ -51,8 +53,7 @@ class BookmarkEdit extends React.Component<Props, State> {
                                 this.setChanged(true);
                             }} 
                             onBlur={(e) => {
-                                this.props.onAcceptEdit(this.state.newContents);
-                                this.setChanged(false);
+                                this.onAccept();
                             }}
                             disabled={false}
                             html={this.state.newContents} 

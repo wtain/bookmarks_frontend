@@ -9,11 +9,13 @@ interface Props {
     tags: TagDto[];
     onTagAdded: (tag: TagDto) => void;
     onDelete: (index: number) => void;
+    containerClass?: string;
 }
 
 const TagsEditor: React.FC<Props> = (props: Props) => {
 
     const [currentTag, setCurrentTag] = React.useState(BookmarkUtils.createNewTag());
+    const inputRef = React.useRef<null | HTMLInputElement>(null);
 
     useEffect(() => {
         setCurrentTag(BookmarkUtils.createNewTag());
@@ -42,13 +44,20 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
         }
     }
 
+    const containerClasses = [cl.container];
+    if (props.containerClass) {
+        containerClasses.push(props.containerClass);
+    }
+
     return (
-        <div className={cl.container}>
+        <div className={containerClasses.join(" ")} onClick={(e) => {
+            inputRef.current?.focus();
+        }}>
             {
                 props.tags.map((tag, i) => <Tag key={tag.id} tag={tag} onDelete={() => props.onDelete(i)} />)
             }
             <span className={cl.sp}>
-                <input 
+                <input ref={inputRef}
                         value={currentTag.name} 
                         onChange={(e) => onCurrentTagChange(e.target.value)} 
                         className={cl.input} 
@@ -60,8 +69,13 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
                                     e.stopPropagation();
                                 }
                             }
-                        }
-                } />
+                        }} 
+                        onBlur={(e) => {
+                            if (currentTag.name.trim().length > 0) {
+                                onTagAdded();
+                            }
+                        }}
+                        />
             </span>
         </div>
     )

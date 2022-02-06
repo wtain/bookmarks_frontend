@@ -4,13 +4,16 @@
     /* flex-wrap: wrap-reverse; */
     /* display: flex; */
     flex-flow: column wrap;
-    width: 278px;
+    /* width: 278px; */
+    cursor: text;
 }
 
 .sp {
     /* background-color: lightpink; */
     /* display: flex; */
     /* float: left; */
+    display: inline-block;
+    width: auto;
 }
 
 .input {
@@ -35,8 +38,14 @@
     padding: 1px;
 }
 
+.close_button_wrapper {
+    float: right;
+}
+
 .close_button {
     width: 20px;
     height: 20px;
     border-radius: 10px;
+    position: relative;
+    right: 0px;
 }

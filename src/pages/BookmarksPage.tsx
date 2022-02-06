@@ -47,7 +47,6 @@ const BookmarksPage = (props: Props) => {
     }, [])
 
     const doUpdatePoll = async () => {
-        console.log("Updating...");
         setBookmarks(await props.bookmarksRepository.getBookmarks());
     }
 
@@ -98,19 +97,19 @@ const BookmarksPage = (props: Props) => {
                         newBookmarkId={newBookmarkId}
                         onRemoveBookmark={(bm: BookmarkDto) => removeBookmark(bm)} 
                         onBookmarkContentsChanged={async (bm: BookmarkDto, new_contents: string) => {
-                            await props.bookmarksRepository.editBookmark({...bm, contents: new_contents});
+                            await props.bookmarksRepository.editBookmark({...bm, contents: new_contents, updated: new Date().toLocaleString()});
                             doUpdatePoll();
                         }}
                         onBookmarkSummaryChanged={async (bm: BookmarkDto, new_summary: string) => {
-                            await props.bookmarksRepository.editBookmark({...bm, summary: new_summary});
+                            await props.bookmarksRepository.editBookmark({...bm, summary: new_summary, updated: new Date().toLocaleString()});
                             doUpdatePoll();
                         }}
                         onBookmarkTagAdded={async (bm: BookmarkDto, new_tag: TagDto) => {
-                            await props.bookmarksRepository.editBookmark({...bm, tags: [...bm.tags, new_tag]});
+                            await props.bookmarksRepository.editBookmark({...bm, tags: [...bm.tags, new_tag], updated: new Date().toLocaleString()});
                             doUpdatePoll();
                         }}
                         onBookmarkTagRemoved={async (bm: BookmarkDto, index: number) => {
-                            await props.bookmarksRepository.editBookmark({...bm, tags: bm.tags.filter((v, i) => i !== index)});
+                            await props.bookmarksRepository.editBookmark({...bm, tags: bm.tags.filter((v, i) => i !== index), updated: new Date().toLocaleString()});
                             doUpdatePoll();
                         }}
                         />

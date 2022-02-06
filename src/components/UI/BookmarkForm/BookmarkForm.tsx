@@ -79,6 +79,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
                             />
             </div>
             <TagsEditor 
+                    containerClass={cl.tags_container}
                     tags={tags} 
                     onTagAdded={(tag: TagDto) => {
                         setTags([...tags, tag]);

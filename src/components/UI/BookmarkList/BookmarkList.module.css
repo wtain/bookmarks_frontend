@@ -9,7 +9,7 @@
 .bookmarkEnterActive {
     /* transform: translateX(0px); */
     opacity: 1;
-    transition: opacity 700ms;
+    transition: opawicity 700ms;
 }
 .bookmarkExit {
     opacity: 1;

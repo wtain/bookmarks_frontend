@@ -3,7 +3,7 @@
     border: black solid 1px;
     border-radius: 15px;
     background-color: darkgray;
-    width: 90%;
+    width: 100%-20px;
     margin: 5px;
     padding: 10px;
 }
@@ -15,6 +15,7 @@
 .summary {
     font-weight: bold;
     color: black;
+    width: calc(100% - 30px);
 }
 
 .created {
@@ -41,4 +42,8 @@
     border-radius: 30px;
     background-color: darkgray;
     font-size: 20px;
+}
+
+.tags_container {
+    width: calc(100% - 7px);    
 }
