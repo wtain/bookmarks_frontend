@@ -16,6 +16,7 @@ interface Props {
     doChangeSummary: (new_summary: string) => void;
     doAddTag: (tag: TagDto) => void;
     doRemoveTag: (index: number) => void;
+    doChangeIsDone: (new_value: boolean) => void;
     highlightJustAdded?: boolean;
 }
 
@@ -29,15 +30,16 @@ const Bookmark = (props: Props) => {
         }
     }, [props.highlightJustAdded])
 
-    const [isedit, setIsEdit] = useState(false)
     
     return (
         <div className={cl.bookmark} ref={divRef}>
             <Collapsible open={props.highlightJustAdded!} 
                          trigger={<BookmarkHeader bookmark={props.bookmark} 
-                         doRemove={props.doRemove} onCancelEdit={() => setIsEdit(false)} 
+                         doRemove={props.doRemove}
+                         onIsDoneChanged={(new_value: boolean) => {
+                             props.doChangeIsDone(new_value);
+                         }}
                          onAcceptEdit={(new_summary: string) => {
-                           setIsEdit(false);
                            props.doChangeSummary(new_summary);
                        }} />}>
                 
@@ -48,11 +50,9 @@ const Bookmark = (props: Props) => {
                 }
 
                 <BookmarkEdit initialContents={props.bookmark.contents} 
-                            onCancelEdit={() => setIsEdit(false)} 
                             onAcceptEdit={(new_contents: string) => {
-                            setIsEdit(false);
-                            props.doChangeContents(new_contents);
-                        }} />
+                                props.doChangeContents(new_contents);
+                            }} />
                 <br />
                 <TagsEditor 
                     containerClass={cl.tags_container}

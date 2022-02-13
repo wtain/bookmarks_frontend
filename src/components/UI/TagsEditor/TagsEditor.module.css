@@ -21,6 +21,7 @@
     border: 0px;
     display: table-cell;
     width: 100%;
+    color: white;
 }
 
 .input:focus {
@@ -36,6 +37,12 @@
     display: inline-block;
     color: lightgray;
     padding: 1px;
+    border-style: outset;
+    border-color: black;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .close_button_wrapper {

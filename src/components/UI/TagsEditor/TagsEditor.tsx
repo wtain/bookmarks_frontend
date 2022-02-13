@@ -33,7 +33,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
 
     const onCurrentTagChange = (v: string) => {
         let p = v.indexOf(" ")
-        if (p != -1) {
+        if (p !== -1) {
             let value = v.substring(0, p).trim();
             if (value.length > 0) {
                 props.onTagAdded({...currentTag, name: value});

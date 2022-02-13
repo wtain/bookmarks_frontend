@@ -1,13 +1,14 @@
 
 import useEventListener from "@use-it/event-listener";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import BookmarkForm from "../components/UI/BookmarkForm/BookmarkForm";
 import BookmarkList from "../components/UI/BookmarkList/BookmarkList";
 import Loading from "../components/UI/Loading/Loading";
 import Modal from "../components/UI/Modal/Modal";
 import BookmarkDto from "../domain/dto/BookmarkDto";
 import TagDto from "../domain/dto/TagDto";
-import IBookmarksRepository from "../domain/repository/IBookmarksRepository";
+import IBookmarksRepository from "../domain/repository/bookmarks/IBookmarksRepository";
 import cl from './BookmarksPage.module.css'
 
 interface Props {
@@ -17,6 +18,8 @@ interface Props {
 const BookmarksPage = (props: Props) => {
 
     const [modal, setModal] = useState(false);
+
+    const { tag } = useParams();
 
     let [newBookmarkId, setNewBookmarkId] = useState("");
 
@@ -28,7 +31,7 @@ const BookmarksPage = (props: Props) => {
 
     const loadBookmarks = async(success: (bookmarks: BookmarkDto[]) => void, error: (e: any) => void) => {
         try {
-            const bookmarks = await props.bookmarksRepository.getBookmarks();
+            const bookmarks = await (tag ? props.bookmarksRepository.getBookmarksByTag(tag) : props.bookmarksRepository.getBookmarks());
             success(bookmarks)
         } catch (e) {
             error(e)
@@ -44,10 +47,10 @@ const BookmarksPage = (props: Props) => {
             (e) => {
                 setLoading(false);
             })
-    }, [])
+    }, [tag])
 
     const doUpdatePoll = async () => {
-        setBookmarks(await props.bookmarksRepository.getBookmarks());
+        setBookmarks(((tag ? await props.bookmarksRepository.getBookmarksByTag(tag) : await props.bookmarksRepository.getBookmarks())));
     }
 
     const addBookmark = async (newBookmark: BookmarkDto) => {
@@ -66,7 +69,7 @@ const BookmarksPage = (props: Props) => {
     useEffect(() => {
         const interval = setInterval(() => doUpdatePoll(), 20 * 1000);
         return () => clearInterval(interval);
-    }, []);
+    }, [tag]);
 
     useEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === "a" && e.ctrlKey) {
@@ -110,6 +113,10 @@ const BookmarksPage = (props: Props) => {
                         }}
                         onBookmarkTagRemoved={async (bm: BookmarkDto, index: number) => {
                             await props.bookmarksRepository.editBookmark({...bm, tags: bm.tags.filter((v, i) => i !== index), updated: new Date().toLocaleString()});
+                            doUpdatePoll();
+                        }}
+                        onBookmarkIsDoneChanged={async (bm: BookmarkDto, new_value: boolean) => {
+                            await props.bookmarksRepository.editBookmark({...bm, isDone: new_value, updated: new Date().toLocaleString()});
                             doUpdatePoll();
                         }}
                         />

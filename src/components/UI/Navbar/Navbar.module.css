@@ -16,7 +16,7 @@
     margin-left: auto;
 }
 
-.link {
+.link, .link:visited {
     background-color: darkgray;
     text-decoration: unset;
     padding: 5px;

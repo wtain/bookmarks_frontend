@@ -6,16 +6,39 @@ import cl from './TagsEditor.module.css'
 interface Props {
     tag: TagDto;
     onDelete?: () => void;
+    onClick?: () => void;
 }
 
 const Tag: React.FC<Props> = (props: Props) => {
 
     const [showClose, setShowClose] = useState(false)
+    const [clickablePointer, setClickablePointer] = useState(false);
+
+    const clickable = cl.clickable;
+
+    const styles = [cl.tag];
+
+    if (clickablePointer) {
+        styles.push(clickable);
+    }
 
     return (
-        <span className={cl.tag} 
-            onMouseEnter={() => setShowClose(true)}
-            onMouseLeave={() => setShowClose(false)}>
+        <span className={styles.join(" ")} 
+            onClick={() => {
+                if (props.onClick) {
+                    props.onClick()
+                }
+            }}
+            onMouseEnter={() => {
+                setShowClose(true);
+                if (props.onClick) {
+                    setClickablePointer(true);
+                }
+            }}
+            onMouseLeave={() => {
+                setShowClose(false);
+                setClickablePointer(false);
+            }}>
             {props.tag.name}
             {
                 (showClose && props.onDelete) ? 

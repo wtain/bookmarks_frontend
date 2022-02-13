@@ -3,14 +3,16 @@
     padding: 0 0 15px 15px;
     margin: 0px;
     border-radius: 16px;
+    background-color: darkslategray;
+    border: solid 2px;
 }
 
 .form_valid {
-    background-color: darkslategray;
+    border-color: black;
 }
 
 .form_invalid {
-    background-color: darkred;
+    border-color: red;
 }
 
 .input {
@@ -21,6 +23,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 5px 0 5px;
+    color: white;
 }
 
 .textarea_wrapper {
@@ -48,6 +51,7 @@
     box-sizing: border-box;
     margin: 5px 0 5px;
     height: 10ex;
+    color: white;
 }
 
 .button {

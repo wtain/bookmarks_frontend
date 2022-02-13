@@ -18,6 +18,10 @@
     width: calc(100% - 30px);
 }
 
+.done {
+    text-decoration: line-through;
+}
+
 .created {
     font-size: small;
 }

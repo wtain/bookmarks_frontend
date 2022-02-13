@@ -5,7 +5,6 @@ import cl from '../Bookmark.module.css'
 
 interface Props {
     initialContents: string;
-    onCancelEdit: () => void;
     onAcceptEdit: (new_contents: string) => void;
 }
 
@@ -42,7 +41,6 @@ class BookmarkEdit extends React.Component<Props, State> {
 
     onCancel() {
         this.setNewContents(this.props.initialContents)
-        this.props.onCancelEdit()
         this.setChanged(false);
     }
 

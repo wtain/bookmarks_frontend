@@ -8,8 +8,8 @@ import cl from '../Bookmark.module.css'
 interface Props {
     bookmark: BookmarkDto;
     doRemove: (bm: BookmarkDto) => void;
-    onCancelEdit: () => void;
     onAcceptEdit: (new_summary: string) => void;
+    onIsDoneChanged: (new_value: boolean) => void;
 }
 
 interface State {
@@ -41,14 +41,24 @@ class BookmarkHeader extends React.Component<Props, State> {
 
     onCancel() {
         this.setNewSummary(this.props.bookmark.summary)
-        this.props.onCancelEdit()
         this.setChanged(false);
     }
 
     render () {
+        const classes = [cl.summary];
+        if (this.props.bookmark.isDone) {
+            classes.push(cl.done);
+        }
+
         return (
             <>
-                <div data-tip data-for={"registerTip" + this.props.bookmark.id}>
+                <input type="checkbox" checked={this.props.bookmark.isDone} style={{display: "flow", float: "left"}} 
+                    onClick={(e) => {
+                        e.stopPropagation();
+                    }} onChange={(e) => {
+                        this.props.onIsDoneChanged(e.target.checked);
+                    }} />
+                <div data-tip data-for={"registerTip" + this.props.bookmark.id} style={{display: "flow"}}>
                     <span>
                         <button className={cl.btn_remove} 
                                 onClick={() => this.props.doRemove(this.props.bookmark)}>
@@ -64,7 +74,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                             }}
                             disabled={false}
                             html={this.state.new_summary} 
-                            className={cl.summary} 
+                            className={classes.join(" ")} 
                             onKeyDown={(e) => {
                                 if (e.code === "Enter" && e.ctrlKey) {
                                     this.onAccept();
@@ -76,7 +86,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                 </div>
 
                 <ReactTooltip className={cl.id} id={"registerTip" + this.props.bookmark.id} place="left" effect="float">
-                    {this.props.bookmark.id}
+                    {this.props.bookmark.contents}
                 </ReactTooltip>
             </>
         )

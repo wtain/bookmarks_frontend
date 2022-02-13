@@ -14,6 +14,7 @@ interface Props {
     onBookmarkSummaryChanged: (bm: BookmarkDto, new_summary: string) => void;
     onBookmarkTagAdded: (bm: BookmarkDto, new_tag: TagDto) => void;
     onBookmarkTagRemoved: (bm: BookmarkDto, index: number) => void;
+    onBookmarkIsDoneChanged: (bm: BookmarkDto, new_value: boolean) => void;
     newBookmarkId? :string;
 }
 
@@ -51,6 +52,9 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
                                         }}
                                         doRemoveTag={(index: number) => {
                                             props.onBookmarkTagRemoved(bm, index);
+                                        }}
+                                        doChangeIsDone={(new_value: boolean) => {
+                                            props.onBookmarkIsDoneChanged(bm, new_value);
                                         }}
                                 />
                             </CSSTransition>
