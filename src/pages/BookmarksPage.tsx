@@ -19,7 +19,7 @@ const BookmarksPage = (props: Props) => {
 
     const [modal, setModal] = useState(false);
 
-    const { tag } = useParams();
+    const { tag, id } = useParams();
 
     let [newBookmarkId, setNewBookmarkId] = useState("");
 
@@ -29,9 +29,18 @@ const BookmarksPage = (props: Props) => {
 
     let [loading, setLoading] = useState(false);
 
-    const loadBookmarks = async(success: (bookmarks: BookmarkDto[]) => void, error: (e: any) => void) => {
+    const getData = async (): Promise<BookmarkDto[]> => {
+        if (id) {
+            return [await props.bookmarksRepository.getBookmark(id)];
+        }
+        return await (tag ? 
+                props.bookmarksRepository.getBookmarksByTag(tag) : 
+                props.bookmarksRepository.getBookmarks());
+    }
+
+    const loadBookmarks = async (success: (bookmarks: BookmarkDto[]) => void, error: (e: any) => void) => {
         try {
-            const bookmarks = await (tag ? props.bookmarksRepository.getBookmarksByTag(tag) : props.bookmarksRepository.getBookmarks());
+            const bookmarks = await getData();
             success(bookmarks)
         } catch (e) {
             error(e)
@@ -47,10 +56,12 @@ const BookmarksPage = (props: Props) => {
             (e) => {
                 setLoading(false);
             })
-    }, [tag])
+    }, [tag, id])
 
     const doUpdatePoll = async () => {
-        setBookmarks(((tag ? await props.bookmarksRepository.getBookmarksByTag(tag) : await props.bookmarksRepository.getBookmarks())));
+        setBookmarks(
+            await getData()
+            );
     }
 
     const addBookmark = async (newBookmark: BookmarkDto) => {
@@ -69,7 +80,7 @@ const BookmarksPage = (props: Props) => {
     useEffect(() => {
         const interval = setInterval(() => doUpdatePoll(), 20 * 1000);
         return () => clearInterval(interval);
-    }, [tag]);
+    }, [tag, id]);
 
     useEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === "a" && e.ctrlKey) {

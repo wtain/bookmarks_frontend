@@ -17,6 +17,7 @@
 }
 
 .link, .link:visited {
+    color: black;
     background-color: darkgray;
     text-decoration: unset;
     padding: 5px;

@@ -8,6 +8,11 @@ import BookmarkEdit from "./detail/BookmarkEdit";
 import BookmarkHeader from "./detail/BookmarkHeader";
 import TagsEditor from "../TagsEditor/TagsEditor";
 import TagDto from "../../../domain/dto/TagDto";
+import TimeAgo from 'javascript-time-ago'
+
+// import en from 'javascript-time-ago/locale/en.json'
+import moment from "moment";
+
 
 interface Props {
     bookmark: BookmarkDto
@@ -22,7 +27,26 @@ interface Props {
 
 const Bookmark = (props: Props) => {
 
-    const divRef = React.useRef<null | HTMLDivElement>(null)
+    const divRef = React.useRef<null | HTMLDivElement>(null);
+
+    // const rtf = new Intl.RelativeTimeFormat('en', { style:'narrow'});
+    // const elapsed = Date.now() - Date.parse(props.bookmark.created);
+    // rtf.format(elapsed, "")
+
+    const timeAgo = new TimeAgo('en-US');
+
+    // hack
+    const localFormat = "DD.MM.yyyy, HH:mm:ss";
+    
+    const createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
+    // const createdAgo = props.bookmark.created;
+
+    let updatedAgo = undefined;
+    if (props.bookmark.updated !== undefined) {
+        updatedAgo = timeAgo.format(moment(props.bookmark.updated, localFormat).toDate());;
+    }
+
+    // useEffect(() => TimeAgo.addDefaultLocale(en));
 
     useEffect(() => {
         if (props.highlightJustAdded) {
@@ -43,10 +67,10 @@ const Bookmark = (props: Props) => {
                            props.doChangeSummary(new_summary);
                        }} />}>
                 
-                <div className={cl.created}>Created: {props.bookmark.created}</div>
+                <div className={cl.created}>Created: {createdAgo}</div>
                 {
                     (props.bookmark.updated !== undefined) ? 
-                    <div className={cl.created}>Updated: {props.bookmark.updated}</div> : <></>
+                    <div className={cl.created}>Updated: {updatedAgo}</div> : <></>
                 }
 
                 <BookmarkEdit initialContents={props.bookmark.contents} 

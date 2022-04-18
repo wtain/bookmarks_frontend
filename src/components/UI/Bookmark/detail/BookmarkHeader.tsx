@@ -65,6 +65,14 @@ class BookmarkHeader extends React.Component<Props, State> {
                                     x
                         </button>
                     </span>
+                    <div style={{display: "flow", float: "right"}}>
+                        (
+                        <a href={"bookmark/" + this.props.bookmark.id} onClick={(e) => {
+                            e.stopPropagation();
+                        }}>Link</a>
+                        )
+                    </div>
+                    
                     <ContentEditable onChange={(e) => {
                                 this.setNewSummary(e.target.value)
                                 this.setChanged(true);
