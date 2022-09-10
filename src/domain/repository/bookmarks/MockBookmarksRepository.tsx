@@ -19,6 +19,12 @@ class MockBookmarksRepository implements IBookmarksRepository {
             ));
     }
 
+    async getBookmark(id: string): Promise<BookmarkDto> {
+        // todo: implement
+        await ReactHelpers.delay(300);
+        return this.bookmarks[0];
+    }
+
     public async getBookmarks(): Promise<BookmarkDto[]> {
         await ReactHelpers.delay(300);
         return this.bookmarks;

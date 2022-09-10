@@ -20,6 +20,7 @@ const AppRouter = () => {
 
     return (
         <Routes>
+            <Route path="/bookmark/:id" element={<BookmarksPage bookmarksRepository={bookmarksRepository} />} />
             <Route path="/bookmarks" element={<BookmarksPage bookmarksRepository={bookmarksRepository} />} />
             <Route path="/bookmarks/:tag" element={<BookmarksPage bookmarksRepository={bookmarksRepository} />} />
             <Route path="/tags" element={<TagsPage tagsRepository={tagsRepository} />} />
