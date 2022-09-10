@@ -1,5 +1,5 @@
 
-export const BACKEND_URL = "http://192.168.1.34:8080";
+export const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://192.168.1.34:8080";
 
 export const BOOKMARKS_ENDPOINT_BASE = BACKEND_URL + "/api/bookmarks";
 

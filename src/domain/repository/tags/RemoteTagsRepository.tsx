@@ -1,3 +1,4 @@
+import IBookmarksRepository from "./ITagsRepository";
 import axios from 'axios'
 import { TAGS_ENDPOINT_GET_ALL } from "../../../constants/backend";
 import ITagsRepository from "./ITagsRepository";
