@@ -1,0 +1,58 @@
+
+.container {
+    border-style: inset;
+    /* flex-wrap: wrap-reverse; */
+    /* display: flex; */
+    flex-flow: column wrap;
+    /* width: 278px; */
+    cursor: text;
+}
+
+.sp {
+    /* background-color: lightpink; */
+    /* display: flex; */
+    /* float: left; */
+    display: inline-block;
+    width: auto;
+}
+
+.input {
+    background-color: transparent;
+    border: 0px;
+    display: table-cell;
+    width: 100%;
+    color: white;
+}
+
+.input:focus {
+    border: 0px;
+    outline: none;
+}
+
+.tag {
+    border-radius: 5px;
+    margin: 1px;
+    width: max-content;
+    background-color: darkblue;
+    display: inline-block;
+    color: lightgray;
+    padding: 1px;
+    border-style: outset;
+    border-color: black;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.close_button_wrapper {
+    float: right;
+}
+
+.close_button {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    right: 0px;
+}

@@ -1,0 +1,21 @@
+
+.bookmark {
+    display: flex;
+}
+.bookmarkEnter {
+    /* transform: translateX(-350px); */
+    opacity: 0;
+}
+.bookmarkEnterActive {
+    /* transform: translateX(0px); */
+    opacity: 1;
+    transition: opawicity 700ms;
+}
+.bookmarkExit {
+    opacity: 1;
+}
+.bookmarkExitActive {
+    /* transform: translateX(-350px); */
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
