@@ -1,6 +1,0 @@
-[submodule "bookmarks_server"]
-	path = bookmarks_server
-	url = https://github.com/wtain/bookmarks_server.git
-[submodule "bookmarks_database"]
-	path = bookmarks_database
-	url = https://github.com/wtain/bookmarks_database.git
