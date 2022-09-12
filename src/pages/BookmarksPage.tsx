@@ -4,15 +4,19 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BookmarkForm from "../components/UI/BookmarkForm/BookmarkForm";
 import BookmarkList from "../components/UI/BookmarkList/BookmarkList";
+import Filter from "../components/UI/Filter/Filter";
 import Loading from "../components/UI/Loading/Loading";
 import Modal from "../components/UI/Modal/Modal";
+import TagCloud from "../components/UI/TagCloud/TagCloud";
 import BookmarkDto from "../domain/dto/BookmarkDto";
 import TagDto from "../domain/dto/TagDto";
 import IBookmarksRepository from "../domain/repository/bookmarks/IBookmarksRepository";
+import ITagsRepository from "../domain/repository/tags/ITagsRepository";
 import cl from './BookmarksPage.module.css'
 
 interface Props {
     bookmarksRepository: IBookmarksRepository;
+    tagsRepository: ITagsRepository;
 }
 
 const BookmarksPage = (props: Props) => {
@@ -102,6 +106,8 @@ const BookmarksPage = (props: Props) => {
             <button onClick={() => setModal(true)} className={cl.btn_add}>
                 Add...
             </button>
+
+            <Filter tagsRepository={props.tagsRepository} />
 
             {
                 loading ? 

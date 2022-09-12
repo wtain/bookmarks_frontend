@@ -28,7 +28,9 @@ RUN npm install @types/react-router-dom
 COPY . ./
 
 # start app
-ENV WDS_SOCKET_PORT=3000
+# ENV WDS_SOCKET_PORT=3000
+# https://github.com/facebook/create-react-app/issues/11897
+ENV WDS_SOCKET_PORT=0
 # In the end this one helped
 ENV WATCHPACK_POLLING=true
 ENV CHOKIDAR_USEPOLLING "true"

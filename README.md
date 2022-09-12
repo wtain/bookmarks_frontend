@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+```bash
+npm i react-test-renderer --force
+npm i @types/react-test-renderer --force
+```
+
+Or better - update dependencies:
+```
+npm i -g npm-check-updates
+ncu -u
+npm install
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
