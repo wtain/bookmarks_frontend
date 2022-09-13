@@ -1,5 +1,4 @@
 
-import React from "react";
 import BookmarkDto from "../domain/dto/BookmarkDto";
 import {v4 as uuidv4} from 'uuid';
 import TagDto from "../domain/dto/TagDto";

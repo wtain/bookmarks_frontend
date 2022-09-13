@@ -1,5 +1,5 @@
 
-import React, { MutableRefObject } from "react";
+import { MutableRefObject } from "react";
 
 const scrollToRef = (ref: MutableRefObject<null | HTMLDivElement>) => {
     if (ref.current) {

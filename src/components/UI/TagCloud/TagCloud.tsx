@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ITagsRepository from "../../../domain/repository/tags/ITagsRepository";
 import Tag from "../TagsEditor/Tag";
@@ -16,7 +16,7 @@ const TagCloud = (props: Props) => {
       [] as string[]
   )
 
-  let [loading, setLoading] = useState(false);
+  let [, setLoading] = useState(false);
 
   const loadTags = async(success: (tags: string[]) => void, error: (e: any) => void) => {
       try {

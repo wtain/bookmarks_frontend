@@ -1,5 +1,4 @@
 
-import React, { useEffect, useState } from "react";
 import ITagsRepository from "../../../domain/repository/tags/ITagsRepository";
 import TagCloud from "../TagCloud/TagCloud";
 

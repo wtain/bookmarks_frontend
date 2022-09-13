@@ -3,7 +3,7 @@ import React from "react";
 import { Navigate, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import IBookmarksRepository from "../../domain/repository/bookmarks/IBookmarksRepository";
-import MockBookmarksRepository from "../../domain/repository/bookmarks/MockBookmarksRepository";
+// import MockBookmarksRepository from "../../domain/repository/bookmarks/MockBookmarksRepository";
 import RemoteBookmarksRepository from "../../domain/repository/bookmarks/RemoteBookmarksRepository";
 import ITagsRepository from "../../domain/repository/tags/ITagsRepository";
 import RemoteTagsBookmarksRepository from "../../domain/repository/tags/RemoteTagsRepository";
