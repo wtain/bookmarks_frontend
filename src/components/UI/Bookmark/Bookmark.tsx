@@ -36,14 +36,23 @@ const Bookmark = (props: Props) => {
     const timeAgo = new TimeAgo('en-US');
 
     // hack
-    const localFormat = "DD.MM.yyyy, HH:mm:ss";
+    const localFormat = "DD.MM.YYYY, HH:mm:ss";
     
-    const createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
+    let createdAgo: any;
+    try {
+        createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
+    } catch (e: any) {
+        const fallbackFormat = "MM/DD/YYYY, h:mm:ss A";
+        createdAgo = timeAgo.format(moment(props.bookmark.created, fallbackFormat).toDate());
+    }
     // const createdAgo = props.bookmark.created;
 
     let updatedAgo = undefined;
     if (props.bookmark.updated !== undefined) {
-        updatedAgo = timeAgo.format(moment(props.bookmark.updated, localFormat).toDate());;
+        try {
+            updatedAgo = timeAgo.format(moment(props.bookmark.updated, localFormat).toDate());;
+        } catch (e: any) {
+        }
     }
 
     // useEffect(() => TimeAgo.addDefaultLocale(en));

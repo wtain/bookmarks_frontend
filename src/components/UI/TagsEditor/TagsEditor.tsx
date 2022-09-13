@@ -63,9 +63,15 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
                         className={cl.input} 
                         placeholder="Tags"
                         onKeyDown={(e) => {
-                            if (e.code === "Space" || e.code === "Tab") {
+                            if (e.code === "Space" || e.code === "Tab" || e.code === "Enter") {
                                 if (currentTag.name.trim().length > 0) {
                                     onTagAdded();
+                                    e.stopPropagation();
+                                }
+                            }
+                            if (e.code === "Backspace") {
+                                if (currentTag.name.trim().length === 0) {
+                                    props.onDelete(props.tags.length - 1);
                                     e.stopPropagation();
                                 }
                             }

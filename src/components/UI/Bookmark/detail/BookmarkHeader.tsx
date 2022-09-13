@@ -12,16 +12,20 @@ interface Props {
     onIsDoneChanged: (new_value: boolean) => void;
 }
 
+// todo: Make it functional
+
 interface State {
     new_summary: string;
     changed: boolean;
+    show_tooltip: boolean;
 }
 
 class BookmarkHeader extends React.Component<Props, State> {
 
     state: State = {
         new_summary: this.props.bookmark.summary,
-        changed: false
+        changed: false,
+        show_tooltip: false
     }
 
     setNewSummary(new_summary: string) {
@@ -58,7 +62,13 @@ class BookmarkHeader extends React.Component<Props, State> {
                     }} onChange={(e) => {
                         this.props.onIsDoneChanged(e.target.checked);
                     }} />
-                <div data-tip data-for={"registerTip" + this.props.bookmark.id} style={{display: "flow"}}>
+                {/* hack: https://stackoverflow.com/questions/71935664/reacttooltip-hide-doesnt-hide-tooltip-instantly */}
+                <div data-tip data-for={"registerTip" + this.props.bookmark.id} style={{ display: "flow" }}
+                    onMouseEnter={() => this.setState({ show_tooltip: true })}
+                    onMouseLeave={() => {
+                        this.setState({ show_tooltip: false })
+                        setTimeout(() => this.setState({ show_tooltip: true }), 50)
+                    }}>
                     <span>
                         <button className={cl.btn_remove} 
                                 onClick={() => this.props.doRemove(this.props.bookmark)}>
@@ -93,9 +103,11 @@ class BookmarkHeader extends React.Component<Props, State> {
                             }}/>
                 </div>
 
-                <ReactTooltip className={cl.id} id={"registerTip" + this.props.bookmark.id} place="left" effect="float">
-                    {this.props.bookmark.contents}
-                </ReactTooltip>
+                {this.state.show_tooltip &&
+                    <ReactTooltip className={cl.id} id={"registerTip" + this.props.bookmark.id} place="left" effect="float">
+                        {this.props.bookmark.contents}
+                    </ReactTooltip>
+                }
             </>
         )
     }
