@@ -54,7 +54,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
             inputRef.current?.focus();
         }}>
             {
-                props.tags.map((tag, i) => <Tag key={tag.id} tag={tag} onDelete={() => props.onDelete(i)} />)
+                props.tags.map((tag, i) => <Tag key={tag.id} tag={tag} onDelete={() => props.onDelete!(i)} />)
             }
             <span className={cl.sp}>
                 <input ref={inputRef}
@@ -71,7 +71,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
                             }
                             if (e.code === "Backspace") {
                                 if (currentTag.name.trim().length === 0) {
-                                    props.onDelete(props.tags.length - 1);
+                                    props.onDelete!(props.tags.length - 1);
                                     e.stopPropagation();
                                 }
                             }
