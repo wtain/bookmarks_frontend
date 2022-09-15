@@ -9,12 +9,12 @@ import TagDto from "../../../domain/dto/TagDto";
 
 interface Props {
     bookmarks: BookmarkDto[];
-    onRemoveBookmark: (bm: BookmarkDto) => void;
-    onBookmarkContentsChanged: (bm: BookmarkDto, new_contents: string) => void;
-    onBookmarkSummaryChanged: (bm: BookmarkDto, new_summary: string) => void;
-    onBookmarkTagAdded: (bm: BookmarkDto, new_tag: TagDto) => void;
-    onBookmarkTagRemoved: (bm: BookmarkDto, index: number) => void;
-    onBookmarkIsDoneChanged: (bm: BookmarkDto, new_value: boolean) => void;
+    onRemoveBookmark?: (bm: BookmarkDto) => void;
+    onBookmarkContentsChanged?: (bm: BookmarkDto, new_contents: string) => void;
+    onBookmarkSummaryChanged?: (bm: BookmarkDto, new_summary: string) => void;
+    onBookmarkTagAdded?: (bm: BookmarkDto, new_tag: TagDto) => void;
+    onBookmarkTagRemoved?: (bm: BookmarkDto, index: number) => void;
+    onBookmarkIsDoneChanged?: (bm: BookmarkDto, new_value: boolean) => void;
     newBookmarkId? :string;
 }
 
@@ -42,19 +42,19 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
                                         bookmark={bm} 
                                         doRemove={props.onRemoveBookmark}
                                         doChangeContents={(new_contents: string) => {
-                                            props.onBookmarkContentsChanged(bm, new_contents)
+                                            props.onBookmarkContentsChanged!(bm, new_contents)
                                         }}
                                         doChangeSummary={(new_summary: string) => {
-                                            props.onBookmarkSummaryChanged(bm, new_summary)
+                                            props.onBookmarkSummaryChanged!(bm, new_summary)
                                         }}
                                         doAddTag={(tag: TagDto) => {
-                                            props.onBookmarkTagAdded(bm, tag);
+                                            props.onBookmarkTagAdded!(bm, tag);
                                         }}
                                         doRemoveTag={(index: number) => {
-                                            props.onBookmarkTagRemoved(bm, index);
+                                            props.onBookmarkTagRemoved!(bm, index);
                                         }}
                                         doChangeIsDone={(new_value: boolean) => {
-                                            props.onBookmarkIsDoneChanged(bm, new_value);
+                                            props.onBookmarkIsDoneChanged!(bm, new_value);
                                         }}
                                 />
                             </CSSTransition>

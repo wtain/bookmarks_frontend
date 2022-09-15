@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bookmark renders correctly 1`] = `
+<div
+  className="bookmark"
+>
+  <div
+    className="Collapsible"
+  >
+    <span
+      aria-controls="collapsible-content-1663277045830"
+      aria-disabled={false}
+      aria-expanded={false}
+      className="Collapsible__trigger is-closed"
+      id="collapsible-trigger-1663277045830"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      style={null}
+      tabIndex={null}
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "flow",
+            "float": "left",
+          }
+        }
+        type="checkbox"
+      />
+      <div
+        data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
+        data-tip={true}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "display": "flow",
+          }
+        }
+      >
+        <span>
+          <button
+            className="btn_remove"
+            onClick={[Function]}
+          >
+            x
+          </button>
+        </span>
+        <div
+          style={
+            Object {
+              "display": "flow",
+              "float": "right",
+            }
+          }
+        >
+          (
+          <a
+            href="bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
+            onClick={[Function]}
+          >
+            Link
+          </a>
+          )
+        </div>
+        <div
+          className="summary done"
+          contentEditable={true}
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Edit tags",
+            }
+          }
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        />
+      </div>
+    </span>
+    <div
+      aria-labelledby="collapsible-trigger-1663277045830"
+      className="Collapsible__contentOuter"
+      hidden={false}
+      id="collapsible-content-1663277045830"
+      onTransitionEnd={[Function]}
+      role="region"
+      style={
+        Object {
+          "WebkitTransition": "height 400ms linear",
+          "height": 0,
+          "msTransition": "height 400ms linear",
+          "overflow": "hidden",
+          "transition": "height 400ms linear",
+        }
+      }
+    >
+      <div
+        className="Collapsible__contentInner"
+      >
+        <div
+          className="created"
+        >
+          Created: 
+          7 months ago
+        </div>
+        <div
+          className="created"
+        >
+          Updated: 
+          7 months ago
+        </div>
+        <div
+          className="contents"
+          contentEditable={true}
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Ability to edit tags for existing bookmarks
+Second line
+Third line",
+            }
+          }
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        />
+        <br />
+        <div
+          className="container tags_container"
+          onClick={[Function]}
+        >
+          <span
+            className="tag"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            Task
+          </span>
+          <span
+            className="sp"
+          >
+            <input
+              className="input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Tags"
+              value=""
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

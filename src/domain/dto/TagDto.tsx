@@ -1,6 +1,4 @@
 
-import React from "react";
-
 interface TagDto {
     name: string;
     id: string;

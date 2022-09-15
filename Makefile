@@ -6,3 +6,5 @@ start:
 	npm run start
 build-docker:
 	docker build .
+test:
+	npm run test

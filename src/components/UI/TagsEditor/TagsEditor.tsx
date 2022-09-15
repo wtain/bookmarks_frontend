@@ -7,8 +7,8 @@ import cl from './TagsEditor.module.css'
 
 interface Props {
     tags: TagDto[];
-    onTagAdded: (tag: TagDto) => void;
-    onDelete: (index: number) => void;
+    onTagAdded?: (tag: TagDto) => void;
+    onDelete?: (index: number) => void;
     containerClass?: string;
 }
 
@@ -25,7 +25,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
         let value = currentTag.name.trim()
         if (value.length > 0) {
             if (props.tags.find(t => t.name === value) === undefined) {
-                props.onTagAdded({...currentTag, name: value});                
+                props.onTagAdded!({...currentTag, name: value});                
             }
             setCurrentTag(BookmarkUtils.createNewTag());
         }
@@ -36,7 +36,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
         if (p !== -1) {
             let value = v.substring(0, p).trim();
             if (value.length > 0) {
-                props.onTagAdded({...currentTag, name: value});
+                props.onTagAdded!({...currentTag, name: value});
             }
             setCurrentTag({ ...BookmarkUtils.createNewTag(), name: v.substring(p+1) })
         } else {

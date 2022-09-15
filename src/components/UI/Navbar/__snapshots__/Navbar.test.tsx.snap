@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<div
+  className="navbar"
+>
+  <div
+    className="navBar__links"
+  >
+    <a
+      className="link"
+      href="/bookmarks"
+      onClick={[Function]}
+    >
+      Bookmarks
+    </a>
+    <a
+      className="link"
+      href="/tags"
+      onClick={[Function]}
+    >
+      Tags
+    </a>
+    <a
+      className="link"
+      href="/calendar"
+      onClick={[Function]}
+    >
+      Calendar
+    </a>
+  </div>
+</div>
+`;

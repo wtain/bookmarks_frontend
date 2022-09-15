@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarPage renders correctly hidden 1`] = `
+<form
+  className="bookmark_form form_invalid"
+>
+  <input
+    className="input"
+    onChange={[Function]}
+    placeholder="Summary"
+    value=""
+  />
+  <div
+    className="textarea_wrapper"
+  >
+    <textarea
+      className="textarea"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Contents"
+      rows={3}
+      value=""
+    />
+  </div>
+  <div
+    className="container tags_container"
+    onClick={[Function]}
+  >
+    <span
+      className="sp"
+    >
+      <input
+        className="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Tags"
+        value=""
+      />
+    </span>
+  </div>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Add
+  </button>
+</form>
+`;
+
+exports[`CalendarPage renders correctly visible 1`] = `
+<form
+  className="bookmark_form form_invalid"
+>
+  <input
+    className="input"
+    onChange={[Function]}
+    placeholder="Summary"
+    value=""
+  />
+  <div
+    className="textarea_wrapper"
+  >
+    <textarea
+      className="textarea"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Contents"
+      rows={3}
+      value=""
+    />
+  </div>
+  <div
+    className="container tags_container"
+    onClick={[Function]}
+  >
+    <span
+      className="sp"
+    >
+      <input
+        className="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Tags"
+        value=""
+      />
+    </span>
+  </div>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Add
+  </button>
+</form>
+`;

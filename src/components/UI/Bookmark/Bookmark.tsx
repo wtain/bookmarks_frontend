@@ -16,12 +16,12 @@ import moment from "moment";
 
 interface Props {
     bookmark: BookmarkDto
-    doRemove: (bm: BookmarkDto) => void;
-    doChangeContents: (new_contents: string) => void;
-    doChangeSummary: (new_summary: string) => void;
-    doAddTag: (tag: TagDto) => void;
-    doRemoveTag: (index: number) => void;
-    doChangeIsDone: (new_value: boolean) => void;
+    doRemove?: (bm: BookmarkDto) => void;
+    doChangeContents?: (new_contents: string) => void;
+    doChangeSummary?: (new_summary: string) => void;
+    doAddTag?: (tag: TagDto) => void;
+    doRemoveTag?: (index: number) => void;
+    doChangeIsDone?: (new_value: boolean) => void;
     highlightJustAdded?: boolean;
 }
 
@@ -37,7 +37,7 @@ const Bookmark = (props: Props) => {
 
     // hack
     const localFormat = "DD.MM.YYYY, HH:mm:ss";
-    
+
     let createdAgo: any;
     try {
         createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
@@ -68,12 +68,16 @@ const Bookmark = (props: Props) => {
         <div className={cl.bookmark} ref={divRef}>
             <Collapsible open={props.highlightJustAdded!} 
                          trigger={<BookmarkHeader bookmark={props.bookmark} 
-                         doRemove={props.doRemove}
-                         onIsDoneChanged={(new_value: boolean) => {
-                             props.doChangeIsDone(new_value);
+                         doRemove={props.doRemove!}
+                             onIsDoneChanged={(new_value: boolean) => {
+                                 if (props.doChangeIsDone) {
+                                     props.doChangeIsDone(new_value);
+                                 }
                          }}
-                         onAcceptEdit={(new_summary: string) => {
-                           props.doChangeSummary(new_summary);
+                             onAcceptEdit={(new_summary: string) => {
+                                 if (props.doChangeSummary) {
+                                     props.doChangeSummary(new_summary);
+                                 }
                        }} />}>
                 
                 <div className={cl.created}>Created: {createdAgo}</div>
@@ -83,18 +87,24 @@ const Bookmark = (props: Props) => {
                 }
 
                 <BookmarkEdit initialContents={props.bookmark.contents} 
-                            onAcceptEdit={(new_contents: string) => {
-                                props.doChangeContents(new_contents);
+                    onAcceptEdit={(new_contents: string) => {
+                                if (props.doChangeContents) {
+                                    props.doChangeContents(new_contents);
+                                }
                             }} />
                 <br />
                 <TagsEditor 
                     containerClass={cl.tags_container}
                     tags={props.bookmark.tags} 
                     onTagAdded={(tag: TagDto) => {
-                        props.doAddTag(tag);
+                        if (props.doAddTag) {
+                            props.doAddTag(tag);
+                        }
                     }} 
                     onDelete={(index: number) => {
-                        props.doRemoveTag(index);
+                        if (props.doRemoveTag) {
+                            props.doRemoveTag(index);
+                        }
                     }} />
             </Collapsible>
         </div>

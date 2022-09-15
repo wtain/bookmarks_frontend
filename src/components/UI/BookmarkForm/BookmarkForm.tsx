@@ -7,9 +7,9 @@ import TagDto from "../../../domain/dto/TagDto";
 import BookmarkUtils from "../../../utils/BookmarkUtils";
 
 interface Props {
-    create: (bookmark: BookmarkDto) => void;
+    create?: (bookmark: BookmarkDto) => void;
     visibility: boolean;
-    validation: (bookmark: BookmarkDto) => boolean;
+    validation?: (bookmark: BookmarkDto) => boolean;
 }
 
 const BookmarkForm: React.FC<Props> = (props: Props) => {
@@ -34,7 +34,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
 
     const updateBookmark = (bookmark: BookmarkDto) => {
         setBookmark(bookmark);
-        setValid(props.validation(bookmark));
+        setValid(props.validation!(bookmark));
     }
 
     const doAddBookmark = () => {
@@ -42,7 +42,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
         if (!valid) {
             return;
         }
-        props.create(newBookmark);
+        props.create!(newBookmark);
         setBookmark(EmptyBookmark);
         setValid(false);
     }
