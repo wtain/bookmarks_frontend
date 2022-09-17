@@ -4,19 +4,32 @@ import axios from 'axios'
 import { BOOKMARKS_ENDPOINT_ADD, BOOKMARKS_ENDPOINT_BASE, BOOKMARKS_ENDPOINT_DELETE, BOOKMARKS_ENDPOINT_GET_ALL, BOOKMARKS_ENDPOINT_GET_BY_TAG, BOOKMARKS_ENDPOINT_UPDATE } from "../../../constants/backend";
 
 class RemoteBookmarksRepository implements IBookmarksRepository {
+
+    private static convertBookmark(bm: BookmarkDto) {
+        return {
+            ...bm,
+            created: new Date(bm.created),
+            updated: bm.updated ? new Date(bm.updated) : undefined
+        };
+    }
+
+    private static convertBookmarks(data: BookmarkDto[]) {
+        return data.map(RemoteBookmarksRepository.convertBookmark);
+    }
+
     async getBookmarks(): Promise<BookmarkDto[]> {
         return await axios.get<BookmarkDto[]>(BOOKMARKS_ENDPOINT_GET_ALL)
-            .then((response) => response.data);
+            .then((response) => RemoteBookmarksRepository.convertBookmarks(response.data));
     }
 
     async getBookmark(id: string): Promise<BookmarkDto> {
         return await axios.get<BookmarkDto>(BOOKMARKS_ENDPOINT_BASE + "/" + id)
-            .then((response) => response.data);
+            .then((response) => RemoteBookmarksRepository.convertBookmark(response.data));
     }
 
     async getBookmarksByTag(tag: string): Promise<BookmarkDto[]> {
         return await axios.get<BookmarkDto[]>(BOOKMARKS_ENDPOINT_GET_BY_TAG + tag)
-            .then((response) => response.data);
+            .then((response) => RemoteBookmarksRepository.convertBookmarks(response.data));
     }
 
     async addBookmark(bookmark: BookmarkDto) {

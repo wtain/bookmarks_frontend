@@ -8,10 +8,12 @@ import BookmarkEdit from "./detail/BookmarkEdit";
 import BookmarkHeader from "./detail/BookmarkHeader";
 import TagsEditor from "../TagsEditor/TagsEditor";
 import TagDto from "../../../domain/dto/TagDto";
-import TimeAgo from 'javascript-time-ago'
+// todo: remove TimeAgo dependency
+// import TimeAgo from 'javascript-time-ago'
 
 // import en from 'javascript-time-ago/locale/en.json'
-import moment from "moment";
+// import moment from "moment";
+import { parseDateTimeFromMongo } from "../../../utils/DateTimeUtils";
 
 
 interface Props {
@@ -33,27 +35,29 @@ const Bookmark = (props: Props) => {
     // const elapsed = Date.now() - Date.parse(props.bookmark.created);
     // rtf.format(elapsed, "")
 
-    const timeAgo = new TimeAgo('en-US');
+    
+    const createdAgo = parseDateTimeFromMongo(props.bookmark.created);
+    const updatedAgo = parseDateTimeFromMongo(props.bookmark.updated);
 
     // hack
-    const localFormat = "DD.MM.YYYY, HH:mm:ss";
+    // const localFormat = "DD.MM.YYYY, HH:mm:ss";
 
-    let createdAgo: any;
-    try {
-        createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
-    } catch (e: any) {
-        const fallbackFormat = "MM/DD/YYYY, h:mm:ss A";
-        createdAgo = timeAgo.format(moment(props.bookmark.created, fallbackFormat).toDate());
-    }
-    // const createdAgo = props.bookmark.created;
+    // let createdAgo: any;
+    // try {
+    //     createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
+    // } catch (e: any) {
+    //     const fallbackFormat = "MM/DD/YYYY, h:mm:ss A";
+    //     createdAgo = timeAgo.format(moment(props.bookmark.created, fallbackFormat).toDate());
+    // }
+    // // const createdAgo = props.bookmark.created;
 
-    let updatedAgo = undefined;
-    if (props.bookmark.updated !== undefined) {
-        try {
-            updatedAgo = timeAgo.format(moment(props.bookmark.updated, localFormat).toDate());;
-        } catch (e: any) {
-        }
-    }
+    // let updatedAgo = undefined;
+    // if (props.bookmark.updated !== undefined) {
+    //     try {
+    //         updatedAgo = timeAgo.format(moment(props.bookmark.updated, localFormat).toDate());;
+    //     } catch (e: any) {
+    //     }
+    // }
 
     // useEffect(() => TimeAgo.addDefaultLocale(en));
 

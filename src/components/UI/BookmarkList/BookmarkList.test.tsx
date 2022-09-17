@@ -6,10 +6,11 @@ import en from 'javascript-time-ago/locale/en.json';
 import BookmarkDto from '../../../domain/dto/BookmarkDto';
 
 TimeAgo.addDefaultLocale(en);
+jest
+  .useFakeTimers()
+  .setSystemTime(new Date('2022-09-17T13:47:36.000Z'));
 
 function run_test(bookmarks: BookmarkDto[]) {
-
-  Date.now = jest.fn(() => 1663277045830);
 
   const tree = renderer
   .create(
@@ -27,7 +28,7 @@ it('BookmarkList renders correctly', () => {
       summary: 'Tests',
       contents: 'For UI and server',
       id: '23f69d44-2080-430e-a53d-794689a78754',
-      created: '06.02.2022, 20:37:07',
+      created: new Date("2022-02-06T20:37:07.000Z"),
       tags: [
         { name: 'UI', id: 'c7bd914c-d9ff-49ea-822e-092e95252330' },
         { name: 'Server', id: '59a6fb07-46b0-4e24-9a99-ab3e7a0d4509' },
@@ -41,13 +42,13 @@ it('BookmarkList renders correctly', () => {
         }
       ],
       isDone: false,
-      updated: '13.02.2022, 16:26:45'
+      updated: new Date("2022-02-13T16:26:45.000Z")
     },
     {
       summary: 'Bookmark - reminder',
       contents: 'Reminder/due date property for bookmark',
       id: '633a089a-1076-4904-8650-4160db0549a9',
-      created: '13.02.2022, 16:21:02',
+      created: new Date("2022-02-13T16:21:02.000Z"),
       tags: [
         {
           name: 'Functionality',
@@ -60,10 +61,10 @@ it('BookmarkList renders correctly', () => {
       summary: 'Edit tags',
       contents: 'Ability to edit tags for existing bookmarks',
       id: 'ab2809a7-de53-4494-8ece-2aeecadce254',
-      created: '30.01.2022, 20:48:19',
+      created: new Date("2022-01-30T20:48:19.000Z"),
       tags: [ { name: 'Task', id: '4b68bb47-c561-4958-8682-ea84ca39773d' } ],
       isDone: true,
-      updated: '13.02.2022, 14:13:09'
+      updated: new Date("2022-02-13T14:13:09.000Z")
     }
   ]
 

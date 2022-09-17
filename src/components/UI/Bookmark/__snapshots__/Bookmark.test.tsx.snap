@@ -8,11 +8,11 @@ exports[`Bookmark renders correctly 1`] = `
     className="Collapsible"
   >
     <span
-      aria-controls="collapsible-content-1663277045830"
+      aria-controls="collapsible-content-1663422456000"
       aria-disabled={false}
       aria-expanded={false}
       className="Collapsible__trigger is-closed"
-      id="collapsible-trigger-1663277045830"
+      id="collapsible-trigger-1663422456000"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
@@ -85,10 +85,10 @@ exports[`Bookmark renders correctly 1`] = `
       </div>
     </span>
     <div
-      aria-labelledby="collapsible-trigger-1663277045830"
+      aria-labelledby="collapsible-trigger-1663422456000"
       className="Collapsible__contentOuter"
       hidden={false}
-      id="collapsible-content-1663277045830"
+      id="collapsible-content-1663422456000"
       onTransitionEnd={[Function]}
       role="region"
       style={
@@ -108,7 +108,7 @@ exports[`Bookmark renders correctly 1`] = `
           className="created"
         >
           Created: 
-          7 months ago
+          8 months ago
         </div>
         <div
           className="created"

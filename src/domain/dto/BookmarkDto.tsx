@@ -4,8 +4,8 @@ import TagDto from "./TagDto";
 interface BookmarkDto {
     summary: string;
     contents: string;
-    created: string;
-    updated?: string;
+    created: Date;
+    updated?: Date;
     id: string;
     tags: TagDto[];
     isDone: boolean;

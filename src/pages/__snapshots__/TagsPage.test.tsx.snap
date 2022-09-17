@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagsPage correctly 1`] = `
-<span
-  className="tag"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
-  (Clear)
-</span>
-`;
-
 exports[`TagsPage renders correctly 1`] = `
 <span
   className="tag"
