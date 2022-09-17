@@ -1,5 +1,4 @@
 
-import React from "react";
 import BookmarkDto from "../../dto/BookmarkDto";
 
 interface IBookmarksRepository {
@@ -8,6 +7,8 @@ interface IBookmarksRepository {
     getBookmark: (id: string) => Promise<BookmarkDto>;
 
     getBookmarksByTag: (tag: string) => Promise<BookmarkDto[]>;
+
+    getBookmarksByDate: (date: Date) => Promise<BookmarkDto[]>;
 
     addBookmark: (bookmark: BookmarkDto) => Promise<void>;
 

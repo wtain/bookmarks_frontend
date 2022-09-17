@@ -16,7 +16,7 @@ const CalendarPage = () => {
         <div className={cl.main_div}>
             {/* <Calendar localizer={localizer} /> */}
             <Calendar onChange={(date: Date) => {
-                navigate("/date/" + date)
+                navigate("/date/" + date.toISOString())
             }} />
         </div>
     )

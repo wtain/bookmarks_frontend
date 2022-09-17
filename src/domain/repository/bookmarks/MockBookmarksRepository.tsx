@@ -1,5 +1,4 @@
 
-import React from "react";
 import BookmarkDto from "../../dto/BookmarkDto";
 import IBookmarksRepository from "./IBookmarksRepository";
 import ReactHelpers from "../../../utils/ReactHelpers"
@@ -18,7 +17,7 @@ class MockBookmarksRepository implements IBookmarksRepository {
                 })
             ));
     }
-
+    
     async getBookmark(id: string): Promise<BookmarkDto> {
         // todo: implement
         await ReactHelpers.delay(300);
@@ -31,6 +30,11 @@ class MockBookmarksRepository implements IBookmarksRepository {
     }
 
     async getBookmarksByTag(tag: string): Promise<BookmarkDto[]> {
+        await ReactHelpers.delay(300);
+        return this.bookmarks; // todo: implement
+    }
+
+    async getBookmarksByDate(date: Date): Promise<BookmarkDto[]> {
         await ReactHelpers.delay(300);
         return this.bookmarks; // todo: implement
     }

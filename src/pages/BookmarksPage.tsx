@@ -37,7 +37,8 @@ const BookmarksPage = (props: Props) => {
             return [await props.bookmarksRepository.getBookmark(id)];
         }
         if (date) {
-            // todo: add getBookmarksByDate + to server
+            const bookmarksDate = new Date(date);
+            return await props.bookmarksRepository.getBookmarksByDate(bookmarksDate);
         }
         return await (tag ? 
                 props.bookmarksRepository.getBookmarksByTag(tag) : 
