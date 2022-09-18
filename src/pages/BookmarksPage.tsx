@@ -20,17 +20,17 @@ interface Props {
 
 const BookmarksPage = (props: Props) => {
 
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useState<boolean>(false);
 
     const { tag, id, date } = useParams();
 
-    let [newBookmarkId, setNewBookmarkId] = useState("");
+    let [newBookmarkId, setNewBookmarkId] = useState<string | undefined>("");
 
-    let [bookmarks, setBookmarks] = useState(
-        [] as BookmarkDto[]
+    let [bookmarks, setBookmarks] = useState<BookmarkDto[]>(
+        []
     )
 
-    let [loading, setLoading] = useState(false);
+    let [loading, setLoading] = useState<Boolean>(false);
 
     const getData = async (): Promise<BookmarkDto[]> => {
         if (id) {

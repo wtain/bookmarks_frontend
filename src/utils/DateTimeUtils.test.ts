@@ -1,5 +1,5 @@
 import TimeAgo from "javascript-time-ago";
-import { addMonths, parseDateTimeFromMongo } from "./DateTimeUtils";
+import { addOneMonth, parseDateTimeFromMongo, firstDayOfMonth, getDatePortion, datesEqual } from './DateTimeUtils';
 import en from 'javascript-time-ago/locale/en.json';
 
 TimeAgo.addDefaultLocale(en);
@@ -21,16 +21,46 @@ it('DateTimeUtils.parseDateTimeFromMongo should accept undefined', () => {
 
 
 it('DateTimeUtils.addMonths should add month', () => {
-  const result = addMonths(new Date("2022-02-01")).toISOString();
+  const result = addOneMonth(new Date("2022-02-01")).toISOString();
   expect(result).toBe(new Date("2022-03-01").toISOString());
 });
 
 it('DateTimeUtils.addMonths should add month adjusting day of month', () => {
-  const result = addMonths(new Date("2022-01-30")).toISOString();
+  const result = addOneMonth(new Date("2022-01-30")).toISOString();
   expect(result).toBe(new Date("2022-03-02").toISOString());
 });
 
 it('DateTimeUtils.addMonths should add month spilling thru year', () => {
-  const result = addMonths(new Date("2022-12-30")).toISOString();
+  const result = addOneMonth(new Date("2022-12-30")).toISOString();
   expect(result).toBe(new Date("2023-01-30").toISOString());
+});
+
+
+it('DateTimeUtils.firstDayOfMonth should return first day of month', () => {
+  const result = firstDayOfMonth(new Date("2022-02-15")).toISOString();
+  expect(result).toBe(new Date("2022-02-01").toISOString());
+});
+
+
+it('DateTimeUtils.getDatePortion should extract date from timestamp - 1', () => {
+  const result = getDatePortion(new Date("2022-09-13T00:00:00.000Z"));
+  expect(result).toBe("2022-09-13");
+});
+
+it('DateTimeUtils.getDatePortion should extract date from timestamp - 2', () => {
+  const result = getDatePortion(new Date("2022-09-13T22:00:00.000Z"));
+  expect(result).toBe("2022-09-13");
+});
+
+
+it('DateTimeUtils.datesEqual should return true for equal dates', () => {
+  const result = datesEqual(new Date("2022-09-13T22:00:00.000Z"),
+                            new Date("2022-09-13T00:00:00.000Z"));
+  expect(result).toBeTruthy();
+});
+
+it('DateTimeUtils.datesEqual should return false for different dates', () => {
+  const result = datesEqual(new Date("2022-09-14T22:00:00.000Z"),
+                            new Date("2022-09-13T00:00:00.000Z"));
+  expect(result).toBeFalsy();
 });

@@ -8,11 +8,13 @@ import RemoteTagsBookmarksRepository from "../../domain/repository/tags/RemoteTa
 import BookmarksPage from "../../pages/BookmarksPage";
 import CalendarPage from "../../pages/CalendarPage";
 import TagsPage from "../../pages/TagsPage";
+import RemoteDatesRepository from '../../domain/repository/dates/RemoteDatesRepository';
 
 const AppRouter = () => {
 
     const bookmarksRepository: IBookmarksRepository = new RemoteBookmarksRepository();
     const tagsRepository: ITagsRepository = new RemoteTagsBookmarksRepository();
+    const datesRepository = new RemoteDatesRepository();
 
     return (
         <Routes>
@@ -21,7 +23,7 @@ const AppRouter = () => {
             <Route path="/bookmarks/:tag" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/date/:date" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/tags" element={<TagsPage tagsRepository={tagsRepository} />} />
-            <Route path="/calendar" element={<CalendarPage />} />
+            <Route path="/calendar" element={<CalendarPage datesRepository={datesRepository} />} />
             <Route path="/" element={<Navigate to="/bookmarks" />} />
         </Routes>
     )
