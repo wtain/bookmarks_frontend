@@ -1,6 +1,4 @@
 
-import React from "react";
-
 interface ITagsRepository {
     getTags: () => Promise<string[]>;
 }

@@ -1,5 +1,5 @@
 import TimeAgo from "javascript-time-ago";
-import { parseDateTimeFromMongo } from "./DateTimeUtils";
+import { addMonths, parseDateTimeFromMongo } from "./DateTimeUtils";
 import en from 'javascript-time-ago/locale/en.json';
 
 TimeAgo.addDefaultLocale(en);
@@ -17,4 +17,20 @@ it('DateTimeUtils.parseDateTimeFromMongo should convert ISODate from MongoDB', (
 it('DateTimeUtils.parseDateTimeFromMongo should accept undefined', () => {
   const result = parseDateTimeFromMongo(undefined);
   expect(result).toBeUndefined();
+});
+
+
+it('DateTimeUtils.addMonths should add month', () => {
+  const result = addMonths(new Date("2022-02-01")).toISOString();
+  expect(result).toBe(new Date("2022-03-01").toISOString());
+});
+
+it('DateTimeUtils.addMonths should add month adjusting day of month', () => {
+  const result = addMonths(new Date("2022-01-30")).toISOString();
+  expect(result).toBe(new Date("2022-03-02").toISOString());
+});
+
+it('DateTimeUtils.addMonths should add month spilling thru year', () => {
+  const result = addMonths(new Date("2022-12-30")).toISOString();
+  expect(result).toBe(new Date("2023-01-30").toISOString());
 });

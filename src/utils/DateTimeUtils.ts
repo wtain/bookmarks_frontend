@@ -16,3 +16,9 @@ export function parseDateTimeFromMongo(datetime: Date | undefined) {
   // console.log("*** DEBUG = moment: " + moment(datetime.toISOString()));
   return moment(datetime.toISOString()).fromNow();
 }
+
+export function addMonths(date: Date): Date {
+  let result = new Date(date);
+  result.setMonth(result.getMonth() + 1)
+  return result;
+}

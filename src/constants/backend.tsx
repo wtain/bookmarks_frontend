@@ -18,3 +18,7 @@ export const BOOKMARKS_ENDPOINT_ADD = BOOKMARKS_ENDPOINT_BASE + "/add";
 export const TAGS_ENDPOINT_BASE = BACKEND_URL + "/api/tags";
 
 export const TAGS_ENDPOINT_GET_ALL = TAGS_ENDPOINT_BASE;
+
+export const DATES_ENDPOINT_BASE = BACKEND_URL + "/api/dates";
+
+export const DATES_ENDPOINT_RANGE = DATES_ENDPOINT_BASE + "/range/";

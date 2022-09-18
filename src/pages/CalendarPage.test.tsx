@@ -1,6 +1,13 @@
+import TimeAgo from 'javascript-time-ago';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import CalendarPage from './CalendarPage';
+import en from 'javascript-time-ago/locale/en.json';
+
+TimeAgo.addDefaultLocale(en);
+jest
+  .useFakeTimers()
+  .setSystemTime(new Date('2022-09-17T13:47:36.000Z'));
 
 it('CalendarPage renders correctly', () => {
   const tree = renderer
