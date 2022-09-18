@@ -9,6 +9,7 @@ import BookmarksPage from "../../pages/BookmarksPage";
 import CalendarPage from "../../pages/CalendarPage";
 import TagsPage from "../../pages/TagsPage";
 import RemoteDatesRepository from '../../domain/repository/dates/RemoteDatesRepository';
+import BookmarkPage from "../../pages/BookmarkPage";
 
 const AppRouter = () => {
 
@@ -18,7 +19,7 @@ const AppRouter = () => {
 
     return (
         <Routes>
-            <Route path="/bookmark/:id" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
+            <Route path="/bookmark/:bookmarkId" element={<BookmarkPage bookmarksRepository={bookmarksRepository} />} />
             <Route path="/bookmarks" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/bookmarks/:tag" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/date/:date" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />

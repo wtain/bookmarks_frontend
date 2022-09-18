@@ -25,6 +25,7 @@ interface Props {
     doRemoveTag?: (index: number) => void;
     doChangeIsDone?: (new_value: boolean) => void;
     highlightJustAdded?: boolean;
+    showExpanded?: boolean;
 }
 
 const Bookmark = (props: Props) => {
@@ -67,10 +68,10 @@ const Bookmark = (props: Props) => {
         }
     }, [props.highlightJustAdded])
 
-    
+    // todo: Make it possible to set it as non-collapsible (See BookmarkPage)
     return (
         <div className={cl.bookmark} ref={divRef}>
-            <Collapsible open={props.highlightJustAdded!} 
+            <Collapsible open={props.highlightJustAdded! || props.showExpanded!} 
                          trigger={<BookmarkHeader bookmark={props.bookmark} 
                          doRemove={props.doRemove!}
                              onIsDoneChanged={(new_value: boolean) => {
