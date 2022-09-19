@@ -10,6 +10,7 @@ interface Props {
     doRemove: (bm: BookmarkDto) => void;
     onAcceptEdit: (new_summary: string) => void;
     onIsDoneChanged: (new_value: boolean) => void;
+    showSummaryPreview?: boolean;
 }
 
 // todo: Make it functional
@@ -21,6 +22,23 @@ interface State {
 }
 
 class BookmarkHeader extends React.Component<Props, State> {
+
+    private briefSummary: string;
+
+    constructor(props: Props) {
+        super(props);
+        this.briefSummary = "";
+        if (this.props.showSummaryPreview) {
+            this.briefSummary = this.truncateContents();
+        }
+    }
+
+    truncateContents(): string {
+        return this.props.bookmark.contents
+            .replaceAll('\n', '')
+            .replaceAll('\r', '')
+            .substring(0, 60) + "...";
+    }
 
     state: State = {
         new_summary: this.props.bookmark.summary,
@@ -75,7 +93,12 @@ class BookmarkHeader extends React.Component<Props, State> {
                                     x
                         </button>
                     </span>
-                    <div style={{display: "flow", float: "right"}}>
+                    <div style={{ display: "flow", float: "right" }}>
+                        <span style={{color: "GrayText"}}>
+                        {
+                            this.props.showSummaryPreview ? this.briefSummary : ""
+                        }
+                        </span>
                         (
                         <a href={"bookmark/" + this.props.bookmark.id} onClick={(e) => {
                             e.stopPropagation();
@@ -100,7 +123,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                                 if (e.code === "Escape") {
                                     this.onCancel();
                                 }
-                            }}/>
+                        }} />
                 </div>
 
                 {this.state.show_tooltip &&

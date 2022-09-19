@@ -64,6 +64,15 @@ exports[`BookmarkList renders correctly 1`] = `
                   }
                 }
               >
+                <span
+                  style={
+                    Object {
+                      "color": "GrayText",
+                    }
+                  }
+                >
+                  For UI and server...
+                </span>
                 (
                 <a
                   href="bookmark/23f69d44-2080-430e-a53d-794689a78754"
@@ -248,6 +257,15 @@ exports[`BookmarkList renders correctly 1`] = `
                   }
                 }
               >
+                <span
+                  style={
+                    Object {
+                      "color": "GrayText",
+                    }
+                  }
+                >
+                  Reminder/due date property for bookmark...
+                </span>
                 (
                 <a
                   href="bookmark/633a089a-1076-4904-8650-4160db0549a9"
@@ -402,6 +420,15 @@ exports[`BookmarkList renders correctly 1`] = `
                   }
                 }
               >
+                <span
+                  style={
+                    Object {
+                      "color": "GrayText",
+                    }
+                  }
+                >
+                  Ability to edit tags for existing bookmarks...
+                </span>
                 (
                 <a
                   href="bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"

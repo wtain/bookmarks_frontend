@@ -58,6 +58,15 @@ exports[`Bookmark renders correctly 1`] = `
             }
           }
         >
+          <span
+            style={
+              Object {
+                "color": "GrayText",
+              }
+            }
+          >
+            Ability to edit tags for existing bookmarksSecond lineThird ...
+          </span>
           (
           <a
             href="bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"

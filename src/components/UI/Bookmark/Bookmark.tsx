@@ -68,11 +68,17 @@ const Bookmark = (props: Props) => {
         }
     }, [props.highlightJustAdded])
 
+    const showExpanded = props.highlightJustAdded! || props.showExpanded!;
+    const showSummaryPreview = !showExpanded;
+
+    // todo: Read the state of Collapsible to pass it to the BookmarkHeader
+
     // todo: Make it possible to set it as non-collapsible (See BookmarkPage)
     return (
         <div className={cl.bookmark} ref={divRef}>
-            <Collapsible open={props.highlightJustAdded! || props.showExpanded!} 
-                         trigger={<BookmarkHeader bookmark={props.bookmark} 
+            <Collapsible open={showExpanded} 
+                trigger={<BookmarkHeader bookmark={props.bookmark} 
+                showSummaryPreview={showSummaryPreview}
                          doRemove={props.doRemove!}
                              onIsDoneChanged={(new_value: boolean) => {
                                  if (props.doChangeIsDone) {
