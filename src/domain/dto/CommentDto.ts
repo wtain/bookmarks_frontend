@@ -1,8 +1,6 @@
+import BaseEntity from '../repository/BaseEntity';
 
-interface CommentDto {
-  created: Date;
-  updated?: Date;
-  id: string;
+interface CommentDto extends BaseEntity {
   bookmarkId: string;
   contents: string;
 }
