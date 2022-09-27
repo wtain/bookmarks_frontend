@@ -1,8 +1,10 @@
 import CommentDto from "../../dto/CommentDto";
 import IEntityRepository from '../IEntityRepository';
 
-interface ICommentsRepository extends IEntityRepository<CommentDto> {
-  getComments: () => Promise<CommentDto[]>;
+// extends IEntityRepository<CommentDto>
+interface ICommentsRepository {
+  // bookmarkId: string
+  getComments: (bookmarkId: string) => Promise<CommentDto[]>;
   
   addComment: (comment: CommentDto) => Promise<CommentDto>;
 

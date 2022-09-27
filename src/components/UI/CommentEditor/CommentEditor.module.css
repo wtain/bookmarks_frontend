@@ -1,0 +1,25 @@
+
+/* Copied from bookmark form */
+.textarea {
+    /* width: calc(100%-30px); */
+    /* max-width: 100%; */
+    width: 95%;
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 5ex;
+    max-height: 30ex;
+    background: transparent;
+    border: 1px solid teal;
+    /* margin: 5px 5px 5px 5px; */
+    /* padding: 5px 5px 5px 5px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 5px 10px;
+    height: 10ex;
+    color: white;
+}
+
+.textarea_wrapper {
+    width: 95%;
+}

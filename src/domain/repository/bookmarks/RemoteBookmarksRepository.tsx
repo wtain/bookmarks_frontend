@@ -42,6 +42,8 @@ class RemoteBookmarksRepository implements IBookmarksRepository {
     }
 
     async removeBookmark(bookmark: BookmarkDto) {
+        // todo: return value
+        // todo: cascade delete
         await axios.delete(BOOKMARKS_ENDPOINT_DELETE + bookmark.id);
     }
 

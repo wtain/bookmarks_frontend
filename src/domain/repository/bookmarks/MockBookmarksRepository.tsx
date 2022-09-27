@@ -44,7 +44,7 @@ class MockBookmarksRepository implements IBookmarksRepository {
     }
 
     public async removeBookmark(bookmark: BookmarkDto) {
-        this.bookmarks = this.bookmarks.filter(b => b.id != bookmark.id);
+        this.bookmarks = this.bookmarks.filter(b => b.id !== bookmark.id);
     }
 
     public async editBookmark(bookmark: BookmarkDto) {
