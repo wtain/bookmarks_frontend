@@ -74,14 +74,20 @@ class BookmarkHeader extends React.Component<Props, State> {
 
         return (
             <>
-                <input type="checkbox" checked={this.props.bookmark.isDone} style={{display: "flow", float: "left"}} 
-                    onClick={(e) => {
-                        e.stopPropagation();
-                    }} onChange={(e) => {
-                        this.props.onIsDoneChanged(e.target.checked);
-                    }} />
+                <input type="checkbox"
+                    checked={this.props.bookmark.isDone}
+                    className={cl.done_checkbox} 
+                    onClick={
+                        (e) => {
+                            e.stopPropagation();
+                        }}
+                    onChange={
+                        (e) => {
+                            this.props.onIsDoneChanged(e.target.checked);
+                        }} />
                 {/* hack: https://stackoverflow.com/questions/71935664/reacttooltip-hide-doesnt-hide-tooltip-instantly */}
-                <div data-tip data-for={"registerTip" + this.props.bookmark.id} style={{ display: "flow" }}
+                <div data-tip data-for={"registerTip" + this.props.bookmark.id}
+                    className={cl.header_div} 
                     onMouseEnter={() => this.setState({ show_tooltip: true })}
                     onMouseLeave={() => {
                         this.setState({ show_tooltip: false })
@@ -93,8 +99,12 @@ class BookmarkHeader extends React.Component<Props, State> {
                                     x
                         </button>
                     </span>
-                    <div style={{ display: "flow", float: "right" }}>
-                        <span style={{color: "GrayText"}}>
+                    <div 
+                        className={cl.summary_preview}
+                    >
+                        <span
+                            className={cl.summary_preview_text}
+                        >
                         {
                             this.props.showSummaryPreview ? this.briefSummary : ""
                         }
@@ -127,7 +137,10 @@ class BookmarkHeader extends React.Component<Props, State> {
                 </div>
 
                 {this.state.show_tooltip &&
-                    <ReactTooltip className={cl.id} id={"registerTip" + this.props.bookmark.id} place="left" effect="float">
+                    <ReactTooltip className={cl.id}
+                        id={"registerTip" + this.props.bookmark.id}
+                        place="left"
+                        effect="float">
                         {this.props.bookmark.contents}
                     </ReactTooltip>
                 }

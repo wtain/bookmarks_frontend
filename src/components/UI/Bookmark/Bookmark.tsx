@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import BookmarkDto from "../../../domain/dto/BookmarkDto";
 import cl from './Bookmark.module.css'
 import Collapsible from 'react-collapsible';
@@ -26,6 +26,8 @@ interface Props {
     doChangeIsDone?: (new_value: boolean) => void;
     highlightJustAdded?: boolean;
     showExpanded?: boolean;
+    showPreview?: boolean;
+    collapsible?: boolean;
 }
 
 const Bookmark = (props: Props) => {
@@ -69,28 +71,36 @@ const Bookmark = (props: Props) => {
     }, [props.highlightJustAdded])
 
     const showExpanded = props.highlightJustAdded! || props.showExpanded!;
-    const showSummaryPreview = !showExpanded;
+
+    // const [showSummaryPreview, setShowSummaryPreview] = useState(!showExpanded);
+
+    // const showSummaryPreview = !showExpanded;
 
     // todo: Read the state of Collapsible to pass it to the BookmarkHeader
 
     // todo: Make it possible to set it as non-collapsible (See BookmarkPage)
-    return (
-        <div className={cl.bookmark} ref={divRef}>
-            <Collapsible open={showExpanded} 
-                trigger={<BookmarkHeader bookmark={props.bookmark} 
-                showSummaryPreview={showSummaryPreview}
-                         doRemove={props.doRemove!}
-                             onIsDoneChanged={(new_value: boolean) => {
-                                 if (props.doChangeIsDone) {
-                                     props.doChangeIsDone(new_value);
-                                 }
-                         }}
-                             onAcceptEdit={(new_summary: string) => {
-                                 if (props.doChangeSummary) {
-                                     props.doChangeSummary(new_summary);
-                                 }
-                       }} />}>
-                
+
+    const bookmarkHeader = useMemo(() => {
+        return () => (
+            <BookmarkHeader bookmark={props.bookmark}
+            showSummaryPreview={props.showPreview}
+            doRemove={props.doRemove!}
+            onIsDoneChanged={(new_value: boolean) => {
+                if (props.doChangeIsDone) {
+                    props.doChangeIsDone(new_value);
+                }
+            }}
+            onAcceptEdit={(new_summary: string) => {
+                if (props.doChangeSummary) {
+                    props.doChangeSummary(new_summary);
+                }
+            }} />
+        )
+    }, []);
+
+    const bookmarkIntrinsics = useMemo(() => {
+        return () => (
+            <>
                 <div className={cl.created}>Created: {createdAgo}</div>
                 {
                     (props.bookmark.updated !== undefined) ? 
@@ -117,9 +127,29 @@ const Bookmark = (props: Props) => {
                             props.doRemoveTag(index);
                         }
                     }} />
-            </Collapsible>
-        </div>
-    )
+            </>
+        );
+    }, []);
+
+    if (props.collapsible) {
+        return (
+            <div className={cl.bookmark} ref={divRef}>
+                <Collapsible open={showExpanded} 
+                    trigger={bookmarkHeader()}>
+                    
+                    { bookmarkIntrinsics() }
+                </Collapsible>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div className={cl.bookmark} ref={divRef}>
+                { bookmarkHeader() }
+                { bookmarkIntrinsics() }
+            </div>
+        )
+    }
 }
 
 export default Bookmark;

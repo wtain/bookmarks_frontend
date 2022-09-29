@@ -1,7 +1,5 @@
 
-import React from "react";
 import BookmarkDto from "../../../../domain/dto/BookmarkDto";
-import Tag from "../../TagsEditor/Tag";
 import cl from '../Bookmark.module.css'
 
 interface Props {

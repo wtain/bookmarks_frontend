@@ -13,7 +13,7 @@ const CommentList = (props: Props) => {
 
   return (
     <div>
-      {props.comments.map(comment => <Comment comment={comment} />)}
+      {props.comments.map(comment => <Comment key={comment.id} comment={comment} />)}
     </div>
   )
 

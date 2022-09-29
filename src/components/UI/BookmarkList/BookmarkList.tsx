@@ -40,6 +40,8 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
                                 <Bookmark key={bm.id}
                                         highlightJustAdded={props.newBookmarkId! === bm.id}
                                         bookmark={bm} 
+                                        collapsible={true}
+                                        showPreview={true}
                                         doRemove={props.onRemoveBookmark}
                                         doChangeContents={(new_contents: string) => {
                                             props.onBookmarkContentsChanged!(bm, new_contents)

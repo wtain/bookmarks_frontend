@@ -12,10 +12,28 @@
     font-weight: bold;
 }
 
+.header_div {
+    display: flow-root;
+}
+
+.done_checkbox {
+    display: flow-root;
+    float: left;
+}
+
 .summary {
     font-weight: bold;
     color: black;
     width: calc(100% - 30px);
+}
+
+.summary_preview {
+    display: flow-root;
+    float: right;
+}
+
+.summary_preview_text {
+    color: gray;
 }
 
 .done {

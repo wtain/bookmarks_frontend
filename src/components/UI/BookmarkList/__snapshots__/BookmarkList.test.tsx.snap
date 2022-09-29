@@ -27,26 +27,17 @@ exports[`BookmarkList renders correctly 1`] = `
           >
             <input
               checked={false}
+              className="done_checkbox"
               onChange={[Function]}
               onClick={[Function]}
-              style={
-                Object {
-                  "display": "flow",
-                  "float": "left",
-                }
-              }
               type="checkbox"
             />
             <div
+              className="header_div"
               data-for="registerTip23f69d44-2080-430e-a53d-794689a78754"
               data-tip={true}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
-              style={
-                Object {
-                  "display": "flow",
-                }
-              }
             >
               <span>
                 <button
@@ -57,19 +48,10 @@ exports[`BookmarkList renders correctly 1`] = `
                 </button>
               </span>
               <div
-                style={
-                  Object {
-                    "display": "flow",
-                    "float": "right",
-                  }
-                }
+                className="summary_preview"
               >
                 <span
-                  style={
-                    Object {
-                      "color": "GrayText",
-                    }
-                  }
+                  className="summary_preview_text"
                 >
                   For UI and server...
                 </span>
@@ -220,26 +202,17 @@ exports[`BookmarkList renders correctly 1`] = `
           >
             <input
               checked={false}
+              className="done_checkbox"
               onChange={[Function]}
               onClick={[Function]}
-              style={
-                Object {
-                  "display": "flow",
-                  "float": "left",
-                }
-              }
               type="checkbox"
             />
             <div
+              className="header_div"
               data-for="registerTip633a089a-1076-4904-8650-4160db0549a9"
               data-tip={true}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
-              style={
-                Object {
-                  "display": "flow",
-                }
-              }
             >
               <span>
                 <button
@@ -250,19 +223,10 @@ exports[`BookmarkList renders correctly 1`] = `
                 </button>
               </span>
               <div
-                style={
-                  Object {
-                    "display": "flow",
-                    "float": "right",
-                  }
-                }
+                className="summary_preview"
               >
                 <span
-                  style={
-                    Object {
-                      "color": "GrayText",
-                    }
-                  }
+                  className="summary_preview_text"
                 >
                   Reminder/due date property for bookmark...
                 </span>
@@ -383,26 +347,17 @@ exports[`BookmarkList renders correctly 1`] = `
           >
             <input
               checked={true}
+              className="done_checkbox"
               onChange={[Function]}
               onClick={[Function]}
-              style={
-                Object {
-                  "display": "flow",
-                  "float": "left",
-                }
-              }
               type="checkbox"
             />
             <div
+              className="header_div"
               data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
               data-tip={true}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
-              style={
-                Object {
-                  "display": "flow",
-                }
-              }
             >
               <span>
                 <button
@@ -413,19 +368,10 @@ exports[`BookmarkList renders correctly 1`] = `
                 </button>
               </span>
               <div
-                style={
-                  Object {
-                    "display": "flow",
-                    "float": "right",
-                  }
-                }
+                className="summary_preview"
               >
                 <span
-                  style={
-                    Object {
-                      "color": "GrayText",
-                    }
-                  }
+                  className="summary_preview_text"
                 >
                   Ability to edit tags for existing bookmarks...
                 </span>
