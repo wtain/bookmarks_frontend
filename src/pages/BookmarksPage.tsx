@@ -68,7 +68,7 @@ const BookmarksPage = (props: Props) => {
     const doUpdatePoll = async () => {
         setBookmarks(
             await getData()
-            );
+        );
     }
 
     const addBookmark = async (newBookmark: BookmarkDto) => {

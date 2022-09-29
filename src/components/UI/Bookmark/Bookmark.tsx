@@ -83,20 +83,16 @@ const Bookmark = (props: Props) => {
     const bookmarkHeader = useMemo(() => {
         return () => (
             <BookmarkHeader bookmark={props.bookmark}
-            showSummaryPreview={props.showPreview}
-            doRemove={props.doRemove!}
-            onIsDoneChanged={(new_value: boolean) => {
-                if (props.doChangeIsDone) {
-                    props.doChangeIsDone(new_value);
-                }
-            }}
-            onAcceptEdit={(new_summary: string) => {
-                if (props.doChangeSummary) {
-                    props.doChangeSummary(new_summary);
-                }
-            }} />
+                            showSummaryPreview={props.showPreview}
+                            doRemove={props.doRemove!}
+                            onIsDoneChanged={(new_value: boolean) => {
+                                props.doChangeIsDone!(new_value);
+                            }}
+                            onAcceptEdit={(new_summary: string) => {
+                                props.doChangeSummary!(new_summary);
+                            }} />
         )
-    }, []);
+    }, [props.bookmark, props.showPreview]);
 
     const bookmarkIntrinsics = useMemo(() => {
         return () => (
