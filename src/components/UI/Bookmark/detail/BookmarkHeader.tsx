@@ -110,7 +110,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                         }
                         </span>
                         (
-                        <a href={"bookmark/" + this.props.bookmark.id} onClick={(e) => {
+                        <a href={"/bookmark/" + this.props.bookmark.id} onClick={(e) => {
                             e.stopPropagation();
                         }}>Link</a>
                         )

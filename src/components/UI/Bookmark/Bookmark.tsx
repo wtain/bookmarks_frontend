@@ -105,23 +105,17 @@ const Bookmark = (props: Props) => {
 
                 <BookmarkEdit initialContents={props.bookmark.contents} 
                     onAcceptEdit={(new_contents: string) => {
-                                if (props.doChangeContents) {
-                                    props.doChangeContents(new_contents);
-                                }
-                            }} />
+                        props.doChangeContents!(new_contents);
+                    }} />
                 <br />
                 <TagsEditor 
                     containerClass={cl.tags_container}
                     tags={props.bookmark.tags} 
                     onTagAdded={(tag: TagDto) => {
-                        if (props.doAddTag) {
-                            props.doAddTag(tag);
-                        }
+                        props.doAddTag!(tag);
                     }} 
                     onDelete={(index: number) => {
-                        if (props.doRemoveTag) {
-                            props.doRemoveTag(index);
-                        }
+                        props.doRemoveTag!(index);
                     }} />
             </>
         );

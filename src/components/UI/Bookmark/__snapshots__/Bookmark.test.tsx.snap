@@ -34,7 +34,7 @@ exports[`Bookmark renders correctly 1`] = `
       />
       (
       <a
-        href="bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
+        href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
         onClick={[Function]}
       >
         Link
