@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import cl from './SearchBox.module.css'
 
 const SearchBox: React.FC = () => {
 
@@ -10,20 +11,26 @@ const SearchBox: React.FC = () => {
   const [searchString, setSearchString] = useState(searchQuery);
 
   const doSearch = () => {
-    navigate("/search/" + searchString);
+    if (searchString && searchString !== "") {
+      navigate("/search/" + searchString);
+    }
+    else {
+      navigate("/bookmarks");
+    }
   };
 
   return (
     <>
       <input type="text"
         placeholder="🔎 Enter search text"
+        className={cl.input}
         value={searchString}
         onChange={(e) => setSearchString(e.currentTarget.value)} onKeyDown={(e) => {
-          if (e.code == "Enter") {
+          if (e.key === "Enter") {
             doSearch();
           }
         }} />
-                <button onClick={() => {
+                <button className={cl.search_button} onClick={() => {
                   doSearch();
                 }}>
                     Go

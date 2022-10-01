@@ -30,10 +30,12 @@
 }
 
 .tag {
-    border-radius: 5px;
+    border-radius: 7px;
+    border: 1px;
+    border-color: lightgreen;
     margin: 1px;
     width: max-content;
-    background-color: darkblue;
+    background-color: darkolivegreen;
     display: inline-block;
     color: lightgray;
     padding: 1px;
@@ -55,4 +57,7 @@
     border-radius: 10px;
     position: relative;
     right: 0px;
+    font-size: x-small;
+    padding: 0%;
+    margin-left: 0%;
 }

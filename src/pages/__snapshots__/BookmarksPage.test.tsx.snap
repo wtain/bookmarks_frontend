@@ -69,7 +69,7 @@ exports[`BookmarksPage renders correctly 1`] = `
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    (Clear)
+    ❌
   </span>
   <div>
     (No bookmarks)

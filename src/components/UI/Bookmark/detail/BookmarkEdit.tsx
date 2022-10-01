@@ -57,10 +57,10 @@ class BookmarkEdit extends React.Component<Props, State> {
                             html={this.state.newContents} 
                             className={cl.contents} 
                             onKeyDown={(e) => {
-                                if (e.code === "Enter" && e.ctrlKey) {
+                                if (e.key === "Enter" && e.ctrlKey) {
                                     this.onAccept();
                                 } 
-                                if (e.code === "Escape") {
+                                if (e.key === "Escape") {
                                     this.onCancel();
                                 }
                             }}/>

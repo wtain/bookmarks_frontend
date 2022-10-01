@@ -125,10 +125,10 @@ class BookmarkHeader extends React.Component<Props, State> {
                             html={this.state.new_summary} 
                             className={classes.join(" ")} 
                             onKeyDown={(e) => {
-                                if (e.code === "Enter" && e.ctrlKey) {
+                                if (e.key === "Enter" && e.ctrlKey) {
                                     this.onAccept();
                                 } 
-                                if (e.code === "Escape") {
+                                if (e.key === "Escape") {
                                     this.onCancel();
                                 }
                         }} />

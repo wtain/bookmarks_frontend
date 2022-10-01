@@ -16,7 +16,7 @@ const CommentEditor: React.FC<Props> = (props: Props) => {
           value={commentText} 
           onChange={(e) => setCommentText(e.target.value)} 
           onKeyDown={(e) => {
-              if (e.ctrlKey && e.code === "Enter") {
+              if (e.ctrlKey && e.key === "Enter") {
                 props.onDone!(commentText);
                 setCommentText("");
                 e.stopPropagation();

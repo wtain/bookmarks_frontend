@@ -71,7 +71,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
                             onChange={(e) => updateBookmark({...bookmark, contents: e.target.value} as BookmarkDto)} 
                             className={cl.textarea}
                             onKeyDown={(e) => {
-                                if (e.ctrlKey && e.code === "Enter") {
+                                if (e.ctrlKey && e.key === "Enter") {
                                    doAddBookmark();
                                    e.stopPropagation();
                                 }
@@ -88,7 +88,7 @@ const BookmarkForm: React.FC<Props> = (props: Props) => {
                         const new_tags = tags.filter((v, i) => i !== index);
                         setTags(new_tags)
                     }} />
-            <button onClick={addBookmark} className={cl.button}>Add</button>
+            <button onClick={addBookmark} className={cl.button}>✔️Add</button>
         </form>
     )
 }

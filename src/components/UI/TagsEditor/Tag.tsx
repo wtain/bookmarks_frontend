@@ -46,8 +46,8 @@ const Tag: React.FC<Props> = (props: Props) => {
                         <button className={cl.close_button} onClick={() => {
                                 if (props.onDelete !== null && props.onDelete !== undefined)
                                     props.onDelete!()
-                            }}>
-                            x
+                        }}>
+                            ❌
                         </button> 
                     </div>
                     : <></>

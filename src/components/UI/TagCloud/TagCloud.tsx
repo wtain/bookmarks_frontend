@@ -40,7 +40,7 @@ const TagCloud = (props: Props) => {
 
   return (
     <>
-          <Tag tag={{name: "(Clear)", id: ""}} onClick={() => {
+          <Tag tag={{name: "❌", id: ""}} onClick={() => {
               navigate("/bookmarks")
           }} />
           {tags.map(tag => <Tag key={tag} tag={{name: tag, id: ""}} onClick={() => {
