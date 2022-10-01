@@ -64,7 +64,7 @@ const BookmarksPage = (props: Props) => {
             (e) => {
                 setLoading(false);
             })
-    }, [tag, id])
+    }, [tag, id, searchQuery, date])
 
     const doUpdatePoll = async () => {
         const bookmarks = await getData();
@@ -87,7 +87,7 @@ const BookmarksPage = (props: Props) => {
     useEffect(() => {
         const interval = setInterval(() => doUpdatePoll(), 20 * 1000);
         return () => clearInterval(interval);
-    }, [tag, id]);
+    }, [tag, id, searchQuery, date]);
 
     useEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === "a" && e.ctrlKey) {

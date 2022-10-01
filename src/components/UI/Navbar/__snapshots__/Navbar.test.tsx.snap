@@ -30,6 +30,7 @@ exports[`Navbar renders correctly 1`] = `
     </a>
     <input
       onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="Enter search text"
       type="text"
     />

@@ -9,11 +9,22 @@ const SearchBox: React.FC = () => {
 
   const [searchString, setSearchString] = useState(searchQuery);
 
+  const doSearch = () => {
+    navigate("/search/" + searchString);
+  };
+
   return (
     <>
-      <input type="text" placeholder="Enter search text" value={searchString} onChange={(e) => setSearchString(e.currentTarget.value)} />
+      <input type="text"
+        placeholder="Enter search text"
+        value={searchString}
+        onChange={(e) => setSearchString(e.currentTarget.value)} onKeyDown={(e) => {
+          if (e.code == "Enter") {
+            doSearch();
+          }
+        }} />
                 <button onClick={() => {
-                    navigate("/search/" + searchString);
+                  doSearch();
                 }}>
                     Go
                 </button>
