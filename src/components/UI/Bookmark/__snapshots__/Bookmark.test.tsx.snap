@@ -23,7 +23,7 @@ exports[`Bookmark renders correctly 1`] = `
         className="btn_remove"
         onClick={[Function]}
       >
-        x
+        ❌
       </button>
     </span>
     <div
@@ -32,14 +32,13 @@ exports[`Bookmark renders correctly 1`] = `
       <span
         className="summary_preview_text"
       />
-      (
       <a
+        className="link"
         href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
         onClick={[Function]}
       >
-        Link
+        🔗
       </a>
-      )
     </div>
     <div
       className="summary done"

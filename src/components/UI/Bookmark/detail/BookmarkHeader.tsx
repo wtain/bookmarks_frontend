@@ -96,7 +96,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                     <span>
                         <button className={cl.btn_remove} 
                                 onClick={() => this.props.doRemove(this.props.bookmark)}>
-                                    x
+                                    ❌
                         </button>
                     </span>
                     <div 
@@ -109,11 +109,9 @@ class BookmarkHeader extends React.Component<Props, State> {
                             this.props.showSummaryPreview ? this.briefSummary : ""
                         }
                         </span>
-                        (
-                        <a href={"/bookmark/" + this.props.bookmark.id} onClick={(e) => {
+                        <a className={cl.link} href={"/bookmark/" + this.props.bookmark.id} onClick={(e) => {
                             e.stopPropagation();
-                        }}>Link</a>
-                        )
+                        }}>🔗</a>
                     </div>
                     
                     <ContentEditable onChange={(e) => {

@@ -61,7 +61,7 @@ exports[`BookmarksPage renders correctly 1`] = `
     className="btn_add"
     onClick={[Function]}
   >
-    Add...
+    ➕
   </button>
   <span
     className="tag"

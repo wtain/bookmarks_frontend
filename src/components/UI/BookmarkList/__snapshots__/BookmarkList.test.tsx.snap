@@ -44,7 +44,7 @@ exports[`BookmarkList renders correctly 1`] = `
                   className="btn_remove"
                   onClick={[Function]}
                 >
-                  x
+                  ❌
                 </button>
               </span>
               <div
@@ -55,14 +55,13 @@ exports[`BookmarkList renders correctly 1`] = `
                 >
                   For UI and server...
                 </span>
-                (
                 <a
+                  className="link"
                   href="/bookmark/23f69d44-2080-430e-a53d-794689a78754"
                   onClick={[Function]}
                 >
-                  Link
+                  🔗
                 </a>
-                )
               </div>
               <div
                 className="summary"
@@ -219,7 +218,7 @@ exports[`BookmarkList renders correctly 1`] = `
                   className="btn_remove"
                   onClick={[Function]}
                 >
-                  x
+                  ❌
                 </button>
               </span>
               <div
@@ -230,14 +229,13 @@ exports[`BookmarkList renders correctly 1`] = `
                 >
                   Reminder/due date property for bookmark...
                 </span>
-                (
                 <a
+                  className="link"
                   href="/bookmark/633a089a-1076-4904-8650-4160db0549a9"
                   onClick={[Function]}
                 >
-                  Link
+                  🔗
                 </a>
-                )
               </div>
               <div
                 className="summary"
@@ -364,7 +362,7 @@ exports[`BookmarkList renders correctly 1`] = `
                   className="btn_remove"
                   onClick={[Function]}
                 >
-                  x
+                  ❌
                 </button>
               </span>
               <div
@@ -375,14 +373,13 @@ exports[`BookmarkList renders correctly 1`] = `
                 >
                   Ability to edit tags for existing bookmarks...
                 </span>
-                (
                 <a
+                  className="link"
                   href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
                   onClick={[Function]}
                 >
-                  Link
+                  🔗
                 </a>
-                )
               </div>
               <div
                 className="summary done"

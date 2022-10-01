@@ -107,7 +107,7 @@ const BookmarksPage = (props: Props) => {
                         validation={(bookmark: BookmarkDto) => bookmark.contents.trim().length > 0 && bookmark.summary.trim().length > 0} />
             </Modal>
             <button onClick={() => setModal(true)} className={cl.btn_add}>
-                Add...
+            ➕
             </button>
 
             <Filter tagsRepository={props.tagsRepository} />

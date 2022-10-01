@@ -12,26 +12,26 @@ exports[`Navbar renders correctly 1`] = `
       href="/bookmarks"
       onClick={[Function]}
     >
-      Bookmarks
+      📖Bookmarks
     </a>
     <a
       className="link"
       href="/tags"
       onClick={[Function]}
     >
-      Tags
+      🏷️Tags
     </a>
     <a
       className="link"
       href="/calendar"
       onClick={[Function]}
     >
-      Calendar
+      🗓️Calendar
     </a>
     <input
       onChange={[Function]}
       onKeyDown={[Function]}
-      placeholder="Enter search text"
+      placeholder="🔎 Enter search text"
       type="text"
     />
     <button

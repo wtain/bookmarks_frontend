@@ -16,7 +16,7 @@ const SearchBox: React.FC = () => {
   return (
     <>
       <input type="text"
-        placeholder="Enter search text"
+        placeholder="🔎 Enter search text"
         value={searchString}
         onChange={(e) => setSearchString(e.currentTarget.value)} onKeyDown={(e) => {
           if (e.code == "Enter") {
