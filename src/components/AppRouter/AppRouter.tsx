@@ -25,6 +25,7 @@ const AppRouter = () => {
             <Route path="/bookmark/:bookmarkId" element={<BookmarkPage bookmarksRepository={bookmarksRepository} commentsRepository={commentsRepository} />} />
             <Route path="/bookmarks" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/bookmarks/:tag" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
+            <Route path="/search/:searchQuery" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/date/:date" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/tags" element={<TagsPage tagsRepository={tagsRepository} />} />
             <Route path="/calendar" element={<CalendarPage datesRepository={datesRepository} />} />

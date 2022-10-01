@@ -28,6 +28,16 @@ exports[`Navbar renders correctly 1`] = `
     >
       Calendar
     </a>
+    <input
+      onChange={[Function]}
+      placeholder="Enter search text"
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+    >
+      Go
+    </button>
   </div>
 </div>
 `;
