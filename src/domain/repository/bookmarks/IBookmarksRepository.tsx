@@ -15,6 +15,8 @@ interface IBookmarksRepository {
     removeBookmark: (bookmark: BookmarkDto) => Promise<void>;
 
     editBookmark: (bookmark: BookmarkDto) => Promise<void>;
+
+    searchBookmarks: (query: string) => Promise<BookmarkDto[]>;
 }
 
 export default IBookmarksRepository;

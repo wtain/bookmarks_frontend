@@ -1,4 +1,3 @@
-import ReactHelpers from "../../../utils/ReactHelpers";
 import DateDto from "../../dto/DateDto";
 import IDatesRepository from "./IDatesRepository";
 
@@ -40,12 +39,10 @@ class MockDatesRepository implements IDatesRepository {
   }
 
   async getDates(): Promise<DateDto[]> {
-    await ReactHelpers.delay(300);
     return this.dateRecords;
   }
 
   async getDatesBetween(startDate: Date, endDate: Date): Promise<DateDto[]> {
-    await ReactHelpers.delay(300);
     return this.dateRecords;
   }
 

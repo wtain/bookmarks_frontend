@@ -1,4 +1,3 @@
-import ReactHelpers from "../../../utils/ReactHelpers";
 import CommentDto from '../../dto/CommentDto';
 import ICommentsRepository from "./ICommentsRepository";
 
@@ -34,18 +33,15 @@ class MockCommentsRepository implements ICommentsRepository {
   }
 
   async addComment(comment: CommentDto): Promise<CommentDto> {
-    await ReactHelpers.delay(300);
     this.comments = [...this.comments, comment];
     return comment;
   }
 
   async deleteComment(id: string): Promise<void> {
-    await ReactHelpers.delay(300);
     this.comments = this.comments.filter(comment => comment.id !== id);
   }
 
   async updateComment(comment: CommentDto): Promise<CommentDto> {
-    await ReactHelpers.delay(300);
     this.comments = this.comments.map(c => c.id === comment.id ? comment : c);
     return comment;
   }

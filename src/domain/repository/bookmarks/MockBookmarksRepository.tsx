@@ -1,7 +1,6 @@
 
 import BookmarkDto from "../../dto/BookmarkDto";
 import IBookmarksRepository from "./IBookmarksRepository";
-import ReactHelpers from "../../../utils/ReactHelpers"
 import BookmarkUtils from "../../../utils/BookmarkUtils";
 
 class MockBookmarksRepository implements IBookmarksRepository {
@@ -20,22 +19,18 @@ class MockBookmarksRepository implements IBookmarksRepository {
     
     async getBookmark(id: string): Promise<BookmarkDto> {
         // todo: implement
-        await ReactHelpers.delay(300);
         return this.bookmarks[0];
     }
 
     public async getBookmarks(): Promise<BookmarkDto[]> {
-        await ReactHelpers.delay(300);
         return this.bookmarks;
     }
 
     async getBookmarksByTag(tag: string): Promise<BookmarkDto[]> {
-        await ReactHelpers.delay(300);
         return this.bookmarks; // todo: implement
     }
 
     async getBookmarksByDate(date: Date): Promise<BookmarkDto[]> {
-        await ReactHelpers.delay(300);
         return this.bookmarks; // todo: implement
     }
 
@@ -49,6 +44,10 @@ class MockBookmarksRepository implements IBookmarksRepository {
 
     public async editBookmark(bookmark: BookmarkDto) {
         this.bookmarks = this.bookmarks.map(b => b.id === bookmark.id ? bookmark : b);
+    }
+
+    public async searchBookmarks(query: string): Promise<BookmarkDto[]> {
+        return this.bookmarks.filter(b => b.contents.includes(query) || b.summary.includes(query));
     }
 }
 

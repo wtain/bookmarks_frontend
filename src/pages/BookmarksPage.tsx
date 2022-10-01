@@ -32,7 +32,7 @@ const BookmarksPage = (props: Props) => {
 
     const getData = async (): Promise<BookmarkDto[]> => {
         if (searchQuery) {
-            // to search
+            return await props.bookmarksRepository.searchBookmarks(searchQuery);
         }
         if (id) {
             return [await props.bookmarksRepository.getBookmark(id)];

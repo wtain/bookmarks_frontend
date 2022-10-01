@@ -12,12 +12,8 @@ const scrollToRef = (ref: MutableRefObject<null | HTMLDivElement>) => {
     }
 };
 
-const delay = (milliseconds: number) => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
-
 const ReactHelpers = {
-    scrollToRef, delay
+    scrollToRef
 }
 
 export default ReactHelpers;
