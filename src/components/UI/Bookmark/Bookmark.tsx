@@ -1,5 +1,5 @@
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import BookmarkDto from "../../../domain/dto/BookmarkDto";
 import cl from './Bookmark.module.css'
 import Collapsible from 'react-collapsible';
@@ -9,10 +9,6 @@ import BookmarkHeader from "./detail/BookmarkHeader";
 import TagsEditor from "../TagsEditor/TagsEditor";
 import TagDto from "../../../domain/dto/TagDto";
 // todo: remove TimeAgo dependency
-// import TimeAgo from 'javascript-time-ago'
-
-// import en from 'javascript-time-ago/locale/en.json'
-// import moment from "moment";
 import { parseDateTimeFromMongo } from "../../../utils/DateTimeUtils";
 
 
@@ -34,35 +30,8 @@ const Bookmark = (props: Props) => {
 
     const divRef = React.useRef<null | HTMLDivElement>(null);
 
-    // const rtf = new Intl.RelativeTimeFormat('en', { style:'narrow'});
-    // const elapsed = Date.now() - Date.parse(props.bookmark.created);
-    // rtf.format(elapsed, "")
-
-    
     const createdAgo = parseDateTimeFromMongo(props.bookmark.created);
     const updatedAgo = parseDateTimeFromMongo(props.bookmark.updated);
-
-    // hack
-    // const localFormat = "DD.MM.YYYY, HH:mm:ss";
-
-    // let createdAgo: any;
-    // try {
-    //     createdAgo = timeAgo.format(moment(props.bookmark.created, localFormat).toDate());
-    // } catch (e: any) {
-    //     const fallbackFormat = "MM/DD/YYYY, h:mm:ss A";
-    //     createdAgo = timeAgo.format(moment(props.bookmark.created, fallbackFormat).toDate());
-    // }
-    // // const createdAgo = props.bookmark.created;
-
-    // let updatedAgo = undefined;
-    // if (props.bookmark.updated !== undefined) {
-    //     try {
-    //         updatedAgo = timeAgo.format(moment(props.bookmark.updated, localFormat).toDate());;
-    //     } catch (e: any) {
-    //     }
-    // }
-
-    // useEffect(() => TimeAgo.addDefaultLocale(en));
 
     useEffect(() => {
         if (props.highlightJustAdded) {
@@ -72,13 +41,7 @@ const Bookmark = (props: Props) => {
 
     const showExpanded = props.highlightJustAdded! || props.showExpanded!;
 
-    // const [showSummaryPreview, setShowSummaryPreview] = useState(!showExpanded);
-
-    // const showSummaryPreview = !showExpanded;
-
     // todo: Read the state of Collapsible to pass it to the BookmarkHeader
-
-    // todo: Make it possible to set it as non-collapsible (See BookmarkPage)
 
     const bookmarkHeader = useMemo(() => {
         return () => (
@@ -119,7 +82,7 @@ const Bookmark = (props: Props) => {
                     }} />
             </>
         );
-    }, [props.bookmark]);
+    }, [props.bookmark, createdAgo, updatedAgo]);
 
     if (props.collapsible) {
         return (
