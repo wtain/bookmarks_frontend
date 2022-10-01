@@ -119,7 +119,7 @@ const Bookmark = (props: Props) => {
                     }} />
             </>
         );
-    }, []);
+    }, [props.bookmark]);
 
     if (props.collapsible) {
         return (

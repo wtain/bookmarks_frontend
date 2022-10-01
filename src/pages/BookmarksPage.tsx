@@ -26,9 +26,7 @@ const BookmarksPage = (props: Props) => {
 
     let [newBookmarkId, setNewBookmarkId] = useState<string | undefined>("");
 
-    let [bookmarks, setBookmarks] = useState<BookmarkDto[]>(
-        []
-    )
+    let [bookmarks, setBookmarks] = useState<BookmarkDto[]>([]);
 
     let [loading, setLoading] = useState<Boolean>(false);
 
@@ -66,9 +64,8 @@ const BookmarksPage = (props: Props) => {
     }, [tag, id])
 
     const doUpdatePoll = async () => {
-        setBookmarks(
-            await getData()
-        );
+        const bookmarks = await getData();
+        setBookmarks(bookmarks);
     }
 
     const addBookmark = async (newBookmark: BookmarkDto) => {
