@@ -29,12 +29,14 @@ exports[`Navbar renders correctly 1`] = `
       🗓️Calendar
     </a>
     <input
+      className="input"
       onChange={[Function]}
       onKeyDown={[Function]}
       placeholder="🔎 Enter search text"
       type="text"
     />
     <button
+      className="search_button"
       onClick={[Function]}
     >
       Go

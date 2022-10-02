@@ -52,7 +52,7 @@ exports[`BookmarksPage renders correctly 1`] = `
           className="button"
           onClick={[Function]}
         >
-          Add
+          ✔️Add
         </button>
       </form>
     </div>

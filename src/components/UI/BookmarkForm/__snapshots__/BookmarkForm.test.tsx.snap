@@ -43,7 +43,7 @@ exports[`CalendarPage renders correctly hidden 1`] = `
     className="button"
     onClick={[Function]}
   >
-    Add
+    ✔️Add
   </button>
 </form>
 `;
@@ -91,7 +91,7 @@ exports[`CalendarPage renders correctly visible 1`] = `
     className="button"
     onClick={[Function]}
   >
-    Add
+    ✔️Add
   </button>
 </form>
 `;
