@@ -1,4 +1,4 @@
-import React from 'react'
+
 import * as FaIcons from 'react-icons/fa' 
 
 export const SidebarData = [
@@ -8,23 +8,18 @@ export const SidebarData = [
         icon: <FaIcons.FaHome />
     },
     {
-        title: 'Team',
-        path: '/team',
-        icon: <FaIcons.FaUsers />
+        title: 'Bookmarks',
+        path: '/bookmarks',
+        icon: <FaIcons.FaBookmark />
     },
     {
-        title: 'Tasks',
-        path: '/tasks',
-        icon: <FaIcons.FaTasks />
+        title: 'Tags',
+        path: '/tags',
+        icon: <FaIcons.FaTags />
     },
     {
-        title: 'Chats',
-        path: '/chats',
-        icon: <FaIcons.FaRocketchat />
-    },
-    {
-        title: 'Analytics',
-        path: '/analytics',
-        icon: <FaIcons.FaRegChartBar />
+        title: 'Calendar',
+        path: '/calendar',
+        icon: <FaIcons.FaCalendar />
     }
 ]

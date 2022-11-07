@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa' 
 
 import { SidebarData } from './SidebarData'
-import Navbar from '../Navbar/Navbar'
+import SearchBox from '../SearchBox/SearchBox'
 
 const NavbarContainer = styled.div`
     display: flex;
@@ -14,6 +14,10 @@ const NavbarContainer = styled.div`
     align-items: center;
     height: 3.5rem;
     background-color: darkgray;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    border-bottom: 2px solid black;
 `
 
 const MenuIconOpen = styled(Link)`
@@ -21,6 +25,7 @@ const MenuIconOpen = styled(Link)`
     justify-content: start;
     font-size: 1.5rem;
     margin-left: 2rem;
+    margin-right: 1rem;
     color: black;
 `
 
@@ -87,7 +92,7 @@ const Sidebar: React.FunctionComponent = () => {
                 <FaIcons.FaBars />
               </MenuIconOpen>
           
-              <Navbar />
+              <SearchBox />
             </NavbarContainer>
 
             <SidebarMenu close={close}>

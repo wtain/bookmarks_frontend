@@ -6,7 +6,8 @@ import AppRouter from './components/AppRouter/AppRouter';
 import TimeAgo from 'javascript-time-ago'
 
 import en from 'javascript-time-ago/locale/en.json'
-import Sidebar from './components/UI/Sidebar/Sidebar';
+import Sidebar from './components/UI/Sidebar/Sidebar'
+
 function App() {
 
   useEffect(() => TimeAgo.addDefaultLocale(en));
