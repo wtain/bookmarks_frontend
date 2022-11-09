@@ -1,6 +1,7 @@
 
 import BookmarkDto from "../../dto/BookmarkDto";
 import BookmarksFilterDto from "../../dto/BookmarksFilterDto";
+import FilterResultDto from "../../dto/FilterResultDto";
 
 interface IBookmarksRepository {
     getBookmarks: () => Promise<BookmarkDto[]>;
@@ -19,7 +20,7 @@ interface IBookmarksRepository {
 
     searchBookmarks: (query: string) => Promise<BookmarkDto[]>;
 
-    filterBookmarks: (filter: BookmarksFilterDto) => Promise<BookmarkDto[]>;
+    filterBookmarks: (filter: BookmarksFilterDto) => Promise<FilterResultDto>;
 }
 
 export default IBookmarksRepository;

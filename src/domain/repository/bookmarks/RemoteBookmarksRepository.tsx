@@ -3,6 +3,7 @@ import IBookmarksRepository from "./IBookmarksRepository";
 import axios from 'axios'
 import { BOOKMARKS_ENDPOINT_ADD, BOOKMARKS_ENDPOINT_DELETE, BOOKMARKS_ENDPOINT_GET_ALL, BOOKMARKS_ENDPOINT_GET_BY_DATE, BOOKMARKS_ENDPOINT_GET_BY_ID, BOOKMARKS_ENDPOINT_GET_BY_TAG, BOOKMARKS_ENDPOINT_SEARCH, BOOKMARKS_ENDPOINT_UPDATE, BOOKMARKS_ENDPOINT_FILTER } from '../../../constants/backend';
 import BookmarksFilterDto from "../../dto/BookmarksFilterDto";
+import FilterResultDto from "../../dto/FilterResultDto";
 
 class RemoteBookmarksRepository implements IBookmarksRepository {
     
@@ -53,15 +54,22 @@ class RemoteBookmarksRepository implements IBookmarksRepository {
         await axios.put(BOOKMARKS_ENDPOINT_UPDATE, bookmark);
     }
 
+    // todo: get rid of convertBookmarks
+
     async searchBookmarks(query: string): Promise<BookmarkDto[]> {
         return await axios.get<BookmarkDto[]>(BOOKMARKS_ENDPOINT_SEARCH + query)
             .then((response) => RemoteBookmarksRepository.convertBookmarks(response.data));
     }
 
-    async filterBookmarks(filter: BookmarksFilterDto): Promise<BookmarkDto[]> {
-        return await axios.post<BookmarkDto[]>(BOOKMARKS_ENDPOINT_FILTER,
+    async filterBookmarks(filter: BookmarksFilterDto): Promise<FilterResultDto> {
+        return await axios.post<FilterResultDto>(BOOKMARKS_ENDPOINT_FILTER,
             filter)
-            .then((response) => RemoteBookmarksRepository.convertBookmarks(response.data));
+            .then((response) => {
+                return {
+                    bookmarks: RemoteBookmarksRepository.convertBookmarks(response.data.bookmarks),
+                    count: response.data.count
+                }
+            });
     }
 }
 

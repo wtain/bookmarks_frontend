@@ -13,6 +13,11 @@ export const SidebarData = [
         icon: <FaIcons.FaBookmark />
     },
     {
+      title: 'Search',
+      path: '/filter',
+      icon: <FaIcons.FaSearch />
+    },
+    {
         title: 'Tags',
         path: '/tags',
         icon: <FaIcons.FaTags />

@@ -1,27 +1,27 @@
 
 // Copied from server
 interface BookmarksFilterDto {
-  summary: string | null;
-  description: string | null;
-  created_from: Date | null;
-  created_to: Date | null;
-  is_done: boolean | null;
+  summary: string | null | undefined;
+  description: string | null | undefined;
+  created_from: Date | null | undefined;
+  created_to: Date | null | undefined;
+  is_done: boolean | null | undefined;
   tags: string[];
-  tags_all: boolean | null;
-  start: number | null;
-  page_size: number | null;
+  tags_all: boolean | null | undefined;
+  start: number | null | undefined;
+  page_size: number | null | undefined;
 }
 
 export default BookmarksFilterDto;
 
 export const EmptyFilter: BookmarksFilterDto = {
-  summary: null,
-  description: null,
-  created_from: null,
-  created_to: null,
-  is_done: null,
+  summary: undefined,
+  description: undefined,
+  created_from: undefined,
+  created_to: undefined,
+  is_done: undefined,
   tags: [],
-  tags_all: null,
-  start: null,
-  page_size: null
+  tags_all: undefined,
+  start: undefined,
+  page_size: undefined
 };

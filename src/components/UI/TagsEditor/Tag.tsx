@@ -7,6 +7,7 @@ interface Props {
     tag: TagDto;
     onDelete?: () => void;
     onClick?: () => void;
+    isSelected?: boolean;
 }
 
 const Tag: React.FC<Props> = (props: Props) => {
@@ -20,6 +21,10 @@ const Tag: React.FC<Props> = (props: Props) => {
 
     if (clickablePointer) {
         styles.push(clickable);
+    }
+
+    if (props.isSelected!) {
+        styles.push(cl.tag_selected);
     }
 
     return (

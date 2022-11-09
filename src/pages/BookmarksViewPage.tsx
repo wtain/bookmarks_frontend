@@ -3,7 +3,6 @@ import useEventListener from "@use-it/event-listener";
 import { useEffect, useState } from "react";
 import BookmarkForm from "../components/UI/BookmarkForm/BookmarkForm";
 import BookmarkList from "../components/UI/BookmarkList/BookmarkList";
-import Filter from "../components/UI/Filter/Filter";
 import Loading from "../components/UI/Loading/Loading";
 import Modal from "../components/UI/Modal/Modal";
 import BookmarkDto from "../domain/dto/BookmarkDto";
@@ -12,6 +11,8 @@ import IBookmarksRepository from "../domain/repository/bookmarks/IBookmarksRepos
 import ITagsRepository from "../domain/repository/tags/ITagsRepository";
 import cl from './BookmarksPage.module.css'
 import BookmarksFilterDto, { EmptyFilter } from '../domain/dto/BookmarksFilterDto';
+import FilterResultDto from "../domain/dto/FilterResultDto";
+import BookmarksFilter from "../components/UI/BookmarksFilter/BookmarksFilter";
 
 interface Props {
     bookmarksRepository: IBookmarksRepository;
@@ -31,14 +32,14 @@ const BookmarksViewPage = (props: Props) => {
 
     let [loading, setLoading] = useState<Boolean>(false);
 
-    const getData = async (): Promise<BookmarkDto[]> => {
+    const getData = async (): Promise<FilterResultDto> => {
       return await props.bookmarksRepository.filterBookmarks(filter);
     }
 
     const loadBookmarks = async (success: (bookmarks: BookmarkDto[]) => void, error: (e: any) => void) => {
         try {
             const bookmarks = await getData();
-            success(bookmarks)
+            success(bookmarks.bookmarks)
         } catch (e) {
             error(e)
         }
@@ -58,7 +59,7 @@ const BookmarksViewPage = (props: Props) => {
 
     const doUpdatePoll = async () => {
         const bookmarks = await getData();
-        setBookmarks(bookmarks);
+        setBookmarks(bookmarks.bookmarks);
     }
 
     const addBookmark = async (newBookmark: BookmarkDto) => {
@@ -102,7 +103,11 @@ const BookmarksViewPage = (props: Props) => {
             ➕
             </button>
 
-            <Filter tagsRepository={props.tagsRepository} />
+            <BookmarksFilter tagsRepository={props.tagsRepository} onFilterChanged={
+                (filter: BookmarksFilterDto) => {
+                    setFilter(filter);
+                }
+            } />
         
 
             {

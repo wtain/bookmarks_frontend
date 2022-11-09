@@ -12,6 +12,7 @@ import RemoteDatesRepository from '../../domain/repository/dates/RemoteDatesRepo
 import BookmarkPage from "../../pages/BookmarkPage";
 import ICommentsRepository from '../../domain/repository/comments/ICommentsRepository';
 import RemoteCommentsRepository from '../../domain/repository/comments/RemoteCommentsRepository';
+import BookmarksViewPage from "../../pages/BookmarksViewPage";
 
 const AppRouter = () => {
 
@@ -26,6 +27,7 @@ const AppRouter = () => {
             <Route path="/bookmarks" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/bookmarks/:tag" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/search/:searchQuery" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
+            <Route path="/filter" element={<BookmarksViewPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/date/:date" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/tags" element={<TagsPage tagsRepository={tagsRepository} />} />
             <Route path="/calendar" element={<CalendarPage datesRepository={datesRepository} />} />

@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import SearchBox from "../SearchBox/SearchBox";
 import cl from './Navbar.module.css'
 
+// No longer used
+// todo: remove
 const Navbar: React.FC = () => {
     return (
         <div className={cl.navbar}>
