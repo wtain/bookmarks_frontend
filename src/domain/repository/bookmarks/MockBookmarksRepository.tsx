@@ -2,6 +2,7 @@
 import BookmarkDto from "../../dto/BookmarkDto";
 import IBookmarksRepository from "./IBookmarksRepository";
 import BookmarkUtils from "../../../utils/BookmarkUtils";
+import BookmarksFilterDto from "../../dto/BookmarksFilterDto";
 
 class MockBookmarksRepository implements IBookmarksRepository {
 
@@ -48,6 +49,11 @@ class MockBookmarksRepository implements IBookmarksRepository {
 
     public async searchBookmarks(query: string): Promise<BookmarkDto[]> {
         return this.bookmarks.filter(b => b.contents.includes(query) || b.summary.includes(query));
+    }
+
+    public async filterBookmarks(filter: BookmarksFilterDto): Promise<BookmarkDto[]> {
+        // todo: implement
+        return this.bookmarks.filter(b => b.contents.includes(filter.description!) || b.summary.includes(filter.summary!));
     }
 }
 

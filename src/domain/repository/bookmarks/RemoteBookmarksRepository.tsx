@@ -1,7 +1,8 @@
 import BookmarkDto from "../../dto/BookmarkDto";
 import IBookmarksRepository from "./IBookmarksRepository";
 import axios from 'axios'
-import { BOOKMARKS_ENDPOINT_ADD, BOOKMARKS_ENDPOINT_DELETE, BOOKMARKS_ENDPOINT_GET_ALL, BOOKMARKS_ENDPOINT_GET_BY_DATE, BOOKMARKS_ENDPOINT_GET_BY_ID, BOOKMARKS_ENDPOINT_GET_BY_TAG, BOOKMARKS_ENDPOINT_SEARCH, BOOKMARKS_ENDPOINT_UPDATE } from "../../../constants/backend";
+import { BOOKMARKS_ENDPOINT_ADD, BOOKMARKS_ENDPOINT_DELETE, BOOKMARKS_ENDPOINT_GET_ALL, BOOKMARKS_ENDPOINT_GET_BY_DATE, BOOKMARKS_ENDPOINT_GET_BY_ID, BOOKMARKS_ENDPOINT_GET_BY_TAG, BOOKMARKS_ENDPOINT_SEARCH, BOOKMARKS_ENDPOINT_UPDATE, BOOKMARKS_ENDPOINT_FILTER } from '../../../constants/backend';
+import BookmarksFilterDto from "../../dto/BookmarksFilterDto";
 
 class RemoteBookmarksRepository implements IBookmarksRepository {
     
@@ -57,6 +58,11 @@ class RemoteBookmarksRepository implements IBookmarksRepository {
             .then((response) => RemoteBookmarksRepository.convertBookmarks(response.data));
     }
 
+    async filterBookmarks(filter: BookmarksFilterDto): Promise<BookmarkDto[]> {
+        return await axios.post<BookmarkDto[]>(BOOKMARKS_ENDPOINT_FILTER,
+            filter)
+            .then((response) => RemoteBookmarksRepository.convertBookmarks(response.data));
+    }
 }
 
 export default RemoteBookmarksRepository;
