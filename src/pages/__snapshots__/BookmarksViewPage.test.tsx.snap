@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookmarksViewPage renders correctly 1`] = `
+<div>
+  <div
+    className="Modal"
+    onClick={[Function]}
+  >
+    <div
+      className="ModalContent"
+      onClick={[Function]}
+    >
+      <form
+        className="bookmark_form form_invalid"
+      >
+        <input
+          className="input"
+          onChange={[Function]}
+          placeholder="Summary"
+          value=""
+        />
+        <div
+          className="textarea_wrapper"
+        >
+          <textarea
+            className="textarea"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Contents"
+            rows={3}
+            value=""
+          />
+        </div>
+        <div
+          className="container tags_container"
+          onClick={[Function]}
+        >
+          <span
+            className="sp"
+          >
+            <input
+              className="input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Tags"
+              value=""
+            />
+          </span>
+        </div>
+        <button
+          className="button"
+          onClick={[Function]}
+        >
+          ✔️Add
+        </button>
+      </form>
+    </div>
+  </div>
+  <button
+    className="btn_add"
+    onClick={[Function]}
+  >
+    ➕
+  </button>
+  <span
+    className="tag"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ❌
+  </span>
+  <div>
+    (No bookmarks)
+  </div>
+</div>
+`;
