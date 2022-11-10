@@ -71,6 +71,32 @@ exports[`BookmarksViewPage renders correctly 1`] = `
   >
     ❌
   </span>
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  All tags?
+  <select
+    onChange={[Function]}
+    value={0}
+  >
+    <option
+      value={0}
+    >
+      All
+    </option>
+    <option
+      value={1}
+    >
+      Todo
+    </option>
+    <option
+      value={2}
+    >
+      Done
+    </option>
+  </select>
   <div>
     (No bookmarks)
   </div>

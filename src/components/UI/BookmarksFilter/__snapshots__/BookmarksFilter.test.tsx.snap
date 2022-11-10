@@ -1,12 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BookmarksFilter renders correctly 1`] = `
-<span
-  className="tag"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
-  ❌
-</span>
+Array [
+  <span
+    className="tag"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ❌
+  </span>,
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />,
+  "All tags?",
+  <select
+    onChange={[Function]}
+    value={0}
+  >
+    <option
+      value={0}
+    >
+      All
+    </option>
+    <option
+      value={1}
+    >
+      Todo
+    </option>
+    <option
+      value={2}
+    >
+      Done
+    </option>
+  </select>,
+]
 `;
