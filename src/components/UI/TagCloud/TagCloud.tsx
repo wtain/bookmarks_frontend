@@ -9,6 +9,7 @@ interface Props {
     onTagSelected?: (tag: string) => void;
     onTagDeSelected?: (tag: string) => void;
     onClearTagsClick?: () => void;
+    tagSelectionEnabled?: boolean;
 }
 
 const TagCloud = (props: Props) => {
@@ -30,6 +31,8 @@ const TagCloud = (props: Props) => {
         }
     }
 
+    const isSelectionEnabled = props.tagSelectionEnabled!;
+
     useEffect(() => {
         setLoading(true);
         loadTags((tags: string[]) => {
@@ -50,7 +53,7 @@ const TagCloud = (props: Props) => {
                 setSelectedTags([]);
             }} />
             {tags.map(tag => <Tag key={tag} tag={{ name: tag, id: "" }}
-                isSelected={selectedTags.includes(tag)}
+                isSelected={isSelectionEnabled && selectedTags.includes(tag)}
                 onClick={() => {
                     if (props.onTagClick) {
                         props.onTagClick!(tag);      

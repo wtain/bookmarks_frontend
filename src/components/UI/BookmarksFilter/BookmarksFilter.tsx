@@ -4,7 +4,7 @@ import ITagsRepository from "../../../domain/repository/tags/ITagsRepository";
 import TagCloud from "../TagCloud/TagCloud";
 import BookmarksFilterDto from '../../../domain/dto/BookmarksFilterDto';
 import { EmptyFilter } from '../../../domain/dto/BookmarksFilterDto';
-
+import cl from './BookmarksFilter.module.css'
 
 interface Props {
   tagsRepository: ITagsRepository;
@@ -54,8 +54,9 @@ const BookmarksFilter = (props: Props) => {
   }, [tags, tags_all, openClose]);
 
   return (
-    <>
+    <div className={cl.filter}>
       <TagCloud tagsRepository={props.tagsRepository}
+        tagSelectionEnabled={true}
         onTagSelected={(tag: string) => {
           setTags([...tags, tag]);
         }}
@@ -76,7 +77,7 @@ const BookmarksFilter = (props: Props) => {
         <option value={1}>Todo</option>
         <option value={2}>Done</option>
       </select>
-    </>
+    </div>
   )
 }
 
