@@ -28,13 +28,13 @@ const BookmarksFilter = (props: Props) => {
       tags_all: tags_all,
       tags: tags
     };
-    if (openClose == 1) {
+    if (openClose === 1) {
       filterObject = {
         ...filterObject,
         is_done: false
       }
     }
-    else if (openClose == 2) {
+    else if (openClose === 2) {
       filterObject = {
         ...filterObject,
         is_done: true
