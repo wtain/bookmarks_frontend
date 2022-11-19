@@ -113,19 +113,12 @@ exports[`BookmarkList renders correctly 1`] = `
                 7 months ago
               </div>
               <div
-                className="contents"
-                contentEditable={true}
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "For UI and server",
                   }
                 }
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
+                onDoubleClick={[Function]}
               />
               <br />
               <div
@@ -281,19 +274,12 @@ exports[`BookmarkList renders correctly 1`] = `
                 7 months ago
               </div>
               <div
-                className="contents"
-                contentEditable={true}
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "Reminder/due date property for bookmark",
                   }
                 }
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
+                onDoubleClick={[Function]}
               />
               <br />
               <div
@@ -431,19 +417,12 @@ exports[`BookmarkList renders correctly 1`] = `
                 7 months ago
               </div>
               <div
-                className="contents"
-                contentEditable={true}
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "Ability to edit tags for existing bookmarks",
                   }
                 }
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
+                onDoubleClick={[Function]}
               />
               <br />
               <div

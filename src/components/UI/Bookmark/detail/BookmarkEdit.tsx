@@ -1,6 +1,7 @@
 
 import React from "react";
 import ContentEditable from "react-contenteditable";
+import { processTextAndEnableLinks } from "../../../../utils/UrlHelpers";
 import cl from '../Bookmark.module.css'
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
 interface State {
     newContents: string;
     changed: boolean;
+    isEditing: boolean;
 }
 
 class BookmarkEdit extends React.Component<Props, State> {
@@ -21,7 +23,8 @@ class BookmarkEdit extends React.Component<Props, State> {
 
     state: State = {
         newContents: this.props.initialContents,
-        changed: false
+        changed: false,
+        isEditing: false
     }
 
     setNewContents(newContents: string) {
@@ -30,6 +33,10 @@ class BookmarkEdit extends React.Component<Props, State> {
 
     setChanged(changed: boolean) {
         this.setState({changed});
+    }
+
+    setIsEditing(isEditing: boolean) {
+        this.setState({isEditing});
     }
 
     onAccept() {
@@ -44,7 +51,17 @@ class BookmarkEdit extends React.Component<Props, State> {
         this.setChanged(false);
     }
 
-    render () {
+    render() {
+        
+        if (!this.state.isEditing) {
+            const content_processed = processTextAndEnableLinks(this.state.newContents);
+            return (
+                <div onDoubleClick={() => {
+                    this.setIsEditing(true);
+                }} dangerouslySetInnerHTML={{__html: content_processed}} />
+            );
+        }
+
         return (
             <ContentEditable onChange={(e) => {
                                 this.setNewContents(e.target.value)
@@ -52,6 +69,7 @@ class BookmarkEdit extends React.Component<Props, State> {
                             }} 
                             onBlur={(e) => {
                                 this.onAccept();
+                                this.setIsEditing(false);
                             }}
                             disabled={false}
                             html={this.state.newContents} 
@@ -59,9 +77,11 @@ class BookmarkEdit extends React.Component<Props, State> {
                             onKeyDown={(e) => {
                                 if (e.key === "Enter" && e.ctrlKey) {
                                     this.onAccept();
+                                    this.setIsEditing(false);
                                 } 
                                 if (e.key === "Escape") {
                                     this.onCancel();
+                                    this.setIsEditing(false);
                                 }
                             }}/>
         )

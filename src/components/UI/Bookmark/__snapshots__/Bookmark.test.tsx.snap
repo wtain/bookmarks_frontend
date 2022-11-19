@@ -69,21 +69,12 @@ exports[`Bookmark renders correctly 1`] = `
     7 months ago
   </div>
   <div
-    className="contents"
-    contentEditable={true}
     dangerouslySetInnerHTML={
       Object {
-        "__html": "Ability to edit tags for existing bookmarks
-Second line
-Third line",
+        "__html": "Ability to edit tags for existing bookmarks<BR>Second line<BR>Third line",
       }
     }
-    disabled={false}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onInput={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
+    onDoubleClick={[Function]}
   />
   <br />
   <div
