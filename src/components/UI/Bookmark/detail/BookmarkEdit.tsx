@@ -1,6 +1,7 @@
 
 import React from "react";
 import ContentEditable from "react-contenteditable";
+import { sanitizeText } from "../../../../utils/HtmlHelpers";
 import { processTextAndEnableLinks } from "../../../../utils/UrlHelpers";
 import cl from '../Bookmark.module.css'
 
@@ -20,6 +21,8 @@ class BookmarkEdit extends React.Component<Props, State> {
     // useState doesn't work with this component
     // See: https://github.com/lovasoa/react-contenteditable/issues/161
     // const [newContents, setNewContents] = useState(props.initialContents)
+
+    // todo: wrap with a functional component so that hooks are allowed
 
     state: State = {
         newContents: this.props.initialContents,
@@ -54,7 +57,8 @@ class BookmarkEdit extends React.Component<Props, State> {
     render() {
         
         if (!this.state.isEditing) {
-            const content_processed = processTextAndEnableLinks(this.state.newContents);
+            // todo: put into effect
+            const content_processed = processTextAndEnableLinks(sanitizeText(this.state.newContents));
             return (
                 <div onDoubleClick={() => {
                     this.setIsEditing(true);
