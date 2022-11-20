@@ -60,10 +60,10 @@ const Bookmark = (props: Props) => {
     const bookmarkIntrinsics = useMemo(() => {
         return () => (
             <>
-                <div className={cl.created}>Created: {createdAgo}</div>
+                <div className={cl.created}>Created: {createdAgo} ({props.bookmark.created.toString()})</div>
                 {
                     (props.bookmark.updated !== undefined) ? 
-                    <div className={cl.created}>Updated: {updatedAgo}</div> : <></>
+                    <div className={cl.created}>Updated: {updatedAgo} ({props.bookmark.updated.toString()})</div> : <></>
                 }
 
                 <BookmarkEdit initialContents={props.bookmark.contents} 

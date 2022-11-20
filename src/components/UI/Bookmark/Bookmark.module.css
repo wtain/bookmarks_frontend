@@ -73,3 +73,19 @@
 .tags_container {
     width: calc(100% - 7px);    
 }
+
+.edit {
+    position: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgba(0,0,0, 0.0);
+}
+
+.edit.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

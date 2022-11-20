@@ -55,6 +55,12 @@ class BookmarkEdit extends React.Component<Props, State> {
     }
 
     render() {
+
+        // const rootClasses = [cl.edit];
+
+        // if (this.state.isEditing) {
+        //     rootClasses.push(cl.active);
+        // }
         
         if (!this.state.isEditing) {
             // todo: put into effect
@@ -67,27 +73,29 @@ class BookmarkEdit extends React.Component<Props, State> {
         }
 
         return (
-            <ContentEditable onChange={(e) => {
-                                this.setNewContents(e.target.value)
-                                this.setChanged(true);
-                            }} 
-                            onBlur={(e) => {
-                                this.onAccept();
-                                this.setIsEditing(false);
-                            }}
-                            disabled={false}
-                            html={this.state.newContents} 
-                            className={cl.contents} 
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter" && e.ctrlKey) {
+            // <div className={rootClasses.join(" ")} onClick={() => this.setIsEditing(false)}>
+                <ContentEditable onChange={(e) => {
+                                    this.setNewContents(e.target.value)
+                                    this.setChanged(true);
+                                }} 
+                                onBlur={(e) => {
                                     this.onAccept();
                                     this.setIsEditing(false);
-                                } 
-                                if (e.key === "Escape") {
-                                    this.onCancel();
-                                    this.setIsEditing(false);
-                                }
-                            }}/>
+                                }}
+                                disabled={false}
+                                html={this.state.newContents} 
+                                className={cl.contents} 
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" && e.ctrlKey) {
+                                        this.onAccept();
+                                        this.setIsEditing(false);
+                                    } 
+                                    if (e.key === "Escape") {
+                                        this.onCancel();
+                                        this.setIsEditing(false);
+                                    }
+                        }} />
+                // </div>
         )
     }
 }
