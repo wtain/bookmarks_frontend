@@ -1,7 +1,6 @@
+import EntityDto from "./EntityDto";
 
-interface TagDto {
-    name: string;
-    id: string;
+interface TagDto extends EntityDto {
 }
 
 export default TagDto;

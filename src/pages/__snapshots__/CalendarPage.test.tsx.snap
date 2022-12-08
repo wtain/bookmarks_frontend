@@ -71,7 +71,7 @@ exports[`CalendarPage renders correctly 1`] = `
       onMouseLeave={null}
     >
       <div
-        className="react-calendar__month-view "
+        className="react-calendar__month-view"
       >
         <div
           style={
@@ -197,7 +197,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </div>
               <div
-                className="react-calendar__month-view__weekdays__weekday"
+                className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -216,7 +216,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </div>
               <div
-                className="react-calendar__month-view__weekdays__weekday"
+                className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -246,7 +246,7 @@ exports[`CalendarPage renders correctly 1`] = `
               }
             >
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -268,7 +268,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -290,7 +290,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -312,7 +312,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -334,7 +334,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -356,7 +356,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -378,7 +378,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -400,7 +400,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -422,7 +422,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -444,7 +444,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -466,7 +466,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -488,7 +488,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -510,7 +510,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -532,7 +532,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -554,7 +554,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -576,7 +576,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -598,7 +598,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -620,7 +620,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -642,7 +642,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -664,7 +664,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -686,7 +686,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -708,7 +708,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -730,7 +730,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -752,7 +752,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -774,7 +774,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -796,7 +796,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -818,7 +818,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -840,7 +840,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -862,7 +862,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -884,7 +884,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -906,7 +906,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -928,7 +928,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -950,7 +950,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day "
+                className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -972,7 +972,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
@@ -994,7 +994,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </button>
               <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth "
+                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
                 onFocus={null}
                 onMouseOver={null}
