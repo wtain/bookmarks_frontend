@@ -1,4 +1,6 @@
 
+// Unused for now?
+
 interface BaseEntity {
   id: string;
   created: Date;

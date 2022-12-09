@@ -1,6 +1,8 @@
-import BaseEntity from "./BaseEntity";
+import EntityDto from "../dto/EntityDto";
+// import BaseEntity from "./BaseEntity";
 
-interface IEntityRepository<TEntityDto extends BaseEntity> {
+// interface IEntityRepository<TEntityDto extends BaseEntity> {
+interface IEntityRepository<TEntityDto extends EntityDto> {
 
     list: () => Promise<TEntityDto[]>;
 

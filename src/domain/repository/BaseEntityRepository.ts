@@ -1,9 +1,11 @@
 import axios from "axios";
-import BaseEntity from "./BaseEntity";
+import EntityDto from "../dto/EntityDto";
+// import BaseEntity from "./BaseEntity";
 import ICrudEndpoints from "./ICrudEndpoints";
 import IEntityRepository from "./IEntityRepository";
 
-class BaseEntityRepository<TEntityDto extends BaseEntity> implements IEntityRepository<TEntityDto> {
+//class BaseEntityRepository<TEntityDto extends BaseEntity> implements IEntityRepository<TEntityDto> {
+class BaseEntityRepository<TEntityDto extends EntityDto> implements IEntityRepository<TEntityDto> {
 
   public constructor(private crudEndpoints: ICrudEndpoints) {
 

@@ -55,8 +55,8 @@ const MenuItems = styled.li`
     align-items: center;
     justify-content: start;
     width: 100%;
-    height: 90px;
-    padding: 1rem 0 1.25rem;
+    height: 35px;
+    padding: 0rem 0 0rem;
 `
 
 const MenuItemLinks = styled(Link)`

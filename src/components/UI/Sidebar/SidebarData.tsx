@@ -26,5 +26,10 @@ export const SidebarData = [
         title: 'Calendar',
         path: '/calendar',
         icon: <FaIcons.FaCalendar />
-    }
+    },
+    {
+        title: 'Users',
+        path: '/users',
+        icon: <FaIcons.FaUsers />
+    },
 ]

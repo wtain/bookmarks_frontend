@@ -13,6 +13,11 @@ import BookmarkPage from "../../pages/BookmarkPage";
 import ICommentsRepository from '../../domain/repository/comments/ICommentsRepository';
 import RemoteCommentsRepository from '../../domain/repository/comments/RemoteCommentsRepository';
 import BookmarksViewPage from "../../pages/BookmarksViewPage";
+import BaseEntityRepository from "../../domain/repository/BaseEntityRepository";
+import UserDto from "../../domain/dto/UserDto";
+import SimpleCrudEndpoints from "../../domain/repository/SimpleCrudEndpoints";
+import { USERS_ENDPOINT_ADD, USERS_ENDPOINT_DELETE, USERS_ENDPOINT_EDIT, USERS_ENDPOINT_GETBYID, USERS_ENDPOINT_LIST } from "../../constants/backend";
+import UsersPage from "../../pages/UsersPage";
 
 const AppRouter = () => {
 
@@ -20,9 +25,32 @@ const AppRouter = () => {
     const tagsRepository: ITagsRepository = new RemoteTagsBookmarksRepository();
     const commentsRepository: ICommentsRepository = new RemoteCommentsRepository();
     const datesRepository = new RemoteDatesRepository();
+    const usersRepository = new BaseEntityRepository<UserDto>({
+        listEndpoint: () => {
+            return USERS_ENDPOINT_LIST;
+        },
+  
+        getEndpoint: (id: string) => {
+            return USERS_ENDPOINT_GETBYID + id;
+        },
+
+        createEndpoint: () => {
+            return USERS_ENDPOINT_ADD;
+        },
+
+        updateEndpoint: (id: string) => {
+            return USERS_ENDPOINT_EDIT;
+        },
+        
+        deleteEndpoint: (id: string) => {
+            return USERS_ENDPOINT_DELETE;
+        }
+    });
 
     return (
         <Routes>
+            <Route path="/user/:d" element={<UsersPage usersRepository={usersRepository} />} />
+            <Route path="/users" element={<UsersPage usersRepository={usersRepository} />} />
             <Route path="/bookmark/:bookmarkId" element={<BookmarkPage bookmarksRepository={bookmarksRepository} commentsRepository={commentsRepository} />} />
             <Route path="/bookmarks" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
             <Route path="/bookmarks/:tag" element={<BookmarksPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />} />
