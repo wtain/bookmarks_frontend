@@ -1,8 +1,11 @@
 import EntityDto from "./EntityDto";
 
 interface UserDto extends EntityDto {
-    passwordHash: string;
-    sessionIds: string[];
+    // Server-side
+    // passwordHash: string;
+    // sessionIds: string[];
+    password1: string;
+    password2: string;
     roles: string[];
 }
 

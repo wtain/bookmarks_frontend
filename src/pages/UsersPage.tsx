@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loading from "../components/UI/Loading/Loading";
 import User from "../components/UI/User/User";
 import UserDto from "../domain/dto/UserDto";
 import BaseEntityRepository from "../domain/repository/BaseEntityRepository";
@@ -57,6 +58,10 @@ const UsersPage = (props: Props) => {
         const interval = setInterval(() => doUpdatePoll(), 20 * 1000);
         return () => clearInterval(interval);
     }, [id]);
+
+    if (loading) {
+        return (<Loading /> )
+    }
 
     return (
         <div>
