@@ -2,6 +2,7 @@
   "name": "bookmarks",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@mui/styles": "^5.10.16",
     "@testing-library/jest-dom": "^5.16.5",
@@ -9,9 +10,9 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/axios": "^0.14.0",
     "@types/javascript-time-ago": "^2.0.3",
-    "@types/jest": "^29.2.3",
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.13",
+    "@types/react": "^18.0.26",
     "@types/react-autocomplete": "^1.8.6",
     "@types/react-calendar": "^3.9.0",
     "@types/react-date-range": "^1.4.4",
@@ -21,6 +22,7 @@
     "@use-it/event-listener": "^0.1.7",
     "axios": "^1.2.0",
     "crypto": "^1.0.1",
+    "formik": "^2.2.9",
     "javascript-time-ago": "^2.5.9",
     "materialize-css": "^1.0.0",
     "moment": "^2.29.4",
@@ -37,7 +39,7 @@
     "react-layout-components": "^3.0.6",
     "react-modern-calendar-datepicker": "^3.1.6",
     "react-pro-sidebar": "^1.0.0-alpha.9",
-    "react-router-dom": "^6.4.3",
+    "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "react-tag-input": "^6.8.1",
     "react-tageditor": "^0.2.3",
@@ -48,7 +50,8 @@
     "sanitize-html": "^2.7.3",
     "styled-components": "^5.3.6",
     "uuid": "^9.0.0",
-    "web-vitals": "^3.1.0"
+    "web-vitals": "^3.1.0",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",

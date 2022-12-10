@@ -1,6 +1,8 @@
 import axios from "axios";
 import { AUTHENTICATION_ENDPOINT_LOGIN, AUTHENTICATION_ENDPOINT_LOGOUT, AUTHENTICATION_ENDPOINT_REGISTER } from "../constants/backend";
 
+// todo: mock axios here as long as jest is failing
+
 class AuthService {
 
     public async login(username: string, password: string): Promise<string> {
@@ -34,6 +36,8 @@ class AuthService {
     public async logout(): Promise<void> {
         await axios
             .get(AUTHENTICATION_ENDPOINT_LOGOUT + `?sessionToken=${this.getSessionToken()}&userName=${this.getUserName()}`);
+        localStorage.removeItem("sessionId");
+        localStorage.removeItem("userName");
     }
 
     public async register(fullName: string, username: string, password1: string, password2: string): Promise<boolean> {

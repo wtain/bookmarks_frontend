@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import * as FaIcons from 'react-icons/fa' 
 
 import { SidebarData } from './SidebarData'
 import SearchBox from '../SearchBox/SearchBox'
+import AuthService from '../../../services/AuthService'
 
 const NavbarContainer = styled.div`
     display: flex;
@@ -82,6 +83,8 @@ const MenuItemLinks = styled(Link)`
 
 const Sidebar: React.FunctionComponent = () => {
 
+    const navigate = useNavigate();
+
     const [close, setClose] = useState(false)
     const showSidebar = () => setClose(!close)
 
@@ -93,6 +96,19 @@ const Sidebar: React.FunctionComponent = () => {
               </MenuIconOpen>
           
               <SearchBox />
+
+              {AuthService.isLoggedIn() ? (
+                <div>
+                    <a href='#' onClick={async () => {
+                        await AuthService.logout()
+                            .then(() => {
+                                navigate("/");
+                            })
+                    }}>
+                        Logout
+                    </a>
+                </div>
+              ) : ""}
             </NavbarContainer>
 
             <SidebarMenu close={close}>

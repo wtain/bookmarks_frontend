@@ -1,5 +1,5 @@
 
-import { Navigate, Routes } from "react-router-dom";
+import { Navigate, Routes, useNavigate } from "react-router-dom";
 import { Route } from "react-router-dom";
 import IBookmarksRepository from "../../domain/repository/bookmarks/IBookmarksRepository";
 import RemoteBookmarksRepository from "../../domain/repository/bookmarks/RemoteBookmarksRepository";
@@ -15,11 +15,26 @@ import RemoteCommentsRepository from '../../domain/repository/comments/RemoteCom
 import BookmarksViewPage from "../../pages/BookmarksViewPage";
 import BaseEntityRepository from "../../domain/repository/BaseEntityRepository";
 import UserDto from "../../domain/dto/UserDto";
-import SimpleCrudEndpoints from "../../domain/repository/SimpleCrudEndpoints";
 import { USERS_ENDPOINT_ADD, USERS_ENDPOINT_DELETE, USERS_ENDPOINT_EDIT, USERS_ENDPOINT_GETBYID, USERS_ENDPOINT_LIST } from "../../constants/backend";
 import UsersPage from "../../pages/UsersPage";
+import AuthService from "../../services/AuthService";
+import LoginPage from "../../pages/LoginPage";
 
 const AppRouter = () => {
+
+    const navigate = useNavigate();
+
+    const authService = AuthService;
+
+    if (!authService.isLoggedIn()) {
+        // navigate("/login");
+        return (
+            <Routes>
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="*" element={<Navigate to="/login" />} />
+            </Routes>
+        )
+    }
 
     const bookmarksRepository: IBookmarksRepository = new RemoteBookmarksRepository();
     const tagsRepository: ITagsRepository = new RemoteTagsBookmarksRepository();
