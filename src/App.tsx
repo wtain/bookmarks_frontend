@@ -6,14 +6,17 @@ import TimeAgo from 'javascript-time-ago'
 
 import en from 'javascript-time-ago/locale/en.json'
 import Sidebar from './components/UI/Sidebar/Sidebar'
+import AuthService from './services/AuthService';
 
 function App() {
+
+  const authService = new AuthService();
 
   useEffect(() => TimeAgo.addDefaultLocale(en));
 
   return (
       <BrowserRouter>
-        <Sidebar />
+        <Sidebar authService={authService} />
         <AppRouter />
       </BrowserRouter>
   );

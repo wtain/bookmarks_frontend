@@ -8,6 +8,7 @@ import * as FaIcons from 'react-icons/fa'
 import { SidebarData } from './SidebarData'
 import SearchBox from '../SearchBox/SearchBox'
 import AuthService from '../../../services/AuthService'
+import IAuthService from '../../../services/IAuthService'
 
 const NavbarContainer = styled.div`
     display: flex;
@@ -81,7 +82,11 @@ const MenuItemLinks = styled(Link)`
 
 // https://annysah.hashnode.dev/build-a-sidebar-menu-with-react-typescript-and-styled-components-ckwkykpm80hs7gns112nycvvy
 
-const Sidebar: React.FunctionComponent = () => {
+interface Props {
+    authService: IAuthService;
+}
+
+const Sidebar: React.FunctionComponent<Props> = (props: Props) => {
 
     const navigate = useNavigate();
 
@@ -97,10 +102,10 @@ const Sidebar: React.FunctionComponent = () => {
           
               <SearchBox />
 
-              {AuthService.isLoggedIn() ? (
+              {props.authService.isLoggedIn() ? (
                 <div>
                     <a href='#' onClick={async () => {
-                        await AuthService.logout()
+                        await props.authService.logout()
                             .then(() => {
                                 navigate("/");
                             })

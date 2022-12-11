@@ -24,7 +24,7 @@ const AppRouter = () => {
 
     const navigate = useNavigate();
 
-    const authService = AuthService;
+    const authService = new AuthService();
 
     if (!authService.isLoggedIn()) {
         // navigate("/login");

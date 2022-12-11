@@ -39,7 +39,9 @@ const LoginPage = (props: Props) => {
         setLoading(true);
         setMessage("");
 
-        AuthService.login(username, password)
+        const authService = new AuthService();
+
+        authService.login(username, password)
             .then(() => navigate("/"), 
                 error => {
                     setLoading(false);

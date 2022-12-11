@@ -1,9 +1,14 @@
 import axios from "axios";
 import { AUTHENTICATION_ENDPOINT_LOGIN, AUTHENTICATION_ENDPOINT_LOGOUT, AUTHENTICATION_ENDPOINT_REGISTER } from "../constants/backend";
+import IAuthService from "./IAuthService";
 
 // todo: mock axios here as long as jest is failing
 
-class AuthService {
+class AuthService implements IAuthService {
+
+    public constructor() {
+        
+    }
 
     public async login(username: string, password: string): Promise<string> {
         return await axios
@@ -25,11 +30,11 @@ class AuthService {
         return sessionToken !== null && sessionToken !== undefined;
     }
 
-    public getSessionToken() {
+    public getSessionToken(): string | null {
         return localStorage.getItem("sessionId");
     }
 
-    public getUserName() {
+    public getUserName(): string | null {
         return localStorage.getItem("userName");
     }
 
@@ -55,4 +60,4 @@ class AuthService {
     }
 }
 
-export default new AuthService;
+export default AuthService;
