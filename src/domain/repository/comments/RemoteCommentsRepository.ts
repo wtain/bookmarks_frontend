@@ -1,4 +1,11 @@
-import { BOOKMARKS_ENDPOINT_GET_BY_ID, COMMENTS_ENDPOINTS_ADD, COMMENTS_ENDPOINTS_BASE, COMMENTS_ENDPOINTS_DELETE_BY_ID, COMMENTS_ENDPOINTS_GET_BY_ID, COMMENTS_ENDPOINTS_UPDATE_BY_ID } from '../../../constants/backend';
+import { 
+        BOOKMARKS_ENDPOINT_GET_BY_ID, 
+        COMMENTS_ENDPOINTS_ADD, 
+        /*COMMENTS_ENDPOINTS_BASE,*/ 
+        COMMENTS_ENDPOINTS_DELETE_BY_ID, 
+        /*COMMENTS_ENDPOINTS_GET_BY_ID,*/ 
+        COMMENTS_ENDPOINTS_UPDATE_BY_ID 
+} from '../../../constants/backend';
 import CommentDto from '../../dto/CommentDto';
 // import BaseEntityRepository from '../BaseEntityRepository';
 import ICommentsRepository from './ICommentsRepository';

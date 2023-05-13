@@ -42,7 +42,7 @@ class MockDatesRepository implements IDatesRepository {
     return this.dateRecords;
   }
 
-  async getDatesBetween(startDate: Date, endDate: Date): Promise<DateDto[]> {
+  async getDatesBetween(_startDate: Date, _endDate: Date): Promise<DateDto[]> {
     return this.dateRecords;
   }
 

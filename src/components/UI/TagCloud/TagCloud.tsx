@@ -14,11 +14,11 @@ interface Props {
 
 const TagCloud = (props: Props) => {
 
-    let [tags, setTags] = useState(
+    const [tags, setTags] = useState(
         [] as string[]
     )
 
-    let [, setLoading] = useState(false);
+    const [, setLoading] = useState(false);
     
     const [selectedTags, setSelectedTags] = useState<string[]>([]); // new Set() ?
 

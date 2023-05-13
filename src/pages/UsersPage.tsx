@@ -15,11 +15,11 @@ const UsersPage = (props: Props) => {
 
     const { id } = useParams();
 
-    let [newUserId, setNewUserId] = useState<string | undefined>("");
+    // const [newUserId, setNewUserId] = useState<string | undefined>("");
 
-    let [users, setUsers] = useState<UserDto[]>([]);
+    const [users, setUsers] = useState<UserDto[]>([]);
 
-    let [loading, setLoading] = useState<Boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const getData = async (): Promise<UserDto[]> => {
         if (id) {

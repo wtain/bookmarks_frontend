@@ -2,469 +2,464 @@
 
 exports[`BookmarkList renders correctly 1`] = `
 <div>
-  <div
-    className=""
-    style={Object {}}
-  >
-    <div>
+  <div>
+    <div
+      className="bookmark"
+    >
       <div
-        className="bookmark"
+        className="Collapsible"
       >
-        <div
-          className="Collapsible"
+        <span
+          aria-controls="collapsible-content-1663422456000"
+          aria-disabled={false}
+          aria-expanded={false}
+          className="Collapsible__trigger is-closed"
+          id="collapsible-trigger-1663422456000"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          style={null}
+          tabIndex={null}
         >
-          <span
-            aria-controls="collapsible-content-1663422456000"
-            aria-disabled={false}
-            aria-expanded={false}
-            className="Collapsible__trigger is-closed"
-            id="collapsible-trigger-1663422456000"
+          <input
+            checked={false}
+            className="done_checkbox"
+            onChange={[Function]}
             onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            style={null}
-            tabIndex={null}
-          >
-            <input
-              checked={false}
-              className="done_checkbox"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <div
-              className="header_div"
-              data-for="registerTip23f69d44-2080-430e-a53d-794689a78754"
-              data-tip={true}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <span>
-                <button
-                  className="btn_remove"
-                  onClick={[Function]}
-                >
-                  ❌
-                </button>
-              </span>
-              <div
-                className="summary_preview"
-              >
-                <span
-                  className="summary_preview_text"
-                >
-                  For UI and server...
-                </span>
-                <a
-                  className="link"
-                  href="/bookmark/23f69d44-2080-430e-a53d-794689a78754"
-                  onClick={[Function]}
-                >
-                  🔗
-                </a>
-              </div>
-              <div
-                className="summary"
-                contentEditable={true}
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Tests",
-                  }
-                }
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-              />
-            </div>
-          </span>
+            type="checkbox"
+          />
           <div
-            aria-labelledby="collapsible-trigger-1663422456000"
-            className="Collapsible__contentOuter"
-            hidden={false}
-            id="collapsible-content-1663422456000"
-            onTransitionEnd={[Function]}
-            role="region"
-            style={
-              Object {
-                "WebkitTransition": "height 400ms linear",
-                "height": 0,
-                "msTransition": "height 400ms linear",
-                "overflow": "hidden",
-                "transition": "height 400ms linear",
-              }
-            }
+            className="header_div"
+            data-for="registerTip23f69d44-2080-430e-a53d-794689a78754"
+            data-tip={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
-            <div
-              className="Collapsible__contentInner"
-            >
-              <div
-                className="created"
-              >
-                Created: 
-                7 months ago
-                 (
-                Sun Feb 06 2022 21:37:07 GMT+0100 (Центральная Европа, стандартное время)
-                )
-              </div>
-              <div
-                className="created"
-              >
-                Updated: 
-                7 months ago
-                 (
-                Sun Feb 13 2022 17:26:45 GMT+0100 (Центральная Европа, стандартное время)
-                )
-              </div>
-              <div
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "For UI and server",
-                  }
-                }
-                onDoubleClick={[Function]}
-              />
-              <br />
-              <div
-                className="container tags_container"
+            <span>
+              <button
+                className="btn_remove"
                 onClick={[Function]}
               >
-                <span
-                  className="tag"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  UI
-                </span>
-                <span
-                  className="tag"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  Server
-                </span>
-                <span
-                  className="tag"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  Infrastructure
-                </span>
-                <span
-                  className="tag"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  CodeQuality
-                </span>
-                <span
-                  className="sp"
-                >
-                  <input
-                    className="input"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Tags"
-                    value=""
-                  />
-                </span>
-              </div>
+                ❌
+              </button>
+            </span>
+            <div
+              className="summary_preview"
+            >
+              <span
+                className="summary_preview_text"
+              >
+                For UI and server...
+              </span>
+              <a
+                className="link"
+                href="/bookmark/23f69d44-2080-430e-a53d-794689a78754"
+                onClick={[Function]}
+              >
+                🔗
+              </a>
+            </div>
+            <div
+              className="summary"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Tests",
+                }
+              }
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            />
+          </div>
+        </span>
+        <div
+          aria-labelledby="collapsible-trigger-1663422456000"
+          className="Collapsible__contentOuter"
+          hidden={false}
+          id="collapsible-content-1663422456000"
+          onTransitionEnd={[Function]}
+          role="region"
+          style={
+            Object {
+              "WebkitTransition": "height 400ms linear",
+              "height": 0,
+              "msTransition": "height 400ms linear",
+              "overflow": "hidden",
+              "transition": "height 400ms linear",
+            }
+          }
+        >
+          <div
+            className="Collapsible__contentInner"
+          >
+            <div
+              className="created"
+            >
+              Created: 
+              7 months ago
+               (
+              Sun Feb 06 2022 21:37:07 GMT+0100 (Центральная Европа, стандартное время)
+              )
+            </div>
+            <div
+              className="created"
+            >
+              Updated: 
+              7 months ago
+               (
+              Sun Feb 13 2022 17:26:45 GMT+0100 (Центральная Европа, стандартное время)
+              )
+            </div>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "For UI and server",
+                }
+              }
+              onDoubleClick={[Function]}
+            />
+            <br />
+            <div
+              className="container tags_container"
+              onClick={[Function]}
+            >
+              <span
+                className="tag"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                UI
+              </span>
+              <span
+                className="tag"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                Server
+              </span>
+              <span
+                className="tag"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                Infrastructure
+              </span>
+              <span
+                className="tag"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                CodeQuality
+              </span>
+              <span
+                className="sp"
+              >
+                <input
+                  className="input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Tags"
+                  value=""
+                />
+              </span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="bookmark"
+    >
       <div
-        className="bookmark"
+        className="Collapsible"
       >
-        <div
-          className="Collapsible"
+        <span
+          aria-controls="collapsible-content-1663422456000"
+          aria-disabled={false}
+          aria-expanded={false}
+          className="Collapsible__trigger is-closed"
+          id="collapsible-trigger-1663422456000"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          style={null}
+          tabIndex={null}
         >
-          <span
-            aria-controls="collapsible-content-1663422456000"
-            aria-disabled={false}
-            aria-expanded={false}
-            className="Collapsible__trigger is-closed"
-            id="collapsible-trigger-1663422456000"
+          <input
+            checked={false}
+            className="done_checkbox"
+            onChange={[Function]}
             onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            style={null}
-            tabIndex={null}
-          >
-            <input
-              checked={false}
-              className="done_checkbox"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <div
-              className="header_div"
-              data-for="registerTip633a089a-1076-4904-8650-4160db0549a9"
-              data-tip={true}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <span>
-                <button
-                  className="btn_remove"
-                  onClick={[Function]}
-                >
-                  ❌
-                </button>
-              </span>
-              <div
-                className="summary_preview"
-              >
-                <span
-                  className="summary_preview_text"
-                >
-                  Reminder/due date property for bookmark...
-                </span>
-                <a
-                  className="link"
-                  href="/bookmark/633a089a-1076-4904-8650-4160db0549a9"
-                  onClick={[Function]}
-                >
-                  🔗
-                </a>
-              </div>
-              <div
-                className="summary"
-                contentEditable={true}
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Bookmark - reminder",
-                  }
-                }
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-              />
-            </div>
-          </span>
+            type="checkbox"
+          />
           <div
-            aria-labelledby="collapsible-trigger-1663422456000"
-            className="Collapsible__contentOuter"
-            hidden={false}
-            id="collapsible-content-1663422456000"
-            onTransitionEnd={[Function]}
-            role="region"
-            style={
-              Object {
-                "WebkitTransition": "height 400ms linear",
-                "height": 0,
-                "msTransition": "height 400ms linear",
-                "overflow": "hidden",
-                "transition": "height 400ms linear",
-              }
-            }
+            className="header_div"
+            data-for="registerTip633a089a-1076-4904-8650-4160db0549a9"
+            data-tip={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
-            <div
-              className="Collapsible__contentInner"
-            >
-              <div
-                className="created"
-              >
-                Created: 
-                7 months ago
-                 (
-                Sun Feb 13 2022 17:21:02 GMT+0100 (Центральная Европа, стандартное время)
-                )
-              </div>
-              <div
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Reminder/due date property for bookmark",
-                  }
-                }
-                onDoubleClick={[Function]}
-              />
-              <br />
-              <div
-                className="container tags_container"
+            <span>
+              <button
+                className="btn_remove"
                 onClick={[Function]}
               >
-                <span
-                  className="tag"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  Functionality
-                </span>
-                <span
-                  className="sp"
-                >
-                  <input
-                    className="input"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Tags"
-                    value=""
-                  />
-                </span>
-              </div>
+                ❌
+              </button>
+            </span>
+            <div
+              className="summary_preview"
+            >
+              <span
+                className="summary_preview_text"
+              >
+                Reminder/due date property for bookmark...
+              </span>
+              <a
+                className="link"
+                href="/bookmark/633a089a-1076-4904-8650-4160db0549a9"
+                onClick={[Function]}
+              >
+                🔗
+              </a>
+            </div>
+            <div
+              className="summary"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Bookmark - reminder",
+                }
+              }
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            />
+          </div>
+        </span>
+        <div
+          aria-labelledby="collapsible-trigger-1663422456000"
+          className="Collapsible__contentOuter"
+          hidden={false}
+          id="collapsible-content-1663422456000"
+          onTransitionEnd={[Function]}
+          role="region"
+          style={
+            Object {
+              "WebkitTransition": "height 400ms linear",
+              "height": 0,
+              "msTransition": "height 400ms linear",
+              "overflow": "hidden",
+              "transition": "height 400ms linear",
+            }
+          }
+        >
+          <div
+            className="Collapsible__contentInner"
+          >
+            <div
+              className="created"
+            >
+              Created: 
+              7 months ago
+               (
+              Sun Feb 13 2022 17:21:02 GMT+0100 (Центральная Европа, стандартное время)
+              )
+            </div>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Reminder/due date property for bookmark",
+                }
+              }
+              onDoubleClick={[Function]}
+            />
+            <br />
+            <div
+              className="container tags_container"
+              onClick={[Function]}
+            >
+              <span
+                className="tag"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                Functionality
+              </span>
+              <span
+                className="sp"
+              >
+                <input
+                  className="input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Tags"
+                  value=""
+                />
+              </span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="bookmark"
+    >
       <div
-        className="bookmark"
+        className="Collapsible"
       >
-        <div
-          className="Collapsible"
+        <span
+          aria-controls="collapsible-content-1663422456000"
+          aria-disabled={false}
+          aria-expanded={false}
+          className="Collapsible__trigger is-closed"
+          id="collapsible-trigger-1663422456000"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          style={null}
+          tabIndex={null}
         >
-          <span
-            aria-controls="collapsible-content-1663422456000"
-            aria-disabled={false}
-            aria-expanded={false}
-            className="Collapsible__trigger is-closed"
-            id="collapsible-trigger-1663422456000"
+          <input
+            checked={true}
+            className="done_checkbox"
+            onChange={[Function]}
             onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            style={null}
-            tabIndex={null}
-          >
-            <input
-              checked={true}
-              className="done_checkbox"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <div
-              className="header_div"
-              data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
-              data-tip={true}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <span>
-                <button
-                  className="btn_remove"
-                  onClick={[Function]}
-                >
-                  ❌
-                </button>
-              </span>
-              <div
-                className="summary_preview"
-              >
-                <span
-                  className="summary_preview_text"
-                >
-                  Ability to edit tags for existing bookmarks...
-                </span>
-                <a
-                  className="link"
-                  href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
-                  onClick={[Function]}
-                >
-                  🔗
-                </a>
-              </div>
-              <div
-                className="summary done"
-                contentEditable={true}
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Edit tags",
-                  }
-                }
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-              />
-            </div>
-          </span>
+            type="checkbox"
+          />
           <div
-            aria-labelledby="collapsible-trigger-1663422456000"
-            className="Collapsible__contentOuter"
-            hidden={false}
-            id="collapsible-content-1663422456000"
-            onTransitionEnd={[Function]}
-            role="region"
-            style={
-              Object {
-                "WebkitTransition": "height 400ms linear",
-                "height": 0,
-                "msTransition": "height 400ms linear",
-                "overflow": "hidden",
-                "transition": "height 400ms linear",
-              }
-            }
+            className="header_div"
+            data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
+            data-tip={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
-            <div
-              className="Collapsible__contentInner"
-            >
-              <div
-                className="created"
-              >
-                Created: 
-                8 months ago
-                 (
-                Sun Jan 30 2022 21:48:19 GMT+0100 (Центральная Европа, стандартное время)
-                )
-              </div>
-              <div
-                className="created"
-              >
-                Updated: 
-                7 months ago
-                 (
-                Sun Feb 13 2022 15:13:09 GMT+0100 (Центральная Европа, стандартное время)
-                )
-              </div>
-              <div
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Ability to edit tags for existing bookmarks",
-                  }
-                }
-                onDoubleClick={[Function]}
-              />
-              <br />
-              <div
-                className="container tags_container"
+            <span>
+              <button
+                className="btn_remove"
                 onClick={[Function]}
               >
-                <span
-                  className="tag"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  Task
-                </span>
-                <span
-                  className="sp"
-                >
-                  <input
-                    className="input"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Tags"
-                    value=""
-                  />
-                </span>
-              </div>
+                ❌
+              </button>
+            </span>
+            <div
+              className="summary_preview"
+            >
+              <span
+                className="summary_preview_text"
+              >
+                Ability to edit tags for existing bookmarks...
+              </span>
+              <a
+                className="link"
+                href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
+                onClick={[Function]}
+              >
+                🔗
+              </a>
+            </div>
+            <div
+              className="summary done"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Edit tags",
+                }
+              }
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            />
+          </div>
+        </span>
+        <div
+          aria-labelledby="collapsible-trigger-1663422456000"
+          className="Collapsible__contentOuter"
+          hidden={false}
+          id="collapsible-content-1663422456000"
+          onTransitionEnd={[Function]}
+          role="region"
+          style={
+            Object {
+              "WebkitTransition": "height 400ms linear",
+              "height": 0,
+              "msTransition": "height 400ms linear",
+              "overflow": "hidden",
+              "transition": "height 400ms linear",
+            }
+          }
+        >
+          <div
+            className="Collapsible__contentInner"
+          >
+            <div
+              className="created"
+            >
+              Created: 
+              8 months ago
+               (
+              Sun Jan 30 2022 21:48:19 GMT+0100 (Центральная Европа, стандартное время)
+              )
+            </div>
+            <div
+              className="created"
+            >
+              Updated: 
+              7 months ago
+               (
+              Sun Feb 13 2022 15:13:09 GMT+0100 (Центральная Европа, стандартное время)
+              )
+            </div>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Ability to edit tags for existing bookmarks",
+                }
+              }
+              onDoubleClick={[Function]}
+            />
+            <br />
+            <div
+              className="container tags_container"
+              onClick={[Function]}
+            >
+              <span
+                className="tag"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                Task
+              </span>
+              <span
+                className="sp"
+              >
+                <input
+                  className="input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Tags"
+                  value=""
+                />
+              </span>
             </div>
           </div>
         </div>

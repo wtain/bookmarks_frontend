@@ -1,5 +1,5 @@
 import CommentDto from "../../dto/CommentDto";
-import IEntityRepository from '../IEntityRepository';
+// import IEntityRepository from '../IEntityRepository';
 
 // extends IEntityRepository<CommentDto>
 interface ICommentsRepository {

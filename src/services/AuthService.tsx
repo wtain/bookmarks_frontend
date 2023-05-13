@@ -6,10 +6,6 @@ import IAuthService from "./IAuthService";
 
 class AuthService implements IAuthService {
 
-    public constructor() {
-        
-    }
-
     public async login(username: string, password: string): Promise<string> {
         return await axios
             .post(AUTHENTICATION_ENDPOINT_LOGIN, {

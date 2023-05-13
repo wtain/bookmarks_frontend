@@ -3,10 +3,10 @@
 exports[`Sidebar when logged in renders correctly 1`] = `
 Array [
   <div
-    className="sc-bcXHqe jMKVuS"
+    className="sc-bgqQcB huOvfM"
   >
     <a
-      className="sc-gswNZR EmAX"
+      className="sc-gTRrQi ifgwYy"
       href="/"
       onClick={[Function]}
     >
@@ -52,10 +52,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-hLBbgP dXaYzJ"
+    className="sc-fFGjHI kPUHvl"
   >
     <a
-      className="sc-dkrFOg cZZHow"
+      className="sc-ewnqHT dFWSQJ"
       href="/"
       onClick={[Function]}
     >
@@ -79,10 +79,10 @@ Array [
       </svg>
     </a>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/"
         onClick={[Function]}
       >
@@ -116,10 +116,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/bookmarks"
         onClick={[Function]}
       >
@@ -153,10 +153,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/filter"
         onClick={[Function]}
       >
@@ -190,10 +190,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/tags"
         onClick={[Function]}
       >
@@ -227,10 +227,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/calendar"
         onClick={[Function]}
       >
@@ -264,10 +264,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/users"
         onClick={[Function]}
       >
@@ -307,10 +307,10 @@ Array [
 exports[`Sidebar when not logged in renders correctly 1`] = `
 Array [
   <div
-    className="sc-bcXHqe jMKVuS"
+    className="sc-bgqQcB huOvfM"
   >
     <a
-      className="sc-gswNZR EmAX"
+      className="sc-gTRrQi ifgwYy"
       href="/"
       onClick={[Function]}
     >
@@ -348,10 +348,10 @@ Array [
     </button>
   </div>,
   <div
-    className="sc-hLBbgP dXaYzJ"
+    className="sc-fFGjHI kPUHvl"
   >
     <a
-      className="sc-dkrFOg cZZHow"
+      className="sc-ewnqHT dFWSQJ"
       href="/"
       onClick={[Function]}
     >
@@ -375,10 +375,10 @@ Array [
       </svg>
     </a>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/"
         onClick={[Function]}
       >
@@ -412,10 +412,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/bookmarks"
         onClick={[Function]}
       >
@@ -449,10 +449,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/filter"
         onClick={[Function]}
       >
@@ -486,10 +486,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/tags"
         onClick={[Function]}
       >
@@ -523,10 +523,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/calendar"
         onClick={[Function]}
       >
@@ -560,10 +560,10 @@ Array [
       </a>
     </li>
     <li
-      className="sc-eDvSVe iKTHmu"
+      className="sc-dicizt loNUXP"
     >
       <a
-        className="sc-jSUZER dUGwGZ"
+        className="sc-iVCKna sgnlX"
         href="/users"
         onClick={[Function]}
       >

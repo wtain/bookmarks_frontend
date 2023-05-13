@@ -1,13 +1,14 @@
 
 // import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
 // import moment from 'moment'
-import Calendar, { CalendarTileProperties, ViewCallbackProperties } from 'react-calendar'
+import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import { useNavigate } from 'react-router-dom';
 import cl from './CalendarPage.module.css'
 import IDatesRepository from '../domain/repository/dates/IDatesRepository';
 import { useEffect, useState } from 'react';
 import { firstDayOfMonth, addOneMonth, datesEqual } from '../utils/DateTimeUtils';
+import { TileArgs, Value } from 'react-calendar/dist/cjs/shared/types';
 
 // Marking dates
 // see: https://stackoverflow.com/questions/60446117/how-to-mark-particular-dates-in-react-calender
@@ -52,7 +53,7 @@ const CalendarPage = (props: Props) => {
                 
                 activeStartDate={startDate}
 
-                tileClassName={(props: CalendarTileProperties) => {
+                tileClassName={(props: TileArgs) => {
                     // console.log(props.date.toISOString());
                     if (mark.find(markDate => datesEqual(markDate, props.date))) {
                         return cl.highlight;
@@ -60,14 +61,16 @@ const CalendarPage = (props: Props) => {
                     return "";
                   }}
                 
-                onChange={(date: Date) => {
-                    navigate("/date/" + date.toISOString())
+                onChange={(value: Value) => {
+                    if (value) {
+                        navigate("/date/" + value.toLocaleString())
+                    }
                 }}
                 
-                onActiveStartDateChange={(calendarProps: ViewCallbackProperties) => {
-                    console.log(calendarProps.activeStartDate);
-
-                    setStartDate(calendarProps.activeStartDate);
+                onActiveStartDateChange={({activeStartDate}) => {
+                    if (activeStartDate) {
+                        setStartDate(activeStartDate);
+                    }
                 }}
             />
         </div>

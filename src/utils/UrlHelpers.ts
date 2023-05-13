@@ -1,6 +1,6 @@
 
 export function processUrls(text: string, visitor: (url: string) => string): string {
-  var regex = /(https?:\/\/[^\/]+(\/[\w-]*)+)/gm;
+  const regex = /(https?:\/\/[^/]+(\/[\w-]*)+)/gm;
 
   return text.replaceAll(regex, (substring: string) => {
     return visitor(substring);

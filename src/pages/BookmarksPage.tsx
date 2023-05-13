@@ -24,11 +24,11 @@ const BookmarksPage = (props: Props) => {
 
     const { tag, id, date, searchQuery } = useParams();
 
-    let [newBookmarkId, setNewBookmarkId] = useState<string | undefined>("");
+    const [newBookmarkId, setNewBookmarkId] = useState<string | undefined>("");
 
-    let [bookmarks, setBookmarks] = useState<BookmarkDto[]>([]);
+    const [bookmarks, setBookmarks] = useState<BookmarkDto[]>([]);
 
-    let [loading, setLoading] = useState<Boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const getData = async (): Promise<BookmarkDto[]> => {
         if (searchQuery) {

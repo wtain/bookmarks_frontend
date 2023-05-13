@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import AuthService from "../services/AuthService";
 
-interface Props {
+// interface Props {
 
-}
+// }
 
-const LoginPage = (props: Props) => {
+const LoginPage = () => {
 
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");

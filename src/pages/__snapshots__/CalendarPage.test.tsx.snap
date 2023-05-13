@@ -67,8 +67,6 @@ exports[`CalendarPage renders correctly 1`] = `
     </div>
     <div
       className="react-calendar__viewContainer"
-      onBlur={null}
-      onMouseLeave={null}
     >
       <div
         className="react-calendar__month-view"
@@ -97,7 +95,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 Object {
                   "display": "flex",
                   "flexDirection": undefined,
-                  "flexWrap": "no-wrap",
+                  "flexWrap": "nowrap",
                 }
               }
             >
@@ -197,7 +195,7 @@ exports[`CalendarPage renders correctly 1`] = `
                 </abbr>
               </div>
               <div
-                className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
+                className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current react-calendar__month-view__weekdays__weekday--weekend"
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -248,8 +246,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -270,8 +266,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -292,8 +286,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -314,8 +306,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -336,8 +326,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -358,8 +346,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -380,8 +366,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -402,8 +386,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -424,8 +406,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -446,8 +426,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -468,8 +446,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -490,8 +466,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -512,8 +486,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -534,8 +506,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -556,8 +526,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -578,8 +546,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -600,8 +566,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -622,8 +586,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -644,8 +606,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -666,8 +626,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -688,8 +646,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -710,8 +666,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -732,8 +686,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -754,8 +706,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -776,8 +726,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -798,8 +746,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -820,8 +766,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -842,8 +786,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -864,8 +806,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -886,8 +826,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -908,8 +846,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -930,8 +866,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -952,8 +886,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -974,8 +906,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",
@@ -996,8 +926,6 @@ exports[`CalendarPage renders correctly 1`] = `
               <button
                 className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
                 onClick={[Function]}
-                onFocus={null}
-                onMouseOver={null}
                 style={
                   Object {
                     "flexBasis": "14.285714285714286%",

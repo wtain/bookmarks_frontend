@@ -8,13 +8,13 @@ export function parseDateTimeFromMongo(datetime: Date | undefined) {
 }
 
 export function addOneMonth(date: Date): Date {
-  let result = new Date(date);
+  const result = new Date(date);
   result.setMonth(result.getMonth() + 1)
   return result;
 }
 
 export function firstDayOfMonth(date: Date): Date {
-  let result = new Date(date);
+  const result = new Date(date);
   result.setDate(1)
   return result;
 }

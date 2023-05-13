@@ -5,7 +5,7 @@ it('UrlHelpers.processUrls should recognize URLs', () => {
   const text = "Some text. https://stackoverflow.com/questions/31760030/extracting-for-url-from-string-using-regex Some text";
   const textExpected = "Some text. [###LINK###] Some text";
 
-  const result = processUrls(text, (url: string) => {
+  const result = processUrls(text, (_url: string) => {
     return "[###LINK###]";
   });
   expect(result).toBe(textExpected);
@@ -16,7 +16,7 @@ it('UrlHelpers.processUrls should recognize URLs for http', () => {
   const text = "Some text. http://example.com/ Some text";
   const textExpected = "Some text. [###LINK###] Some text";
 
-  const result = processUrls(text, (url: string) => {
+  const result = processUrls(text, (_url: string) => {
     return "[###LINK###]";
   });
   expect(result).toBe(textExpected);

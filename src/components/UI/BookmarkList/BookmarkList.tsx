@@ -4,7 +4,6 @@ import BookmarkDto from "../../../domain/dto/BookmarkDto";
 import Bookmark from "../Bookmark/Bookmark";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import cl from './BookmarkList.module.css'
-import { Flex } from "reflexy";
 import TagDto from "../../../domain/dto/TagDto";
 
 interface Props {
@@ -24,46 +23,44 @@ const BookmarkList: React.FC<Props> = (props: Props) => {
     }
     return (
         <div>
-            <Flex>
-                <TransitionGroup>
-                {
-                    props.bookmarks.map(bm => 
-                            <CSSTransition 
-                                key={bm.id} 
-                                timeout={500} 
-                                classNames={{
-                                    enterActive: cl.bookmarkEnterActive,
-                                    enter: cl.bookmarkEnter,
-                                    exit: cl.bookmarkExit,
-                                    exitActive: cl.bookmarkExitActive
-                                }}>
-                                <Bookmark key={bm.id}
-                                        highlightJustAdded={props.newBookmarkId! === bm.id}
-                                        bookmark={bm} 
-                                        collapsible={true}
-                                        showPreview={true}
-                                        doRemove={props.onRemoveBookmark}
-                                        doChangeContents={(new_contents: string) => {
-                                            props.onBookmarkContentsChanged!(bm, new_contents)
-                                        }}
-                                        doChangeSummary={(new_summary: string) => {
-                                            props.onBookmarkSummaryChanged!(bm, new_summary)
-                                        }}
-                                        doAddTag={(tag: TagDto) => {
-                                            props.onBookmarkTagAdded!(bm, tag);
-                                        }}
-                                        doRemoveTag={(index: number) => {
-                                            props.onBookmarkTagRemoved!(bm, index);
-                                        }}
-                                        doChangeIsDone={(new_value: boolean) => {
-                                            props.onBookmarkIsDoneChanged!(bm, new_value);
-                                        }}
-                                />
-                            </CSSTransition>
-                            )
-                }
-                </TransitionGroup>
-            </Flex>
+            <TransitionGroup>
+            {
+                props.bookmarks.map(bm => 
+                        <CSSTransition 
+                            key={bm.id} 
+                            timeout={500} 
+                            classNames={{
+                                enterActive: cl.bookmarkEnterActive,
+                                enter: cl.bookmarkEnter,
+                                exit: cl.bookmarkExit,
+                                exitActive: cl.bookmarkExitActive
+                            }}>
+                            <Bookmark key={bm.id}
+                                    highlightJustAdded={props.newBookmarkId! === bm.id}
+                                    bookmark={bm} 
+                                    collapsible={true}
+                                    showPreview={true}
+                                    doRemove={props.onRemoveBookmark}
+                                    doChangeContents={(new_contents: string) => {
+                                        props.onBookmarkContentsChanged!(bm, new_contents)
+                                    }}
+                                    doChangeSummary={(new_summary: string) => {
+                                        props.onBookmarkSummaryChanged!(bm, new_summary)
+                                    }}
+                                    doAddTag={(tag: TagDto) => {
+                                        props.onBookmarkTagAdded!(bm, tag);
+                                    }}
+                                    doRemoveTag={(index: number) => {
+                                        props.onBookmarkTagRemoved!(bm, index);
+                                    }}
+                                    doChangeIsDone={(new_value: boolean) => {
+                                        props.onBookmarkIsDoneChanged!(bm, new_value);
+                                    }}
+                            />
+                        </CSSTransition>
+                        )
+            }
+            </TransitionGroup>
         </div>
     )
 }

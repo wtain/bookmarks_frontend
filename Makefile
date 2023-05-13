@@ -8,3 +8,5 @@ build-docker:
 	docker build .
 test:
 	npm run test
+lint:
+	npm run lint

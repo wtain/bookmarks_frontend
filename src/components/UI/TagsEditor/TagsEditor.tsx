@@ -22,7 +22,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
     }, [])
 
     const onTagAdded = () => {
-        let value = currentTag.name.trim()
+        const value = currentTag.name.trim()
         if (value.length > 0) {
             if (props.tags.find(t => t.name === value) === undefined) {
                 props.onTagAdded!({...currentTag, name: value});                
@@ -32,9 +32,9 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
     }
 
     const onCurrentTagChange = (v: string) => {
-        let p = v.indexOf(" ")
+        const p = v.indexOf(" ")
         if (p !== -1) {
-            let value = v.substring(0, p).trim();
+            const value = v.substring(0, p).trim();
             if (value.length > 0) {
                 props.onTagAdded!({...currentTag, name: value});
             }

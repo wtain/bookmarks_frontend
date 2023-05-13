@@ -24,13 +24,13 @@ const BookmarksViewPage = (props: Props) => {
 
     const [modal, setModal] = useState<boolean>(false);
 
-    let [newBookmarkId, setNewBookmarkId] = useState<string | undefined>("");
+    const [newBookmarkId, setNewBookmarkId] = useState<string | undefined>("");
 
-    let [bookmarks, setBookmarks] = useState<BookmarkDto[]>([]);
+    const [bookmarks, setBookmarks] = useState<BookmarkDto[]>([]);
   
     const [filter, setFilter] = useState<BookmarksFilterDto>(EmptyFilter);
 
-    let [loading, setLoading] = useState<Boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const getData = async (): Promise<FilterResultDto> => {
       return await props.bookmarksRepository.filterBookmarks(filter);
