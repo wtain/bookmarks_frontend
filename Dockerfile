@@ -2,7 +2,7 @@
 
 # https://mherman.org/blog/dockerizing-a-react-app/
 
-FROM node:18.7.0-alpine
+FROM node:20-alpine
 
 # set working directory
 WORKDIR /app
