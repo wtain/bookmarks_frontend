@@ -7,7 +7,7 @@ import cl from '../Bookmark.module.css'
 
 interface Props {
     bookmark: BookmarkDto;
-    doRemove: (bm: BookmarkDto) => void;
+    doRemove?: (bm: BookmarkDto) => void;
     onAcceptEdit: (new_summary: string) => void;
     onIsDoneChanged: (new_value: boolean) => void;
     showSummaryPreview?: boolean;
@@ -95,7 +95,7 @@ class BookmarkHeader extends React.Component<Props, State> {
                     }}>
                     <span>
                         <button className={cl.btn_remove} 
-                                onClick={() => this.props.doRemove(this.props.bookmark)}>
+                                onClick={() => this.props.doRemove?.(this.props.bookmark)}>
                                     ❌
                         </button>
                     </span>

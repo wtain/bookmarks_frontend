@@ -5,57 +5,61 @@ Array [
   <div
     className="bookmark"
   >
-    <input
-      checked={true}
-      className="done_checkbox"
-      onChange={[Function]}
-      onClick={[Function]}
-      type="checkbox"
-    />
     <div
-      className="header_div"
-      data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
-      data-tip={true}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      onClick={[Function]}
     >
-      <span>
-        <button
-          className="btn_remove"
-          onClick={[Function]}
-        >
-          ❌
-        </button>
-      </span>
-      <div
-        className="summary_preview"
-      >
-        <span
-          className="summary_preview_text"
-        />
-        <a
-          className="link"
-          href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
-          onClick={[Function]}
-        >
-          🔗
-        </a>
-      </div>
-      <div
-        className="summary done"
-        contentEditable={true}
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Edit tags",
-          }
-        }
-        disabled={false}
-        onBlur={[Function]}
+      <input
+        checked={true}
+        className="done_checkbox"
         onChange={[Function]}
-        onInput={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
+        onClick={[Function]}
+        type="checkbox"
       />
+      <div
+        className="header_div"
+        data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
+        data-tip={true}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <span>
+          <button
+            className="btn_remove"
+            onClick={[Function]}
+          >
+            ❌
+          </button>
+        </span>
+        <div
+          className="summary_preview"
+        >
+          <span
+            className="summary_preview_text"
+          />
+          <a
+            className="link"
+            href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
+            onClick={[Function]}
+          >
+            🔗
+          </a>
+        </div>
+        <div
+          className="summary done"
+          contentEditable={true}
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Edit tags",
+            }
+          }
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        />
+      </div>
     </div>
     <div
       className="created"
