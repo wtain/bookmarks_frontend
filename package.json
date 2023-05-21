@@ -22,6 +22,7 @@
     "@use-it/event-listener": "^0.1.7",
     "axios": "^1.2.0",
     "crypto": "^1.0.1",
+    "dayjs": "^1.11.7",
     "formik": "^2.2.9",
     "javascript-time-ago": "^2.5.9",
     "materialize-css": "^1.0.0",

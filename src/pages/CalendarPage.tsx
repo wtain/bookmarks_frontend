@@ -1,14 +1,11 @@
 
-// import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
-// import moment from 'moment'
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
 import { useNavigate } from 'react-router-dom';
-import cl from './CalendarPage.module.css'
 import IDatesRepository from '../domain/repository/dates/IDatesRepository';
 import { useEffect, useState } from 'react';
-import { firstDayOfMonth, addOneMonth, datesEqual } from '../utils/DateTimeUtils';
-import { TileArgs, Value } from 'react-calendar/dist/cjs/shared/types';
+import { firstDayOfMonth, addOneMonth, lastDayOfMonth, range } from '../utils/DateTimeUtils';
+import { DatePicker } from '@shopify/polaris';
+import moment from 'moment';
+// import DatePicker, { DayValue } from 'react-modern-calendar-datepicker';
 
 // Marking dates
 // see: https://stackoverflow.com/questions/60446117/how-to-mark-particular-dates-in-react-calender
@@ -20,14 +17,11 @@ interface Props {
 
 const CalendarPage = (props: Props) => {
 
-    // const localizer = momentLocalizer(moment) // or globalizeLocalizer
-
     const navigate = useNavigate();
-
-    // const calendarRef = useRef<Calendar | null>(null);
 
     const [startDate, setStartDate] = useState<Date>(firstDayOfMonth(new Date()));
     const [mark, setMark] = useState<Date[]>([]);
+    const [invertedMark, setInvertedMark] = useState<Date[]>([]);
 
     const loadDates = async (startDate: Date): Promise<Date[]> => {
         const endDate = addOneMonth(startDate);
@@ -39,41 +33,27 @@ const CalendarPage = (props: Props) => {
         (async function doLoad() {
             const dates = await loadDates(startDate);
             setMark(dates);
-            // console.log(dates.map(date => date.toISOString()));
+            const datesHash = new Set(dates.map(date => date.getDate()));
+            const lastDay = lastDayOfMonth(startDate);
+            const inverted = range(startDate.getDate(), lastDay.getDate())
+                    .filter(date => !datesHash.has(date))
+                    .map(day => new Date(lastDay.getFullYear(), lastDay.getMonth(), day));
+            setInvertedMark(inverted);
         })();
     }, [startDate]);
 
-    // ['2022-09-16T00:00:00.000Z', '2022-09-13T00:00:00.000Z', '2022-09-14T00:00:00.000Z', '2022-09-15T00:00:00.000Z', '2022-09-17T00:00:00.000Z', '2022-09-11T00:00:00.000Z', '2022-09-12T00:00:00.000Z']
-    // 2022-09-20T22:00:00.000Z
-
     return (
-        <div className={cl.main_div}>
-            {/* <Calendar localizer={localizer} /> */}
-            <Calendar
-                
-                activeStartDate={startDate}
-
-                tileClassName={(props: TileArgs) => {
-                    // console.log(props.date.toISOString());
-                    if (mark.find(markDate => datesEqual(markDate, props.date))) {
-                        return cl.highlight;
-                    }
-                    return "";
-                  }}
-                
-                onChange={(value: Value) => {
-                    if (value) {
-                        navigate("/date/" + value.toLocaleString())
-                    }
+            <DatePicker 
+                month={startDate.getMonth()}
+                year={startDate.getFullYear()}
+                onChange={({ start }) => {
+                    navigate("/date/" + moment(start).format('YYYY-MM-DD'));
                 }}
-                
-                onActiveStartDateChange={({activeStartDate}) => {
-                    if (activeStartDate) {
-                        setStartDate(activeStartDate);
-                    }
+                onMonthChange={(month: number, year: number) => {
+                    setStartDate(new Date(year, month, 1));
                 }}
+                disableSpecificDates={invertedMark}
             />
-        </div>
     )
 }
 

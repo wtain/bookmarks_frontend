@@ -1,953 +1,710 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CalendarPage renders correctly 1`] = `
-<div
-  className="main_div"
->
+exports[`CalendarPage test CalendarPage renders correctly 1`] = `
+Array [
   <div
-    className="react-calendar"
+    className="Polaris-DatePicker"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
   >
     <div
-      className="react-calendar__navigation"
+      className="Polaris-DatePicker__Header"
     >
       <button
-        aria-label=""
-        className="react-calendar__navigation__arrow react-calendar__navigation__prev2-button"
-        disabled={false}
+        aria-label="Show previous month, August 2022"
+        className="Polaris-Button Polaris-Button--plain Polaris-Button--iconOnly"
         onClick={[Function]}
-        type="button"
-      >
-        «
-      </button>
-      <button
-        aria-label=""
-        className="react-calendar__navigation__arrow react-calendar__navigation__prev-button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        ‹
-      </button>
-      <button
-        aria-label=""
-        className="react-calendar__navigation__label"
-        disabled={false}
-        onClick={[Function]}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
+        onMouseUp={[Function]}
         type="button"
       >
         <span
-          className="react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from"
+          className="Polaris-Button__Content"
         >
-          September 2022
+          <span
+            className="Polaris-Button__Icon"
+          >
+            <span
+              className="Polaris-Icon"
+            >
+              <span
+                className="Polaris-Text--root Polaris-Text--visuallyHidden"
+              />
+              <svg
+                aria-hidden="true"
+                className="Polaris-Icon__Svg"
+                focusable="false"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17 9h-11.586l3.293-3.293a.999.999 0 1 0-1.414-1.414l-5 5a.999.999 0 0 0 0 1.414l5 5a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414l-3.293-3.293h11.586a1 1 0 1 0 0-2z"
+                />
+              </svg>
+            </span>
+          </span>
         </span>
       </button>
       <button
-        aria-label=""
-        className="react-calendar__navigation__arrow react-calendar__navigation__next-button"
-        disabled={false}
+        aria-label="Show next month, October 2022"
+        className="Polaris-Button Polaris-Button--plain Polaris-Button--iconOnly"
         onClick={[Function]}
+        onMouseUp={[Function]}
         type="button"
       >
-        ›
-      </button>
-      <button
-        aria-label=""
-        className="react-calendar__navigation__arrow react-calendar__navigation__next2-button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        »
+        <span
+          className="Polaris-Button__Content"
+        >
+          <span
+            className="Polaris-Button__Icon"
+          >
+            <span
+              className="Polaris-Icon"
+            >
+              <span
+                className="Polaris-Text--root Polaris-Text--visuallyHidden"
+              />
+              <svg
+                aria-hidden="true"
+                className="Polaris-Icon__Svg"
+                focusable="false"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="m17.707 9.293-5-5a.999.999 0 1 0-1.414 1.414l3.293 3.293h-11.586a1 1 0 1 0 0 2h11.586l-3.293 3.293a.999.999 0 1 0 1.414 1.414l5-5a.999.999 0 0 0 0-1.414z"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
       </button>
     </div>
     <div
-      className="react-calendar__viewContainer"
+      className="Polaris-DatePicker__MonthLayout"
     >
       <div
-        className="react-calendar__month-view"
+        className="Polaris-DatePicker__MonthContainer"
       >
-        <div
-          style={
-            Object {
-              "alignItems": "flex-end",
-              "display": "flex",
-            }
-          }
+        <table
+          className="Polaris-DatePicker__Month"
+          role="grid"
         >
-          <div
-            style={
-              Object {
-                "flexGrow": 1,
-                "width": "100%",
-              }
-            }
+          <caption
+            className="Polaris-DatePicker__Title Polaris-DatePicker__Month--current"
           >
-            <div
-              className="react-calendar__month-view__weekdays"
-              onFocus={null}
-              onMouseOver={null}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": undefined,
-                  "flexWrap": "nowrap",
-                }
-              }
+            September
+             
+            2022
+          </caption>
+          <thead>
+            <tr>
+              <th
+                aria-label="Sunday"
+                className="Polaris-DatePicker__Weekday"
+                scope="col"
+              >
+                Su
+              </th>
+              <th
+                aria-label="Monday"
+                className="Polaris-DatePicker__Weekday"
+                scope="col"
+              >
+                Mo
+              </th>
+              <th
+                aria-label="Tuesday"
+                className="Polaris-DatePicker__Weekday"
+                scope="col"
+              >
+                Tu
+              </th>
+              <th
+                aria-label="Wednesday"
+                className="Polaris-DatePicker__Weekday"
+                scope="col"
+              >
+                We
+              </th>
+              <th
+                aria-label="Thursday"
+                className="Polaris-DatePicker__Weekday"
+                scope="col"
+              >
+                Th
+              </th>
+              <th
+                aria-label="Friday"
+                className="Polaris-DatePicker__Weekday"
+                scope="col"
+              >
+                Fr
+              </th>
+              <th
+                aria-label="Saturday"
+                className="Polaris-DatePicker__Weekday Polaris-DatePicker__Weekday--current"
+                scope="col"
+              >
+                Sa
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="Polaris-DatePicker__Week"
             >
-              <div
-                className="react-calendar__month-view__weekdays__weekday"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
+              <td
+                className="Polaris-DatePicker__EmptyDayCell"
+                onMouseOver={[Function]}
+              />
+              <td
+                className="Polaris-DatePicker__EmptyDayCell"
+                onMouseOver={[Function]}
+              />
+              <td
+                className="Polaris-DatePicker__EmptyDayCell"
+                onMouseOver={[Function]}
+              />
+              <td
+                className="Polaris-DatePicker__EmptyDayCell"
+                onMouseOver={[Function]}
+              />
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="Monday"
-                  title="Monday"
-                >
-                  Mon
-                </abbr>
-              </div>
-              <div
-                className="react-calendar__month-view__weekdays__weekday"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-              >
-                <abbr
-                  aria-label="Tuesday"
-                  title="Tuesday"
-                >
-                  Tue
-                </abbr>
-              </div>
-              <div
-                className="react-calendar__month-view__weekdays__weekday"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-              >
-                <abbr
-                  aria-label="Wednesday"
-                  title="Wednesday"
-                >
-                  Wed
-                </abbr>
-              </div>
-              <div
-                className="react-calendar__month-view__weekdays__weekday"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-              >
-                <abbr
-                  aria-label="Thursday"
-                  title="Thursday"
-                >
-                  Thu
-                </abbr>
-              </div>
-              <div
-                className="react-calendar__month-view__weekdays__weekday"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-              >
-                <abbr
-                  aria-label="Friday"
-                  title="Friday"
-                >
-                  Fri
-                </abbr>
-              </div>
-              <div
-                className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current react-calendar__month-view__weekdays__weekday--weekend"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-              >
-                <abbr
-                  aria-label="Saturday"
-                  title="Saturday"
-                >
-                  Sat
-                </abbr>
-              </div>
-              <div
-                className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-              >
-                <abbr
-                  aria-label="Sunday"
-                  title="Sunday"
-                >
-                  Sun
-                </abbr>
-              </div>
-            </div>
-            <div
-              className="react-calendar__month-view__days"
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": undefined,
-                  "flexWrap": "wrap",
-                }
-              }
-            >
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
-              >
-                <abbr
-                  aria-label="August 29, 2022"
-                >
-                  29
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
-              >
-                <abbr
-                  aria-label="August 30, 2022"
-                >
-                  30
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
-              >
-                <abbr
-                  aria-label="August 31, 2022"
-                >
-                  31
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
-              >
-                <abbr
-                  aria-label="September 1, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Thursday September 1 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={0}
+                  type="button"
                 >
                   1
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 2, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Friday September 2 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   2
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 3, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Saturday September 3 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   3
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+            </tr>
+            <tr
+              className="Polaris-DatePicker__Week"
+            >
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 4, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Sunday September 4 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   4
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 5, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Monday September 5 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   5
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 6, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Tuesday September 6 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   6
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 7, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Wednesday September 7 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   7
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 8, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Thursday September 8 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   8
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 9, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Friday September 9 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   9
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 10, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Saturday September 10 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   10
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+            </tr>
+            <tr
+              className="Polaris-DatePicker__Week"
+            >
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 11, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Sunday September 11 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   11
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 12, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Monday September 12 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   12
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 13, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Tuesday September 13 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   13
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 14, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Wednesday September 14 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   14
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 15, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Thursday September 15 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   15
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 16, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Friday September 16 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   16
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 17, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Today Saturday September 17 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--today Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={0}
+                  type="button"
                 >
                   17
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+            </tr>
+            <tr
+              className="Polaris-DatePicker__Week"
+            >
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 18, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Sunday September 18 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   18
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 19, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Monday September 19 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   19
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 20, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Tuesday September 20 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   20
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 21, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Wednesday September 21 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   21
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 22, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Thursday September 22 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   22
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 23, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Friday September 23 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   23
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 24, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Saturday September 24 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   24
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+            </tr>
+            <tr
+              className="Polaris-DatePicker__Week"
+            >
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 25, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Sunday September 25 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   25
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 26, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Monday September 26 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   26
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 27, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Tuesday September 27 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   27
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 28, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Wednesday September 28 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   28
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 29, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Thursday September 29 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   29
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__DayCell"
               >
-                <abbr
-                  aria-label="September 30, 2022"
+                <button
+                  aria-disabled={false}
+                  aria-label="Friday September 30 2022"
+                  aria-pressed={false}
+                  className="Polaris-DatePicker__Day Polaris-DatePicker__Day--hasRange"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  tabIndex={-1}
+                  type="button"
                 >
                   30
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
-              >
-                <abbr
-                  aria-label="October 1, 2022"
-                >
-                  1
-                </abbr>
-              </button>
-              <button
-                className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "flexBasis": "14.285714285714286%",
-                    "flexGrow": 0,
-                    "flexShrink": 0,
-                    "marginLeft": null,
-                    "overflow": "hidden",
-                  }
-                }
-                type="button"
-              >
-                <abbr
-                  aria-label="October 2, 2022"
-                >
-                  2
-                </abbr>
-              </button>
-            </div>
-          </div>
-        </div>
+                </button>
+              </td>
+              <td
+                className="Polaris-DatePicker__EmptyDayCell"
+                onMouseOver={[Function]}
+              />
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;

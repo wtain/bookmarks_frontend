@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './styles/App.css';
+import '@shopify/polaris/build/esm/styles.css';
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from './components/AppRouter/AppRouter';
 import TimeAgo from 'javascript-time-ago'
