@@ -46,7 +46,7 @@ const BookmarksPage = (props: Props) => {
                 props.bookmarksRepository.getBookmarks());
     }
 
-    const loadBookmarks = async (success: (bookmarks: BookmarkDto[]) => void, error: (e: any) => void) => {
+    const loadBookmarks = async (success: (bookmarks: BookmarkDto[]) => void, error: (e: unknown) => void) => {
         try {
             const bookmarks = await getData();
             success(bookmarks)
@@ -61,7 +61,7 @@ const BookmarksPage = (props: Props) => {
             setBookmarks(bookmarks)
             setLoading(false);
         }, 
-            (e) => {
+            (_e) => {
                 setLoading(false);
             })
     }, [tag, id, searchQuery, date])
@@ -139,7 +139,7 @@ const BookmarksPage = (props: Props) => {
                             await props.bookmarksRepository.editBookmark({...bm, isDone: new_value, updated: new Date()});
                             doUpdatePoll();
                         }}
-                        />
+                    />
             }
             
         </div>

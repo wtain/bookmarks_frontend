@@ -29,7 +29,7 @@ const UsersPage = (props: Props) => {
         return await props.usersRepository.list();
     }
 
-    const loadBookmarks = async (success: (users: UserDto[]) => void, error: (e: any) => void) => {
+    const loadBookmarks = async (success: (users: UserDto[]) => void, error: (e: unknown) => void) => {
         try {
             const users = await getData();
             success(users)
@@ -44,7 +44,7 @@ const UsersPage = (props: Props) => {
             setUsers(users)
             setLoading(false);
         }, 
-            (e) => {
+            (_e) => {
                 setLoading(false);
             })
     }, [id])

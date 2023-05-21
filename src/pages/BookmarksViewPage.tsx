@@ -36,12 +36,12 @@ const BookmarksViewPage = (props: Props) => {
       return await props.bookmarksRepository.filterBookmarks(filter);
     }
 
-    const loadBookmarks = async (success: (bookmarks: BookmarkDto[]) => void, error: (e: any) => void) => {
+    const loadBookmarks = async (success: (bookmarks: BookmarkDto[]) => void, error: (e: unknown) => void) => {
         try {
             const bookmarks = await getData();
-            success(bookmarks.bookmarks)
+            success(bookmarks.bookmarks);
         } catch (e) {
-            error(e)
+            error(e);
         }
     }
 
@@ -51,7 +51,7 @@ const BookmarksViewPage = (props: Props) => {
             setBookmarks(bookmarks)
             setLoading(false);
         }, 
-          (e) => {
+          (_e) => {
               // todo: indicate error state, show error popup
                 setLoading(false);
             })
@@ -137,7 +137,7 @@ const BookmarksViewPage = (props: Props) => {
                             await props.bookmarksRepository.editBookmark({...bm, isDone: new_value, updated: new Date()});
                             doUpdatePoll();
                         }}
-                        />
+                    />
             }
             
         </div>

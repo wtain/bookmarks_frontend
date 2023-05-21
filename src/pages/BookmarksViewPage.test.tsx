@@ -3,23 +3,28 @@ import MockBookmarksRepository from '../domain/repository/bookmarks/MockBookmark
 import MockTagsRepository from '../domain/repository/tags/MockTagsRepository';
 import { BrowserRouter } from 'react-router-dom';
 import BookmarksViewPage from './BookmarksViewPage';
+import { jestHacks } from '../utils/JestUtils';
+import { AppProvider } from "@shopify/polaris";
+import translations from "@shopify/polaris/locales/en.json";
 
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+describe('BookmarksViewPage tests', () => {
+  beforeAll(() => {
+    jestHacks();
+  });
 
-it('BookmarksViewPage renders correctly', () => {
-  const bookmarksRepository = new MockBookmarksRepository();
-  const tagsRepository = new MockTagsRepository();
+  it('BookmarksViewPage renders correctly', () => {
+    const bookmarksRepository = new MockBookmarksRepository();
+    const tagsRepository = new MockTagsRepository();
 
-  const tree = renderer
-    .create(
-      <BrowserRouter>
-        <BookmarksViewPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />
-      </BrowserRouter>
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+    const tree = renderer
+      .create(
+        <BrowserRouter>
+          <AppProvider i18n={translations}>
+            <BookmarksViewPage bookmarksRepository={bookmarksRepository} tagsRepository={tagsRepository} />
+          </AppProvider>
+        </BrowserRouter>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

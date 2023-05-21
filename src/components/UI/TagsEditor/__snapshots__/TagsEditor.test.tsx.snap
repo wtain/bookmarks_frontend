@@ -1,45 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagsEditor renders correctly 1`] = `
-<div
-  className="container"
-  onClick={[Function]}
->
-  <span
-    className="tag"
+exports[`TagsEditor tests TagsEditor renders correctly 1`] = `
+Array [
+  <div
+    className="container"
     onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
-    tag1
-  </span>
-  <span
-    className="tag"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    tag2
-  </span>
-  <span
-    className="tag"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    tag3
-  </span>
-  <span
-    className="sp"
-  >
-    <input
-      className="input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      placeholder="Tags"
-      value=""
-    />
-  </span>
-</div>
+    <span
+      className="Polaris-Tag Polaris-Tag--removable"
+    >
+      <span
+        className="Polaris-Tag__TagText"
+        title="tag1"
+      >
+        tag1
+      </span>
+      <button
+        aria-label="Remove tag1"
+        className="Polaris-Tag__Button"
+        disabled={false}
+        onClick={[Function]}
+        onMouseUp={[Function]}
+        type="button"
+      >
+        <span
+          className="Polaris-Icon"
+        >
+          <span
+            className="Polaris-Text--root Polaris-Text--visuallyHidden"
+          />
+          <svg
+            aria-hidden="true"
+            className="Polaris-Icon__Svg"
+            focusable="false"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M6.707 5.293a1 1 0 0 0-1.414 1.414l3.293 3.293-3.293 3.293a1 1 0 1 0 1.414 1.414l3.293-3.293 3.293 3.293a1 1 0 0 0 1.414-1.414l-3.293-3.293 3.293-3.293a1 1 0 0 0-1.414-1.414l-3.293 3.293-3.293-3.293Z"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+    <span
+      className="Polaris-Tag Polaris-Tag--removable"
+    >
+      <span
+        className="Polaris-Tag__TagText"
+        title="tag2"
+      >
+        tag2
+      </span>
+      <button
+        aria-label="Remove tag2"
+        className="Polaris-Tag__Button"
+        disabled={false}
+        onClick={[Function]}
+        onMouseUp={[Function]}
+        type="button"
+      >
+        <span
+          className="Polaris-Icon"
+        >
+          <span
+            className="Polaris-Text--root Polaris-Text--visuallyHidden"
+          />
+          <svg
+            aria-hidden="true"
+            className="Polaris-Icon__Svg"
+            focusable="false"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M6.707 5.293a1 1 0 0 0-1.414 1.414l3.293 3.293-3.293 3.293a1 1 0 1 0 1.414 1.414l3.293-3.293 3.293 3.293a1 1 0 0 0 1.414-1.414l-3.293-3.293 3.293-3.293a1 1 0 0 0-1.414-1.414l-3.293 3.293-3.293-3.293Z"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+    <span
+      className="Polaris-Tag Polaris-Tag--removable"
+    >
+      <span
+        className="Polaris-Tag__TagText"
+        title="tag3"
+      >
+        tag3
+      </span>
+      <button
+        aria-label="Remove tag3"
+        className="Polaris-Tag__Button"
+        disabled={false}
+        onClick={[Function]}
+        onMouseUp={[Function]}
+        type="button"
+      >
+        <span
+          className="Polaris-Icon"
+        >
+          <span
+            className="Polaris-Text--root Polaris-Text--visuallyHidden"
+          />
+          <svg
+            aria-hidden="true"
+            className="Polaris-Icon__Svg"
+            focusable="false"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M6.707 5.293a1 1 0 0 0-1.414 1.414l3.293 3.293-3.293 3.293a1 1 0 1 0 1.414 1.414l3.293-3.293 3.293 3.293a1 1 0 0 0 1.414-1.414l-3.293-3.293 3.293-3.293a1 1 0 0 0-1.414-1.414l-3.293 3.293-3.293-3.293Z"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+    <span
+      className="sp"
+    >
+      <input
+        className="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Tags"
+        value=""
+      />
+    </span>
+  </div>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;

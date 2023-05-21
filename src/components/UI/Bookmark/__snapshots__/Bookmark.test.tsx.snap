@@ -1,112 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bookmark renders correctly 1`] = `
-<div
-  className="bookmark"
->
-  <input
-    checked={true}
-    className="done_checkbox"
-    onChange={[Function]}
-    onClick={[Function]}
-    type="checkbox"
-  />
+exports[`Bookmark tests Bookmark renders correctly 1`] = `
+Array [
   <div
-    className="header_div"
-    data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
-    data-tip={true}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    className="bookmark"
   >
-    <span>
-      <button
-        className="btn_remove"
-        onClick={[Function]}
-      >
-        ❌
-      </button>
-    </span>
-    <div
-      className="summary_preview"
-    >
-      <span
-        className="summary_preview_text"
-      />
-      <a
-        className="link"
-        href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
-        onClick={[Function]}
-      >
-        🔗
-      </a>
-    </div>
-    <div
-      className="summary done"
-      contentEditable={true}
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Edit tags",
-        }
-      }
-      disabled={false}
-      onBlur={[Function]}
+    <input
+      checked={true}
+      className="done_checkbox"
       onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-    />
-  </div>
-  <div
-    className="created"
-  >
-    Created: 
-    8 months ago
-     (
-    Sun Jan 30 2022 21:48:19 GMT+0100 (Центральная Европа, стандартное время)
-    )
-  </div>
-  <div
-    className="created"
-  >
-    Updated: 
-    7 months ago
-     (
-    Sun Feb 13 2022 15:13:09 GMT+0100 (Центральная Европа, стандартное время)
-    )
-  </div>
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "Ability to edit tags for existing bookmarks<BR>Second line<BR>Third line",
-      }
-    }
-    onDoubleClick={[Function]}
-  />
-  <br />
-  <div
-    className="container tags_container"
-    onClick={[Function]}
-  >
-    <span
-      className="tag"
       onClick={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="header_div"
+      data-for="registerTipab2809a7-de53-4494-8ece-2aeecadce254"
+      data-tip={true}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
-      Task
-    </span>
-    <span
-      className="sp"
-    >
-      <input
-        className="input"
+      <span>
+        <button
+          className="btn_remove"
+          onClick={[Function]}
+        >
+          ❌
+        </button>
+      </span>
+      <div
+        className="summary_preview"
+      >
+        <span
+          className="summary_preview_text"
+        />
+        <a
+          className="link"
+          href="/bookmark/ab2809a7-de53-4494-8ece-2aeecadce254"
+          onClick={[Function]}
+        >
+          🔗
+        </a>
+      </div>
+      <div
+        className="summary done"
+        contentEditable={true}
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Edit tags",
+          }
+        }
+        disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
+        onInput={[Function]}
         onKeyDown={[Function]}
-        placeholder="Tags"
-        value=""
+        onKeyUp={[Function]}
       />
-    </span>
-  </div>
-</div>
+    </div>
+    <div
+      className="created"
+    >
+      Created: 
+      8 months ago
+       (
+      Sun Jan 30 2022 21:48:19 GMT+0100 (Центральная Европа, стандартное время)
+      )
+    </div>
+    <div
+      className="created"
+    >
+      Updated: 
+      7 months ago
+       (
+      Sun Feb 13 2022 15:13:09 GMT+0100 (Центральная Европа, стандартное время)
+      )
+    </div>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Ability to edit tags for existing bookmarks<BR>Second line<BR>Third line",
+        }
+      }
+      onDoubleClick={[Function]}
+    />
+    <br />
+    <div
+      className="container tags_container"
+      onClick={[Function]}
+    >
+      <span
+        className="Polaris-Tag Polaris-Tag--removable"
+      >
+        <span
+          className="Polaris-Tag__TagText"
+          title="Task"
+        >
+          Task
+        </span>
+        <button
+          aria-label="Remove Task"
+          className="Polaris-Tag__Button"
+          disabled={false}
+          onClick={[Function]}
+          onMouseUp={[Function]}
+          type="button"
+        >
+          <span
+            className="Polaris-Icon"
+          >
+            <span
+              className="Polaris-Text--root Polaris-Text--visuallyHidden"
+            />
+            <svg
+              aria-hidden="true"
+              className="Polaris-Icon__Svg"
+              focusable="false"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M6.707 5.293a1 1 0 0 0-1.414 1.414l3.293 3.293-3.293 3.293a1 1 0 1 0 1.414 1.414l3.293-3.293 3.293 3.293a1 1 0 0 0 1.414-1.414l-3.293-3.293 3.293-3.293a1 1 0 0 0-1.414-1.414l-3.293 3.293-3.293-3.293Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </span>
+      <span
+        className="sp"
+      >
+        <input
+          className="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Tags"
+          value=""
+        />
+      </span>
+    </div>
+  </div>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;

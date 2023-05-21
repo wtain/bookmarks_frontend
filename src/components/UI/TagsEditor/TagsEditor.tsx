@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import TagDto from "../../../domain/dto/TagDto";
 import BookmarkUtils from "../../../utils/BookmarkUtils";
-import Tag from "./Tag";
+import {Tag} from '@shopify/polaris';
 import cl from './TagsEditor.module.css'
 
 interface Props {
@@ -25,7 +25,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
         const value = currentTag.name.trim()
         if (value.length > 0) {
             if (props.tags.find(t => t.name === value) === undefined) {
-                props.onTagAdded!({...currentTag, name: value});                
+                props.onTagAdded?.({...currentTag, name: value});                
             }
             setCurrentTag(BookmarkUtils.createNewTag());
         }
@@ -36,7 +36,7 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
         if (p !== -1) {
             const value = v.substring(0, p).trim();
             if (value.length > 0) {
-                props.onTagAdded!({...currentTag, name: value});
+                props.onTagAdded?.({...currentTag, name: value});
             }
             setCurrentTag({ ...BookmarkUtils.createNewTag(), name: v.substring(p+1) })
         } else {
@@ -50,11 +50,16 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
     }
 
     return (
-        <div className={containerClasses.join(" ")} onClick={(e) => {
+        <div className={containerClasses.join(" ")} onClick={(_e) => {
             inputRef.current?.focus();
         }}>
             {
-                props.tags.map((tag, i) => <Tag key={tag.id} tag={tag} onDelete={() => props.onDelete!(i)} />)
+                props.tags.map((tag, i) => 
+                    <Tag key={tag.id} 
+                        onRemove={() => props.onDelete?.(i)}>
+                        {tag.name}
+                    </Tag>
+                )
             }
             <span className={cl.sp}>
                 <input ref={inputRef}
@@ -71,17 +76,17 @@ const TagsEditor: React.FC<Props> = (props: Props) => {
                             }
                             if (e.key === "Backspace") {
                                 if (currentTag.name.trim().length === 0) {
-                                    props.onDelete!(props.tags.length - 1);
+                                    props.onDelete?.(props.tags.length - 1);
                                     e.stopPropagation();
                                 }
                             }
                         }} 
-                        onBlur={(e) => {
+                        onBlur={(_e) => {
                             if (currentTag.name.trim().length > 0) {
                                 onTagAdded();
                             }
                         }}
-                        />
+                    />
             </span>
         </div>
     )

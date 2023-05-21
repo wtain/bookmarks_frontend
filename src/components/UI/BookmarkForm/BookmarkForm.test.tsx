@@ -1,19 +1,32 @@
 import renderer from 'react-test-renderer';
 import BookmarkForm from './BookmarkForm';
+import { AppProvider } from "@shopify/polaris";
+import translations from "@shopify/polaris/locales/en.json";
+import { jestHacks } from '../../../utils/JestUtils';
 
 function run_test(visibility: boolean) {
   const tree = renderer
   .create(
-    <BookmarkForm visibility={visibility}  />
+    <AppProvider i18n={translations}>
+      <AppProvider i18n={translations}>
+        <BookmarkForm visibility={visibility}  />
+      </AppProvider>
+    </AppProvider>
   )
   .toJSON();
   expect(tree).toMatchSnapshot();
 }
 
-it('CalendarPage renders correctly visible', () => {
-  run_test(true)
-});
+describe('BookmarkForm tests', () => {
+  beforeAll(() => {
+    jestHacks();
+  });
 
-it('CalendarPage renders correctly hidden', () => {
-  run_test(false)
+  it('BookmarkForm renders correctly visible', () => {
+    run_test(true)
+  });
+
+  it('BookmarkForm renders correctly hidden', () => {
+    run_test(false)
+  });
 });

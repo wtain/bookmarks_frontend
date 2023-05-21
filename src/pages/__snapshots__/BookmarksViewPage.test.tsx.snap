@@ -1,108 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookmarksViewPage renders correctly 1`] = `
-<div>
-  <div
-    className="Modal"
-    onClick={[Function]}
-  >
+exports[`BookmarksViewPage tests BookmarksViewPage renders correctly 1`] = `
+Array [
+  <div>
     <div
-      className="ModalContent"
+      className="Modal"
       onClick={[Function]}
     >
-      <form
-        className="bookmark_form form_invalid"
+      <div
+        className="ModalContent"
+        onClick={[Function]}
       >
-        <input
-          className="input"
-          onChange={[Function]}
-          placeholder="Summary"
-          value=""
-        />
-        <div
-          className="textarea_wrapper"
+        <form
+          className="bookmark_form form_invalid"
         >
-          <textarea
-            className="textarea"
+          <input
+            className="input"
             onChange={[Function]}
-            onKeyDown={[Function]}
-            placeholder="Contents"
-            rows={3}
+            placeholder="Summary"
             value=""
           />
-        </div>
-        <div
-          className="container tags_container"
-          onClick={[Function]}
-        >
-          <span
-            className="sp"
+          <div
+            className="textarea_wrapper"
           >
-            <input
-              className="input"
-              onBlur={[Function]}
+            <textarea
+              className="textarea"
               onChange={[Function]}
               onKeyDown={[Function]}
-              placeholder="Tags"
+              placeholder="Contents"
+              rows={3}
               value=""
             />
-          </span>
-        </div>
-        <button
-          className="button"
-          onClick={[Function]}
-        >
-          ✔️Add
-        </button>
-      </form>
+          </div>
+          <div
+            className="container tags_container"
+            onClick={[Function]}
+          >
+            <span
+              className="sp"
+            >
+              <input
+                className="input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Tags"
+                value=""
+              />
+            </span>
+          </div>
+          <button
+            className="button"
+            onClick={[Function]}
+          >
+            ✔️Add
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-  <button
-    className="btn_add"
-    onClick={[Function]}
-  >
-    ➕
-  </button>
-  <div
-    className="filter"
-  >
-    <span
-      className="tag"
+    <button
+      className="btn_add"
       onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
     >
-      ❌
-    </span>
-    <input
-      checked={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    All tags?
-    <select
-      onChange={[Function]}
-      value={0}
+      ➕
+    </button>
+    <div
+      className="filter"
     >
-      <option
+      <button
+        className="Polaris-Tag Polaris-Tag--clickable"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        ❌
+      </button>
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      All tags?
+      <select
+        onChange={[Function]}
         value={0}
       >
-        All
-      </option>
-      <option
-        value={1}
-      >
-        Todo
-      </option>
-      <option
-        value={2}
-      >
-        Done
-      </option>
-    </select>
-  </div>
-  <div>
-    (No bookmarks)
-  </div>
-</div>
+        <option
+          value={0}
+        >
+          All
+        </option>
+        <option
+          value={1}
+        >
+          Todo
+        </option>
+        <option
+          value={2}
+        >
+          Done
+        </option>
+      </select>
+    </div>
+    <div>
+      (No bookmarks)
+    </div>
+  </div>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;

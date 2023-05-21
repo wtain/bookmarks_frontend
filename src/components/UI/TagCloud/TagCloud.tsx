@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import ITagsRepository from "../../../domain/repository/tags/ITagsRepository";
-import Tag from "../TagsEditor/Tag";
+import {Tag} from '@shopify/polaris';
 
 interface Props {
     tagsRepository: ITagsRepository;
@@ -46,33 +46,22 @@ const TagCloud = (props: Props) => {
 
     return (
         <>
-            <Tag tag={{ name: "❌", id: "" }} onClick={() => {
-                if (props.onClearTagsClick) {
-                    props.onClearTagsClick!();
-                }
+            <Tag onClick={() => {
+                props.onClearTagsClick?.();
                 setSelectedTags([]);
-            }} />
-            {tags.map(tag => <Tag key={tag} tag={{ name: tag, id: "" }}
-                isSelected={isSelectionEnabled && selectedTags.includes(tag)}
+            }}>❌</Tag>
+            {tags.map(tag => <Tag key={tag} 
                 onClick={() => {
-                    if (props.onTagClick) {
-                        props.onTagClick!(tag);      
-                    }
+                    props.onTagClick?.(tag);
                     if (selectedTags.includes(tag)) {
-                        //selectedTags.delete(tag);
                         setSelectedTags(selectedTags.filter(v => v !== tag));
-                        if (props.onTagDeSelected) {
-                            props.onTagDeSelected!(tag);
-                        }
+                        props.onTagDeSelected?.(tag);
                     }
                     else {
-                        //selectedTags.add(tag);
                         setSelectedTags([...selectedTags, tag]);
-                        if (props.onTagSelected) {
-                            props.onTagSelected!(tag);
-                        }
+                        props.onTagSelected?.(tag);
                     }
-                }} />)}
+                }}>{tag}</Tag>)}
         </>
     )
 }

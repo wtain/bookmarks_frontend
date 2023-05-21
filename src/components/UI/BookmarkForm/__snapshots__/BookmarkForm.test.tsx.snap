@@ -1,97 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CalendarPage renders correctly hidden 1`] = `
-<form
-  className="bookmark_form form_invalid"
->
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Summary"
-    value=""
-  />
-  <div
-    className="textarea_wrapper"
+exports[`BookmarkForm tests BookmarkForm renders correctly hidden 1`] = `
+Array [
+  <form
+    className="bookmark_form form_invalid"
   >
-    <textarea
-      className="textarea"
+    <input
+      className="input"
       onChange={[Function]}
-      onKeyDown={[Function]}
-      placeholder="Contents"
-      rows={3}
+      placeholder="Summary"
       value=""
     />
-  </div>
-  <div
-    className="container tags_container"
-    onClick={[Function]}
-  >
-    <span
-      className="sp"
+    <div
+      className="textarea_wrapper"
     >
-      <input
-        className="input"
-        onBlur={[Function]}
+      <textarea
+        className="textarea"
         onChange={[Function]}
         onKeyDown={[Function]}
-        placeholder="Tags"
+        placeholder="Contents"
+        rows={3}
         value=""
       />
-    </span>
-  </div>
-  <button
-    className="button"
-    onClick={[Function]}
-  >
-    ✔️Add
-  </button>
-</form>
+    </div>
+    <div
+      className="container tags_container"
+      onClick={[Function]}
+    >
+      <span
+        className="sp"
+      >
+        <input
+          className="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Tags"
+          value=""
+        />
+      </span>
+    </div>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      ✔️Add
+    </button>
+  </form>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;
 
-exports[`CalendarPage renders correctly visible 1`] = `
-<form
-  className="bookmark_form form_invalid"
->
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Summary"
-    value=""
-  />
-  <div
-    className="textarea_wrapper"
+exports[`BookmarkForm tests BookmarkForm renders correctly visible 1`] = `
+Array [
+  <form
+    className="bookmark_form form_invalid"
   >
-    <textarea
-      className="textarea"
+    <input
+      className="input"
       onChange={[Function]}
-      onKeyDown={[Function]}
-      placeholder="Contents"
-      rows={3}
+      placeholder="Summary"
       value=""
     />
-  </div>
-  <div
-    className="container tags_container"
-    onClick={[Function]}
-  >
-    <span
-      className="sp"
+    <div
+      className="textarea_wrapper"
     >
-      <input
-        className="input"
-        onBlur={[Function]}
+      <textarea
+        className="textarea"
         onChange={[Function]}
         onKeyDown={[Function]}
-        placeholder="Tags"
+        placeholder="Contents"
+        rows={3}
         value=""
       />
-    </span>
-  </div>
-  <button
-    className="button"
-    onClick={[Function]}
-  >
-    ✔️Add
-  </button>
-</form>
+    </div>
+    <div
+      className="container tags_container"
+      onClick={[Function]}
+    >
+      <span
+        className="sp"
+      >
+        <input
+          className="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Tags"
+          value=""
+        />
+      </span>
+    </div>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      ✔️Add
+    </button>
+  </form>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;

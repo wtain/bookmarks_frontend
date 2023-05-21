@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BookmarkPage renders correctly 1`] = `
-<div>
-  (Not found)
-</div>
+Array [
+  <div>
+    (Not found)
+  </div>,
+  <div
+    id="PolarisPortalsContainer"
+  />,
+]
 `;
